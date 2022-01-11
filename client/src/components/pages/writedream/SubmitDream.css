@@ -1,0 +1,23 @@
+.submitButton {
+  color: white;
+  border: none;
+  background-color: #ffbade;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Verdana", sans-serif;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+.textBox {
+  color: white;
+  border: none;
+  background-color: #ffbade;
+  width: 800px;
+  height: 200px;
+  font-size: 15px;
+  font-family: "Verdana", sans-serif;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 16px;
+}

@@ -21,6 +21,8 @@ const router = express.Router();
 //initialize socket
 const socketManager = require("./server-socket");
 
+const Dream = require("./models/dream");
+
 router.post("/login", auth.login);
 router.post("/logout", auth.logout);
 router.get("/whoami", (req, res) => {
@@ -34,12 +36,25 @@ router.get("/whoami", (req, res) => {
 
 router.post("/initsocket", (req, res) => {
   // do nothing if user not logged in
-  if (req.user) socketManager.addUser(req.user, socketManager.getSocketFromSocketID(req.body.socketid));
+  if (req.user)
+    socketManager.addUser(req.user, socketManager.getSocketFromSocketID(req.body.socketid));
   res.send({});
 });
 
 // |------------------------------|
 // | write your API methods below!|
+router.post("/addDream", (req, res) => {
+  console.log("added dream to database");
+  const newDream = new Dream({
+    author: {
+      _id: "1",
+      name: "Anonymous",
+    } /* TODO AUTH LOGIN */,
+    content: req.body.content,
+  });
+
+  newDream.save().then((dream) => res.send(dream));
+});
 // |------------------------------|
 
 // anything else falls to this "not found" case

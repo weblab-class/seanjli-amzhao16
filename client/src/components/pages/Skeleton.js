@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
+import SubmitDream from "./writedream/SubmitDream.js";
+
 import "../../utilities.css";
 import "./Skeleton.css";
 
@@ -40,6 +42,8 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
       </ul>
       <h2>How to go from this skeleton to our actual app</h2>
       <a href="http://weblab.to/get-started">Check out this getting started guide</a>
+
+      <SubmitDream />
     </>
   );
 };

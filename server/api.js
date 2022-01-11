@@ -43,6 +43,8 @@ router.post("/initsocket", (req, res) => {
 
 // |------------------------------|
 // | write your API methods below!|
+// |------------------------------|
+
 router.post("/addDream", (req, res) => {
   console.log("added dream to database");
   const newDream = new Dream({
@@ -55,7 +57,10 @@ router.post("/addDream", (req, res) => {
 
   newDream.save().then((dream) => res.send(dream));
 });
-// |------------------------------|
+
+router.get("/dreams", (req, res) => {
+	Dream.find({}).then((dreams) => res.send(dreams));
+});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {

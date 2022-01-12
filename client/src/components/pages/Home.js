@@ -1,22 +1,29 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
-
+import "./Home.css";
 const Home = (props) => {
-	return (
-	<div>
-		<p>Hello, {props.username}</p>
-		<br />
-		<a href="submit">Submit dream</a>
-		<br />
-		<a href="dreams">View your dreams</a>
-		<br />
-		<a href="profile">Profile</a>
-		<br />
-		<a href="feed">Feed</a>
-		<br />
-		<button onClick={props.handleLogout}>Logout</button>
-	</div>
-	);
-}
+  return (
+    <div>
+      <p className="hello"> Hello, {props.username}</p>
+      <button className="logout" onClick={props.handleLogout}>
+        Logout
+      </button>
+      <br />
+      <a className="writeQuad" href="submit">
+        write dream
+      </a>
+      <a className="profileQuad" href="profile">
+        view profile
+      </a>
+      <br />
+      <a className="dreamsQuad" href="dreams">
+        your dreams
+      </a>
+      <a className="feedQuad" href="feed">
+        friends' dreams
+      </a>
+    </div>
+  );
+};
 
 export default Home;

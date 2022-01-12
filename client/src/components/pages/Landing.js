@@ -5,29 +5,32 @@ import "../../utilities.css";
 import "./Landing.css";
 
 const GOOGLE_CLIENT_ID = "476707967946-j4nra2r90k17lnv4vf4shko7li3osica.apps.googleusercontent.com";
+/* TODO: add an about page/icon (next to login?)*/
 
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {
   return (
-    <>
-	  <h1>Dream Log</h1>
-	  <h4>Write your dreams into reality</h4>
-	  <h6>TODO wooo cloud go whoosh whoosh in background</h6>
+    <div className="landingPage">
+      <h1 className="title"> dream log</h1>
+      <h4 className="subtext">write your dreams into reality. </h4>
+      <br />
       {userId ? (
         <GoogleLogout
+          className="login"
           clientId={GOOGLE_CLIENT_ID}
-          buttonText="Logout"
+          buttonText="logout"
           onLogoutSuccess={handleLogout}
           onFailure={(err) => console.log(err)}
         />
       ) : (
         <GoogleLogin
+          className="login"
           clientId={GOOGLE_CLIENT_ID}
-          buttonText="Login"
+          buttonText="Log in with Google"
           onSuccess={handleLogin}
           onFailure={(err) => console.log(err)}
         />
       )}
-    </>
+    </div>
   );
 };
 

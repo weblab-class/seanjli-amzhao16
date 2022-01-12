@@ -60,6 +60,7 @@
   text-decoration: none;
 }
 
+/* TODO: make this into a circle in the middle */
 .logout {
   float: top;
   border: none;

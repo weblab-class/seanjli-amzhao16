@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { get, post } from "../../../utilities.js";
-import DreamContainer from "../../modules/DreamContainer.js";
+import DreamContainer from "./DreamContainer.js";
 
 const GetDream = (props) => {
 

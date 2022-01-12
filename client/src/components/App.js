@@ -3,8 +3,8 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Home from "./pages/Home";
-import SubmitDream from "./pages/writedream/SubmitDream";
-import GetDream from "./pages/writedream/GetDream";
+import SubmitDream from "./modules/dreams/SubmitDream";
+import GetDream from "./modules/dreams/GetDream";
 
 import "../utilities.css";
 

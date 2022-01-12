@@ -3,8 +3,10 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Landing from "./pages/Landing.js";
 import Home from "./pages/Home";
-import SubmitDream from "./modules/dreams/SubmitDream";
-import GetDream from "./modules/dreams/GetDream";
+import WriteDream from "./pages/WriteDream";
+import Profile from "./pages/Profile";
+import MyDreams from "./pages/MyDreams";
+import Feed from "./pages/Feed";
 
 import "../utilities.css";
 
@@ -50,8 +52,10 @@ setUsername(user.name);
 	  {userId ?
       <Router>
         <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-	<SubmitDream path="/submit" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-	<GetDream path="/dreams" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
+	<WriteDream path="/submit" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
+  <MyDreams path="/dreams" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
+  <Profile path="/profile" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
+	<Feed path="/feed" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
         <NotFound default />
       </Router> :
 	  <Router>

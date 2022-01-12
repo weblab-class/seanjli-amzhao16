@@ -10,6 +10,10 @@ const Home = (props) => {
 		<br />
 		<a href="dreams">View your dreams</a>
 		<br />
+		<a href="profile">Profile</a>
+		<br />
+		<a href="feed">Feed</a>
+		<br />
 		<button onClick={props.handleLogout}>Logout</button>
 	</div>
 	);

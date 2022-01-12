@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
-import Skeleton from "./pages/Skeleton.js";
+import Landing from "./pages/Landing.js";
 import Home from "./pages/Home";
 import SubmitDream from "./modules/dreams/SubmitDream";
 import GetDream from "./modules/dreams/GetDream";
@@ -55,7 +55,7 @@ setUsername(user.name);
         <NotFound default />
       </Router> :
 	  <Router>
-        <Skeleton path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+        <Landing path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
         <NotFound default />
 	  </Router>}
     </>

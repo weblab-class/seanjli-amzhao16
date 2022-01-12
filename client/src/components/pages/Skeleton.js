@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
-import SubmitDream from "./writedream/SubmitDream.js";
-import GetDream from "./writedream/GetDream.js";
-
 import "../../utilities.css";
 import "./Skeleton.css";
 
-const GOOGLE_CLIENT_ID = "799029787987-7mn51totji5gs9p6v3sp4mbn9so6djdt.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "476707967946-j4nra2r90k17lnv4vf4shko7li3osica.apps.googleusercontent.com";
 
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {
   return (
     <>
+	  <h1>Dream Log</h1>
+	  <h4>Write your dreams into reality</h4>
+	  <h6>TODO wooo cloud go whoosh whoosh in background</h6>
       {userId ? (
         <GoogleLogout
           clientId={GOOGLE_CLIENT_ID}
@@ -27,25 +27,6 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
           onFailure={(err) => console.log(err)}
         />
       )}
-      <h1>Good luck on your project :)</h1>
-      <h2> What you need to change in this skeleton</h2>
-      <ul>
-        <li>
-          Change the Frontend CLIENT_ID (Skeleton.js) to your team's CLIENT_ID (obtain this at
-          http://weblab.to/clientid)
-        </li>
-        <li>Change the Server CLIENT_ID to the same CLIENT_ID (auth.js)</li>
-        <li>
-          Change the Database SRV (mongoConnectionURL) for Atlas (server.js). You got this in the
-          MongoDB setup.
-        </li>
-        <li>Change the Database Name for MongoDB to whatever you put in the SRV (server.js)</li>
-      </ul>
-      <h2>How to go from this skeleton to our actual app</h2>
-      <a href="http://weblab.to/get-started">Check out this getting started guide</a>
-
-      <GetDream />
-      <SubmitDream />
     </>
   );
 };

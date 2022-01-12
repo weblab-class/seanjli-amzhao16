@@ -49,9 +49,9 @@ router.post("/addDream", (req, res) => {
   console.log("added dream to database");
   const newDream = new Dream({
     author: {
-      _id: "1",
-      name: "Anonymous",
-    } /* TODO AUTH LOGIN */,
+      _id: req.user._id,
+      name: req.user.name,
+    },
     content: req.body.content,
   });
 

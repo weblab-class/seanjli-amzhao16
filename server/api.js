@@ -59,7 +59,7 @@ router.post("/addDream", (req, res) => {
 });
 
 router.get("/dreams", (req, res) => {
-	Dream.find({}).then((dreams) => res.send(dreams));
+	Dream.find().then((dreams) => res.send(dreams));
 });
 
 // anything else falls to this "not found" case

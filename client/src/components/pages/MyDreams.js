@@ -5,7 +5,7 @@ import {GetDream} from "../modules/dreams/GetDream";
 import DreamContainer from "../modules/dreams/DreamContainer.js";
 
 const MyDreams = (props) => {
-    const dreams = GetDream();
+    const dreams = GetDream().filter((dream) => (dream.author._id === props.userId));
     return (
         <div>
             {dreams.map(

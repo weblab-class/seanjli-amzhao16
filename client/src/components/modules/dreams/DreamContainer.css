@@ -1,0 +1,25 @@
+.name {
+  color: #ea9a8f;
+  font-weight: normal;
+}
+
+.date {
+  position: absolute;
+  right: 5%;
+  color: #ea9a8f;
+  font-weight: normal;
+}
+
+.content {
+  position: absolute;
+  left: 5%;
+  padding-top: 10px;
+  color: #ea9a8f;
+}
+
+.container {
+  padding: 25px;
+  background-color: #ffd5cf;
+  border: 10px solid #ea9a8f;
+  padding-bottom: 50px;
+}

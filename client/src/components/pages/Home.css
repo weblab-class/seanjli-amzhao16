@@ -1,17 +1,16 @@
 * {
   margin: 0;
-  font-size: 30px;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
   padding: 0;
-  border-radius: 0;
-  color: grey;
 }
 
 .writeQuad {
-  float: left;
+  left: 0;
+  position: absolute;
+  top: 0;
   text-align: left;
-  padding-left: 10.001vw;
+  padding-left: 10.002vw;
   vertical-align: middle;
   line-height: 40vh;
   height: 50vh;
@@ -22,7 +21,9 @@
 }
 
 .profileQuad {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   text-align: right;
   vertical-align: middle;
   padding-right: 10vw;
@@ -35,9 +36,11 @@
 }
 
 .dreamsQuad {
-  float: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   text-align: left;
-  padding-left: 10.001vw;
+  padding-left: 10.002vw;
   vertical-align: middle;
   line-height: 60vh;
   height: 50vh;
@@ -48,7 +51,9 @@
 }
 
 .feedQuad {
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   text-align: right;
   vertical-align: middle;
   padding-right: 10vw;
@@ -60,15 +65,46 @@
   text-decoration: none;
 }
 
-/* TODO: make this into a circle in the middle */
+/* TODO: not great w adjusting window */
 .logout {
-  float: top;
   border: none;
-  float: right;
+  font-size: 25px;
+  position: absolute;
+  top: 70%;
+  color: #ffb6c1;
+  text-align: center;
   background-color: white;
+  padding-left: 14vw;
 }
 
 .hello {
-  float: top;
-  float: left;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  font-size: 25px;
+  text-align: center;
+  color: #ffb6c1;
+}
+
+.centerCircle {
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  bottom: 30%;
+  left: 30%;
+  right: 30%;
+  padding: 30px;
+  border-radius: 100px;
+}
+
+.centerText {
+  color: #ffb6c1;
+  text-align: center;
+  font-size: 60px;
+  position: absolute;
+  top: 32%;
+  bottom: 45%;
+  left: 10%;
+  right: 10%;
 }

@@ -4,6 +4,8 @@ import GoogleLogin, { GoogleLogout } from "react-google-login";
 import "../../utilities.css";
 import "./Landing.css";
 
+/*TODO: fix favicon icon :( */
+
 const GOOGLE_CLIENT_ID = "476707967946-j4nra2r90k17lnv4vf4shko7li3osica.apps.googleusercontent.com";
 /* TODO: add an about page/icon (next to login?)*/
 

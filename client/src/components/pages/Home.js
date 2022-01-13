@@ -4,10 +4,6 @@ import "./Home.css";
 const Home = (props) => {
   return (
     <div>
-      <p className="hello"> Hello, {props.username}</p>
-      <button className="logout" onClick={props.handleLogout}>
-        Logout
-      </button>
       <br />
       <a className="writeQuad" href="submit">
         write dream
@@ -22,6 +18,13 @@ const Home = (props) => {
       <a className="feedQuad" href="feed">
         friends' dreams
       </a>
+      <div className="centerCircle">
+        <p className="hello"> Hello, {props.username}</p>
+        <div className="centerText"> dream log </div>
+        <button className="logout" onClick={props.handleLogout}>
+          log out
+        </button>
+      </div>
     </div>
   );
 };

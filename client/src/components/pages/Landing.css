@@ -2,6 +2,8 @@
 
 * {
   margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
 }
 .title {
   color: white;
@@ -10,8 +12,6 @@
   font-size: 70px;
   position: relative;
   top: 200px;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
 }
 
 .landingPage {
@@ -22,22 +22,18 @@
   background: linear-gradient(to bottom, #ffbade 0%, #ffefc0 100%);
   text-align: center;
   font-size: 50px;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
 }
 
 /* TODO: how to make changes on google button??*/
 .login {
   position: relative;
-  top: 180px;
+  top: 170px;
   color: #ffd5cf !important;
   border: none;
   background-color: white !important;
-  padding: 12px 20px;
-  font-size: 20px !important;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
-  border-radius: 20px;
+  padding: 5px 18px !important;
+  font-size: 16px !important;
+  border-radius: 35px !important;
 }
 
 .subtext {
@@ -47,8 +43,6 @@
   font-size: 35px;
   position: relative;
   top: 180px;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
   font-size: 21px;
   text-align: center;
   overflow: hidden;

@@ -6,7 +6,6 @@ const NavBar = (props) => {
     <div className="NavBar">
       <a className="homeNav" href="/">
         {" "}
-        home
       </a>
       {props.type === "w" ? (
         <p className="writeNav">

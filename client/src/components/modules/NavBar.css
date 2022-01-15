@@ -1,13 +1,13 @@
 .writeNav {
   position: absolute;
   top: 0;
-  left: 7vw;
+  left: 5vw;
   text-align: center;
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #ffbade;
   color: #d271a4;
   text-decoration: none;
@@ -21,20 +21,20 @@
   line-height: 8vh;
   height: 1.5vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #d271a4;
 }
 
 .profileNav {
   position: absolute;
   top: 0;
-  left: 27vw;
+  left: 26vw;
   text-align: center;
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #ffc7d7;
   color: #e4829e;
   text-decoration: none;
@@ -48,7 +48,7 @@
   line-height: 8vh;
   height: 1.5vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #e4829e;
 }
 
@@ -61,7 +61,7 @@
   line-height: 8vh;
   height: 8vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #ffd5cf;
   color: #ea9a8f;
   text-decoration: none;
@@ -75,20 +75,20 @@
   line-height: 8vh;
   height: 1.5vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #ea9a8f;
 }
 
 .dreamsNav {
   position: absolute;
   top: 0;
-  left: 67vw;
+  left: 68vw;
   text-align: center;
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #ffe3c8;
   color: #e8b37f;
   text-decoration: none;
@@ -102,14 +102,14 @@
   line-height: 8vh;
   height: 1.5vh;
   font-size: 15px;
-  width: 20vw;
+  width: 21vw;
   background-color: #e8b37f;
 }
 
 .logoutNav {
   position: absolute;
   top: 0;
-  left: 87vw;
+  left: 89vw;
   text-align: center;
   vertical-align: middle;
   line-height: 8vh;
@@ -131,8 +131,10 @@
   height: 8vh;
   font-size: 15px;
   border: none;
-  width: 20vw;
+  width: 5vw;
   background-image: url("home-icon.png");
   background-size: contain;
+  background-color: #ffa6ca;
+  background-repeat: no-repeat;
   text-decoration: none;
 }

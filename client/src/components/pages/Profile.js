@@ -36,7 +36,8 @@ const Profile = (props) => {
         !(
             friends.includes(x._id) ||
             requests.map((x) => x.sender_id).includes(x._id) ||
-            outgoing.map((x) => x.recipient_id).includes(x._id)
+            outgoing.map((x) => x.recipient_id).includes(x._id) ||
+            x._id === props.userId
         )
         ));
     }, [users, friends, requests, outgoing])

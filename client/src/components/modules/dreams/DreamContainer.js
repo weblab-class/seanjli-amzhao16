@@ -4,14 +4,11 @@ import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
 import { convertFromRaw, convertToRaw } from "draft-js";
 import { stateToHTML } from "draft-js-export-html";
+import { formatInTimeZone } from "date-fns-tz";
+/* TODO: Adjust date for other things i.e. friends reqs, comments, etc. */
 import Parser from "html-react-parser";
 
 const DreamContainer = (props) => {
-  /* EDITED HERE*/
-  // let convertedText = EditorState.createEmpty();
-  // convertedText.setState({
-  //   editorState: EditorState.createWithContent(convertFromRaw(JSON.parse(props.content))),
-  // });
   return (
     <div className="container">
       <p className="date">{convertDate(props.date)}</p>
@@ -22,8 +19,8 @@ const DreamContainer = (props) => {
   );
 };
 
-/* TODO: function to get date in mm/dd/yyyy format?? how to apply*/
-function convertDate(date) {
+function convertDate(dateOld) {
+  let date = formatInTimeZone(dateOld, "America/New_York", "yyyy-MM-dd HH:mm:ss zzz");
   let dateNew = date.substring(5, 7) + "/" + date.substring(8, 10) + "/" + date.substring(0, 4);
   let hour = parseInt(date.substring(11, 13));
   let newTime = "";

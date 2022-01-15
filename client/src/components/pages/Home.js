@@ -5,7 +5,7 @@ const Home = (props) => {
   return (
     <div>
       <br />
-      <a className="writeQuad" href="submit">
+      <a className="writeQuad" href="write">
         write dream
       </a>
       <a className="profileQuad" href="profile">

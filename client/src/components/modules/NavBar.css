@@ -1,0 +1,138 @@
+.writeNav {
+  position: absolute;
+  top: 0;
+  left: 7vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #ffbade;
+  color: #d271a4;
+  text-decoration: none;
+}
+.writeUnderline {
+  position: absolute;
+  top: 6.5vh;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 1.5vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #d271a4;
+}
+
+.profileNav {
+  position: absolute;
+  top: 0;
+  left: 27vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #ffc7d7;
+  color: #e4829e;
+  text-decoration: none;
+}
+.profileUnderline {
+  position: absolute;
+  top: 6.5vh;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 1.5vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #e4829e;
+}
+
+.feedNav {
+  position: absolute;
+  top: 0;
+  left: 47vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #ffd5cf;
+  color: #ea9a8f;
+  text-decoration: none;
+}
+.feedUnderline {
+  position: absolute;
+  top: 6.5vh;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 1.5vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #ea9a8f;
+}
+
+.dreamsNav {
+  position: absolute;
+  top: 0;
+  left: 67vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #ffe3c8;
+  color: #e8b37f;
+  text-decoration: none;
+}
+.dreamsUnderline {
+  position: absolute;
+  top: 6.5vh;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 1.5vh;
+  font-size: 15px;
+  width: 20vw;
+  background-color: #e8b37f;
+}
+
+.logoutNav {
+  position: absolute;
+  top: 0;
+  left: 87vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  border: none;
+  width: 13vw;
+  background-color: #ffefc0;
+  color: #ebd187;
+  text-decoration: none;
+}
+.homeNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
+  height: 8vh;
+  font-size: 15px;
+  border: none;
+  width: 20vw;
+  background-image: url("home-icon.png");
+  background-size: contain;
+  text-decoration: none;
+}

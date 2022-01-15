@@ -19,14 +19,14 @@ import { get, post } from "../utilities";
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
-		const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
-	      setUsername(user.name);
+        setUsername(user.name);
       }
     });
   }, []);
@@ -36,32 +36,65 @@ const App = () => {
     const userToken = res.tokenObj.id_token;
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
-setUsername(user.name);
+      setUsername(user.name);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
 
   const handleLogout = () => {
     setUserId(undefined);
-	  setUsername("");
+    setUsername("");
     post("/api/logout");
+    window.location.href = "/";
   };
 
-  return ( 
+  return (
     <>
-	  {userId ?
-      <Router>
-        <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-	<WriteDream path="/submit" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-  <MyDreams path="/dreams" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-  <Profile path="/profile" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-	<Feed path="/feed" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} username={username}/>
-        <NotFound default />
-      </Router> :
-	  <Router>
-        <Landing path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-        <NotFound default />
-	  </Router>}
+      {userId ? (
+        <Router>
+          <Home
+            path="/"
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            userId={userId}
+            username={username}
+          />
+          <WriteDream
+            path="/write"
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            userId={userId}
+            username={username}
+          />
+          <MyDreams
+            path="/dreams"
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            userId={userId}
+            username={username}
+          />
+          <Profile
+            path="/profile"
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            userId={userId}
+            username={username}
+          />
+          <Feed
+            path="/feed"
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            userId={userId}
+            username={username}
+          />
+          <NotFound default />
+        </Router>
+      ) : (
+        <Router>
+          <Landing path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+          <NotFound default />
+        </Router>
+      )}
     </>
   );
 };

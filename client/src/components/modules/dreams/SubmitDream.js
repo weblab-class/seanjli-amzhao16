@@ -1,41 +1,59 @@
-import React, { useState, useEffect } from "react";
-import { get, post } from "../../../utilities.js";
+import React from "react";
+import { Editor, EditorState, RichUtils } from "draft-js";
+import "draft-js/dist/Draft.css";
 import "./SubmitDream.css";
 
-const SubmitDream = (props) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    const addDream = (value) => {
-      const body = { content: value };
-      post("/api/addDream", body);
+class SubmitDream extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      editorState: EditorState.createEmpty(),
     };
-    addDream(value);
-    setValue("");
-    console.log("Added dream with content " + value);
+  }
+
+  onChange = (editorState) => {
+    this.setState({
+      editorState,
+    });
   };
 
-  /* TODO: add css reference in div statement */
+  handleKeyCommand = (command) => {
+    const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
+    if (newState) {
+      this.onChange(newState);
+      return "handled";
+    }
+    return "not-handled";
+  };
 
-  return (
-    <div>
-      <textarea
-        className="textBox"
-        placeholder="Write your dream here!"
-        type="text"
-        value={value}
-        onChange={handleChange}
-      />
-      <br />
-      <button className="submitButton" type="submit" value="Submit" onClick={handleSubmit}>
-        submit dream
-      </button>
-    </div>
-  );
-};
+  // onUnderlineClick = () => {
+  //   this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "UNDERLINE"));
+  // };
+
+  // onBoldClick = () => {
+  //   element.dispatchEvent(new KeyboardEvent("keydown", { key: "command" }));
+  //   element.dispatchEvent(new KeyboardEvent("keydown", { key: "i" }));
+  // };
+
+  // onItalicClick = () => {
+  //   // this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "ITALIC"));
+  //   EditorState.set(this.state.editorState, "ITALIC");
+  // };
+
+  render() {
+    return (
+      <div className="editorContainer">
+        <div className="textBox">
+          <Editor
+            placeholder="write your dream here"
+            editorState={this.state.editorState}
+            handleKeyCommand={this.handleKeyCommand}
+            onChange={this.onChange}
+          />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default SubmitDream;

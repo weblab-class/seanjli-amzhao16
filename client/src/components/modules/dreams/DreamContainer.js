@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./DreamContainer.css";
+import { Editor, EditorState, RichUtils } from "draft-js";
+import "draft-js/dist/Draft.css";
+import ReactDOM from "react-dom";
+import { convertFromRaw, convertToRaw } from "draft-js";
 
 const DreamContainer = (props) => {
-  /* TODO: confused on how to get individual bubbles?*/
+  /* EDITED HERE*/
   return (
     <div className="container">
       <p className="date">{convertDate(props.date)}</p>
-      <strong className="name">{props.name}</strong> <p className="content">{props.content}</p>
+      <strong className="name">{props.name}</strong>{" "}
+      {/* <p className="content">{convertFromRaw(JSON.parse(props.content))}</p> */}
+      <p className="content">{props.content}</p>
     </div>
   );
 };

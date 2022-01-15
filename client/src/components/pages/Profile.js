@@ -5,10 +5,10 @@ import NavBar from "../modules/NavBar.js";
 
 import { get, post } from "../../utilities.js";
 
-import FriendList from "../modules/FriendList";
-import MakeFriendRequests from "../modules/MakeFriendRequests";
-import AcceptFriendRequests from "../modules/AcceptFriendRequests";
-import OutgoingFriendRequests from "../modules/OutgoingFriendRequests";
+import FriendList from "../modules/friendsystem/FriendList";
+import MakeFriendRequests from "../modules/friendsystem/MakeFriendRequests";
+import AcceptFriendRequests from "../modules/friendsystem/AcceptFriendRequests";
+import OutgoingFriendRequests from "../modules/friendsystem/OutgoingFriendRequests";
 
 
 const Profile = (props) => {
@@ -17,7 +17,8 @@ const Profile = (props) => {
     const [me, setMe] = useState([{friends : [], id : ""}]);
     const [requests, setRequests] = useState([]);
     const [outgoing, setOutgoing] = useState([]);
-    const friends = users.filter((x) => (me[0].friends.includes(x._id)));
+    const [friends, setFriends] = useState([]);
+    const [requestees, setRequestees] = useState([]);
 
     useEffect(() => {
         get("/api/getUser").then((x) => setUsers(x));
@@ -26,6 +27,19 @@ const Profile = (props) => {
         get("/api/getOutgoingFriendRequest").then((x) => setOutgoing(x));
     }, []);
 
+    useEffect(() => {
+        setFriends(me[0].friends);
+    }, [me])
+
+    useEffect(() =>{
+        setRequestees(users.filter((x) =>
+        !(
+            friends.includes(x._id) ||
+            requests.map((x) => x.sender_id).includes(x._id) ||
+            outgoing.map((x) => x.recipient_id).includes(x._id)
+        )
+        ));
+    }, [users, friends, requests, outgoing])
 
   return (
     <div>
@@ -33,14 +47,14 @@ const Profile = (props) => {
       <br />
       <br />
       <h1>Friends</h1>
-      <FriendList users={users} setUsers={setUsers} me={me} setMe={setMe} requests={requests} setRequests={setRequests} outgoing={outgoing} setOutgoing={setOutgoing} friends={friends}/>
+      <FriendList users={users} friends={friends} setFriends={setFriends}/>
       <h1>Make Requests</h1>
-      <MakeFriendRequests users={users} setUsers={setUsers} me={me} setMe={setMe} requests={requests} setRequests={setRequests} outgoing={outgoing} setOutgoing={setOutgoing} friends={friends}/>
+      <MakeFriendRequests requestees={requestees} setRequestees={setRequestees} outgoing={outgoing} setOutgoing={setOutgoing}/>
       <br />
       <h1>Incoming Requests</h1>
-      <AcceptFriendRequests users={users} setUsers={setUsers} me={me} setMe={setMe} requests={requests} setRequests={setRequests} outgoing={outgoing} setOutgoing={setOutgoing} friends={friends}/>
+      <AcceptFriendRequests requests={requests} setRequests={setRequests} friends={friends} setFriends={setFriends}/>
       <h1>Outgoing Requests</h1> 
-      <OutgoingFriendRequests users={users} setUsers={setUsers} me={me} setMe={setMe} requests={requests} setRequests={setRequests} outgoing={outgoing} setOutgoing={setOutgoing} friends={friends}/>
+      <OutgoingFriendRequests outgoing={outgoing} setOutgoing={setOutgoing} />
     </div>
   );
 };

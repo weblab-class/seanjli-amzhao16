@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { get, post } from "../../../utilities.js";
 import "./SubmitDream.css";
+import { Editor, EditorState, RichUtils } from "draft-js";
+import "draft-js/dist/Draft.css";
 
 const SubmitDreamButton = (props) => {
   const [value, setValue] = useState("");
@@ -23,13 +25,13 @@ const SubmitDreamButton = (props) => {
 
   return (
     <div>
-      {/* <textarea
+      <textarea
+        value={value}
+        onChange={handleChange}
         className="textBox"
         placeholder="Write your dream here!"
         type="text"
-        value={value}
-        onChange={handleChange}
-      /> */}
+      />
       <br />
       <button className="submitButton" type="submit" value="Submit" onClick={handleSubmit}>
         submit dream

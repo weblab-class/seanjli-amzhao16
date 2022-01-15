@@ -8,40 +8,40 @@ const NavBar = (props) => {
         {" "}
       </a>
       {props.type === "w" ? (
-        <p className="writeNav">
+        <div className="writeNav">
           write
           <p className="writeUnderline"></p>
-        </p>
+        </div>
       ) : (
         <a className="writeNav" href="write">
           write
         </a>
       )}
       {props.type === "p" ? (
-        <p className="profileNav">
+        <div className="profileNav">
           profile
           <p className="profileUnderline"></p>
-        </p>
+        </div>
       ) : (
         <a className="profileNav" href="profile">
           profile
         </a>
       )}
       {props.type === "f" ? (
-        <p className="feedNav">
+        <div className="feedNav">
           friends
           <p className="feedUnderline"></p>
-        </p>
+        </div>
       ) : (
         <a className="feedNav" href="feed">
           friends
         </a>
       )}
       {props.type === "d" ? (
-        <p className="dreamsNav">
+        <div className="dreamsNav">
           my dreams
           <p className="dreamsUnderline"></p>
-        </p>
+        </div>
       ) : (
         <a className="dreamsNav" href="dreams">
           my dreams

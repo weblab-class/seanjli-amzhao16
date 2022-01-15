@@ -1,6 +1,14 @@
-import React from "react";
-import { Editor, EditorState, RichUtils } from "draft-js";
+import React, { useState, useEffect } from "react";
+import {
+  Editor,
+  EditorState,
+  RichUtils,
+  convertFromRaw,
+  convertToRaw,
+  ContentState,
+} from "draft-js";
 import "draft-js/dist/Draft.css";
+import { get, post } from "../../../utilities.js";
 import "./SubmitDream.css";
 
 class SubmitDream extends React.Component {
@@ -9,11 +17,26 @@ class SubmitDream extends React.Component {
     this.state = {
       editorState: EditorState.createEmpty(),
     };
+    this.onChange = (editorState) => {
+      this.setState({
+        editorState: editorState,
+      });
+    };
   }
 
-  onChange = (editorState) => {
+  handleSubmit = (editorState) => {
+    const addDream = (value) => {
+      const body = { content: value };
+      post("/api/addDream", body);
+      // the raw state, stringified
+      /* EDITED HERE*/
+      // convert the raw state back to a useable ContentState object
+    };
+    const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
+    let contentString = JSON.stringify(rawContent);
+    addDream(contentString);
     this.setState({
-      editorState,
+      editorState: EditorState.createEmpty(),
     });
   };
 
@@ -51,6 +74,9 @@ class SubmitDream extends React.Component {
             onChange={this.onChange}
           />
         </div>
+        <button className="submitButton" type="submit" value="Submit" onClick={this.handleSubmit}>
+          submit dream
+        </button>
       </div>
     );
   }

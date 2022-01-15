@@ -6,7 +6,7 @@ import "./Landing.css";
 
 /*TODO: fix favicon icon :( */
 
-const GOOGLE_CLIENT_ID = "476707967946-j4nra2r90k17lnv4vf4shko7li3osica.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "799029787987-7mn51totji5gs9p6v3sp4mbn9so6djdt.apps.googleusercontent.com";
 /* TODO: add an about page/icon (next to login?)*/
 
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {

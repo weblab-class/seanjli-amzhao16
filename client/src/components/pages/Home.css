@@ -14,7 +14,7 @@
   vertical-align: middle;
   line-height: 40vh;
   height: 50vh;
-  font-size: 35px;
+  font-size: 6vh;
   width: 40vw;
   background-color: #ffbade;
   color: #d271a4;
@@ -26,7 +26,7 @@
   top: 0;
   right: 0;
   text-align: right;
-  font-size: 35px;
+  font-size: 6vh;
   vertical-align: middle;
   padding-right: 10vw;
   line-height: 40vh;
@@ -41,7 +41,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  font-size: 35px;
+  font-size: 6vh;
   text-align: left;
   padding-left: 10.002vw;
   vertical-align: middle;
@@ -59,7 +59,7 @@
   right: 0;
   text-align: right;
   vertical-align: middle;
-  font-size: 35px;
+  font-size: 6vh;
   padding-right: 10vw;
   line-height: 60vh;
   height: 50vh;
@@ -72,7 +72,7 @@
 /* TODO: not great w adjusting window */
 .logout {
   border: none;
-  font-size: 25px;
+  font-size: 4vh;
   position: absolute;
   top: 70%;
   color: #ffb6c1;
@@ -86,7 +86,7 @@
   top: 15%;
   left: 20%;
   right: 20%;
-  font-size: 25px;
+  font-size: 4vh;
   text-align: center;
   color: #ffb6c1;
 }
@@ -105,7 +105,7 @@
 .centerText {
   color: #ffb6c1;
   text-align: center;
-  font-size: 60px;
+  font-size: 9vh;
   position: absolute;
   top: 32%;
   bottom: 45%;

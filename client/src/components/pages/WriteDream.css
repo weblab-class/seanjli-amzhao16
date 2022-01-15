@@ -1,1 +1,36 @@
 /* TODO prettify writedream page */
+.writing {
+  background-color: #ffbade;
+  position: absolute;
+  top: 13vh;
+  bottom: 5vh;
+  height: 82 vh;
+  left: 4vw;
+  right: 4vw;
+  border-radius: 6vh;
+}
+
+.writeTitle {
+  background-color: white;
+  color: #ffbade;
+  position: absolute;
+  top: 3vh;
+  height: 12vh;
+  left: 3vw;
+  right: 3vw;
+  border-radius: 10vh;
+}
+
+.greeting {
+  position: absolute;
+  top: 2.5vh;
+  left: 4vh;
+  font-size: 5vh;
+}
+
+.currentDate {
+  position: absolute;
+  top: 2.5vh;
+  right: 4vh;
+  font-size: 5vh;
+}

@@ -47,7 +47,7 @@ const Profile = (props) => {
       <br />
       <br />
       <h1>Friends</h1>
-      <FriendList users={users} friends={friends} setFriends={setFriends}/>
+      <FriendList users={users} requestees={requestees} setRequestees={setRequestees} friends={friends} setFriends={setFriends}/>
       <h1>Make Requests</h1>
       <MakeFriendRequests requestees={requestees} setRequestees={setRequestees} outgoing={outgoing} setOutgoing={setOutgoing}/>
       <br />

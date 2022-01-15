@@ -136,6 +136,13 @@ router.post("/removeFriend", (req, res) => {
     function(err, doc) {
   }
   );
+
+  User.updateOne(
+    {_id: req.body.recipient_id},
+    {$pull: {friends: req.user._id}},
+    function(err, doc) {
+  }
+  );
 });
 
 // DREAMS SECTION

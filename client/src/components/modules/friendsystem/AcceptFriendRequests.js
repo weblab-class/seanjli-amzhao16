@@ -18,7 +18,7 @@ const AcceptFriendRequests = (props) => {
     return (
         <div>
                 {props.requests.map((request) =>
-                    <IncomingRequestBox request={props.request} acceptRequest={props.acceptRequest} declineRequest={props.declineRequest} />
+                    <IncomingRequestBox request={request} acceptRequest={acceptRequest} declineRequest={declineRequest} />
                 )}
         </div>
     );

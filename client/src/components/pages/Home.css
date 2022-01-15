@@ -69,16 +69,17 @@
   text-decoration: none;
 }
 
-/* TODO: not great w adjusting window */
+/* TODO: not perfectly center */
 .logout {
   border: none;
   font-size: 4vh;
   position: absolute;
   top: 70%;
+  left: 40%;
+  right: 40%;
   color: #ffb6c1;
   text-align: center;
   background-color: white;
-  padding-left: 14vw;
 }
 
 .hello {

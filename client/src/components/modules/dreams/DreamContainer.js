@@ -13,7 +13,8 @@ const DreamContainer = (props) => {
 
 /* TODO: function to get date in mm/dd/yyyy format?? how to apply*/
 function convertDate(date) {
-  date = preg_split("[-], date");
-  date = date[1] + "/" + date[2] + "/" + date[0];
+  dateChunks = preg_split("[-]", date);
+  dateNew = dateChunks[1] + "/" + dateChunks[2] + "/" + dateChunks[0];
+  return dateNew;
 }
 export default DreamContainer;

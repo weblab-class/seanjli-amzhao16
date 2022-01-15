@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../modules/NavBar.js";
 
-import { get, post } from "../../utilities.js";
+import { get, post } from "../../../utilities.js";
 
 const MakeFriendRequests = (props) => {
 
@@ -14,17 +13,18 @@ const MakeFriendRequests = (props) => {
     }, []);
 */
 
-    const addRequest = async (id) => {
-        const req = await post("/api/addFriendRequest", {recipient_id : id});
+    const addRequest = async (id, name) => {
+        const req = await post("/api/addFriendRequest", {recipient_id : id, recipient_name : name});
         props.setOutgoing([...props.outgoing, req]);
+        props.setRequestees(props.requestees.filter((x) => x._id != id));
     }; 
 
     return (
         <div>
-            {props.users.map((user) =>
+            {props.requestees.map((user) =>
             <div>
                 <p>{user.name}</p>
-                <button value={user.name} onClick={() => addRequest(user._id)}>Make Friend Request</button>
+                <button value={user.name} onClick={() => addRequest(user._id, user.name)}>Make Friend Request</button>
             </div>
             )}
         </div>

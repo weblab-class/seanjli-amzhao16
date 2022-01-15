@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../modules/NavBar.js";
-
-import { get, post } from "../../utilities.js";
+import OutgoingRequestBox from "./OutgoingRequestBox";
 
 const OutgoingFriendRequests = (props) => {
 
     return (
         <div>
-            {props.outgoing.map((x) => (JSON.stringify(x)))}
+            {props.outgoing.map((request) =>
+            <OutgoingRequestBox request={request} />
+            )}
         </div>
     );
 }

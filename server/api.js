@@ -58,6 +58,11 @@ router.get("/getUser", (req, res) => {
 
 // FRIEND REQUESTS
 
+router.get("/getFriend", async (req, res) => {
+  const me = await User.find({_id: req.user._id});
+  res.send(me.friends);
+});
+
 router.get("/getFriendRequest", (req, res) => {
   FriendRequest.find({recipient_id: req.user._id, status: "pending"}).then((x) => res.send(x));
 });
@@ -79,7 +84,9 @@ router.post("/addFriendRequest", async (req, res) => {
 
   const newFriendRequest = new FriendRequest({
     sender_id: req.user._id,
+    sender_name: req.user.name,
     recipient_id: req.body.recipient_id,
+    recipient_name: req.body.recipient_name,
   });
 
   newFriendRequest.save().then((frq) => res.send(frq));
@@ -123,9 +130,12 @@ router.post("/declineFriendRequest", (req, res) => {
 });
 
 router.post("/removeFriend", (req, res) => {
-  const me = User.find({_id: req.user._id});
-  me.friends = me.friends.filter((item) => (item != req.body.recipient_id));
-  me.save().then((x) => res.send(x));
+  User.updateOne(
+    {_id: req.user._id},
+    {$pull: {friends: req.body.recipient_id}},
+    function(err, doc) {
+  }
+  );
 });
 
 // DREAMS SECTION

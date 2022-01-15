@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../modules/NavBar.js";
-
-import { get, post } from "../../utilities.js";
+import { get, post } from "../../../utilities.js";
+import IncomingRequestBox from "./IncomingRequestBox";
 
 const AcceptFriendRequests = (props) => {
 
     const acceptRequest = (id) => {
         post("/api/acceptFriendRequest", {sender_id: id});
-        props.friends = [...props.friends, id];
+        props.setFriends([...props.friends, id]);
         props.setRequests(props.requests.filter((x) => x.sender_id != id));
     }
 
@@ -18,13 +17,9 @@ const AcceptFriendRequests = (props) => {
 
     return (
         <div>
-            {props.requests.map((request) =>
-            <div>
-                <p>{request.sender_id}</p>
-                <button onClick={() => acceptRequest(request.sender_id)}>Accept</button>
-                <button onClick={() => declineRequest(request.sender_id)}>Decline</button>
-            </div>
-            )}
+                {props.requests.map((request) =>
+                    <IncomingRequestBox request={props.request} acceptRequest={props.acceptRequest} declineRequest={props.declineRequest} />
+                )}
         </div>
     );
     

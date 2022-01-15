@@ -19,7 +19,7 @@ const WriteDream = (props) => {
       <br />
       <br />
       {/* <SubmitDream /> */}
-      <SubmitDreamButton />
+      <SubmitDream />
     </>
   );
 };

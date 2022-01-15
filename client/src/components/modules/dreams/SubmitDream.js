@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { ContentState, Editor, EditorState, RichUtils } from "draft-js";
+import {
+  Editor,
+  EditorState,
+  RichUtils,
+  convertFromRaw,
+  convertToRaw,
+  ContentState,
+} from "draft-js";
 import "draft-js/dist/Draft.css";
 import { get, post } from "../../../utilities.js";
 import "./SubmitDream.css";
-import { convertFromRaw, convertToRaw } from "draft-js";
-import ReactDOM from "react-dom";
 
 class SubmitDream extends React.Component {
   constructor(props) {
@@ -12,25 +17,26 @@ class SubmitDream extends React.Component {
     this.state = {
       editorState: EditorState.createEmpty(),
     };
-    this.handleSubmit = (event) => {
-      const addDream = (value) => {
-        // the raw state, stringified
-        /* EDITED HERE*/
-        const rawContentState = JSON.stringify(
-          convertToRaw(this.state.editorState.getCurrentContent())
-        );
-        // convert the raw state back to a useable ContentState object
-        const body = { content: rawContentState };
-        post("/api/addDream", body);
-      };
-      addDream(this.state.editorState);
-      this.setState(EditorState.createEmpty());
+    this.onChange = (editorState) => {
+      this.setState({
+        editorState: editorState,
+      });
     };
   }
 
-  onChange = (editorState) => {
+  handleSubmit = (editorState) => {
+    const addDream = (value) => {
+      const body = { content: value };
+      post("/api/addDream", body);
+      // the raw state, stringified
+      /* EDITED HERE*/
+      // convert the raw state back to a useable ContentState object
+    };
+    const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
+    let contentString = JSON.stringify(rawContent);
+    addDream(contentString);
     this.setState({
-      editorState,
+      editorState: EditorState.createEmpty(),
     });
   };
 

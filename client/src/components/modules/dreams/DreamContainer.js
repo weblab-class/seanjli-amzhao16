@@ -2,17 +2,22 @@ import React, { useState, useEffect } from "react";
 import "./DreamContainer.css";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
-import ReactDOM from "react-dom";
 import { convertFromRaw, convertToRaw } from "draft-js";
+import { stateToHTML } from "draft-js-export-html";
+import Parser from "html-react-parser";
 
 const DreamContainer = (props) => {
   /* EDITED HERE*/
+  // let convertedText = EditorState.createEmpty();
+  // convertedText.setState({
+  //   editorState: EditorState.createWithContent(convertFromRaw(JSON.parse(props.content))),
+  // });
   return (
     <div className="container">
       <p className="date">{convertDate(props.date)}</p>
       <strong className="name">{props.name}</strong>{" "}
-      {/* <p className="content">{convertFromRaw(JSON.parse(props.content))}</p> */}
-      <p className="content">{props.content}</p>
+      <p className="content">{Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}</p>
+      {/* <p className="content">{props.content}</p> */}
     </div>
   );
 };

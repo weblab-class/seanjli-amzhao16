@@ -59,7 +59,6 @@
   animation: slideFromLeft 1.3s;
   cursor: pointer;
 }
-
 .writeQuadText:hover {
   animation: slideFromLeftAlt 1.3s;
 }

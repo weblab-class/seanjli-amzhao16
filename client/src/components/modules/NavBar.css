@@ -12,6 +12,10 @@
   color: #d271a4;
   text-decoration: none;
 }
+
+.writeNav:hover {
+  background-color: #e996c1;
+}
 .writeUnderline {
   position: absolute;
   top: 6.5vh;
@@ -51,7 +55,9 @@
   width: 21vw;
   background-color: #e4829e;
 }
-
+.profileNav:hover {
+  background-color: #f2a5bb;
+}
 .feedNav {
   position: absolute;
   top: 0;
@@ -77,6 +83,10 @@
   font-size: 17px;
   width: 21vw;
   background-color: #ea9a8f;
+}
+
+.feedNav:hover {
+  background-color: #f5b8af;
 }
 
 .dreamsNav {
@@ -106,6 +116,10 @@
   background-color: #e8b37f;
 }
 
+.dreamsNav:hover {
+  background-color: #f4cba4;
+}
+
 .logoutNav {
   position: absolute;
   top: 0;
@@ -120,6 +134,11 @@
   background-color: #ffefc0;
   color: #ebd187;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.logoutNav:hover {
+  background-color: #f5e0a4;
 }
 .homeNav {
   position: absolute;

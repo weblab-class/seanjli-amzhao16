@@ -15,6 +15,17 @@
     width: 100%;
   }
 }
+
+@keyframes slideFromLeftAlt {
+  0% {
+    margin-left: -100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 .writeQuad {
   left: 0;
   z-index: 0;
@@ -28,6 +39,7 @@
   background-color: #ffbade;
   color: #d271a4;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .writeQuadText {
@@ -44,7 +56,12 @@
   background-color: #ffbade;
   color: #d271a4;
   text-decoration: none;
-  animation: slideFromLeft 1.5s;
+  animation: slideFromLeft 1.3s;
+  cursor: pointer;
+}
+
+.writeQuadText:hover {
+  animation: slideFromLeftAlt 1.3s;
 }
 
 .profileQuad {
@@ -60,6 +77,10 @@
   background-color: #ffc7d7;
   color: #e4829e;
   text-decoration: none;
+  cursor: pointer;
+}
+.profileQuadText:hover {
+  animation: slideFromLeftAlt 1.6s;
 }
 
 .profileQuadText {
@@ -73,10 +94,11 @@
   height: 25vh;
   font-size: 12vh;
   width: 94vw;
+  cursor: pointer;
   background-color: #ffc7d7;
   color: #e4829e;
   text-decoration: none;
-  animation: slideFromLeft 2s;
+  animation: slideFromLeft 1.6s;
 }
 
 .dreamsQuad {
@@ -86,6 +108,7 @@
   z-index: 0;
   text-align: left;
   padding-left: 6vw;
+  cursor: pointer;
   line-height: 25vh;
   height: 25vh;
   font-size: 12vh;
@@ -95,6 +118,9 @@
   text-decoration: none;
 }
 
+.dreamsQuadText:hover {
+  animation: slideFromLeftAlt 2.2s;
+}
 .dreamsQuadText {
   left: 0;
   position: absolute;
@@ -103,13 +129,14 @@
   text-align: left;
   padding-left: 6vw;
   line-height: 25vh;
+  cursor: pointer;
   height: 25vh;
   font-size: 12vh;
   width: 94vw;
   background-color: #ffe3c8;
   color: #e8b37f;
   text-decoration: none;
-  animation: slideFromLeft 3.8s;
+  animation: slideFromLeft 2.2s;
 }
 
 .feedQuad {
@@ -118,6 +145,7 @@
   top: 50vh;
   text-align: left;
   padding-left: 6vw;
+  cursor: pointer;
   line-height: 25vh;
   height: 25vh;
   font-size: 12vh;
@@ -138,11 +166,15 @@
   height: 25vh;
   font-size: 12vh;
   width: 94vw;
+  cursor: pointer;
   z-index: 0;
   background-color: #ffd5cf;
   color: #ea9a8f;
   text-decoration: none;
-  animation: slideFromLeft 3s;
+  animation: slideFromLeft 1.9s;
+}
+.feedQuadText:hover {
+  animation: slideFromLeftAlt 1.9s;
 }
 
 /* TODO: not perfectly center */
@@ -150,6 +182,7 @@
   border: none;
   font-size: 5vh;
   position: absolute;
+  cursor: pointer;
   top: 59vh;
   right: 3vw;
   color: #ffb6c1;
@@ -267,6 +300,7 @@
   z-index: 100;
   right: 23vw;
   top: -1vh;
+  cursor: pointer;
   background-image: url("notifButton.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -279,6 +313,7 @@
 .about {
   position: absolute;
   z-index: 100;
+  cursor: pointer;
   right: 24vw;
   border: none;
   background-color: white;

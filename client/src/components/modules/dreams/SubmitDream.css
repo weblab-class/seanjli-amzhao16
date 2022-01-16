@@ -9,9 +9,13 @@
   bottom: 5vh;
   left: 65vw;
   width: 24vw;
+  cursor: pointer;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   border-radius: 20px;
+}
+.submitButton:hover {
+  background-color: #e996c1;
 }
 .textBox {
   color: white;
@@ -21,6 +25,7 @@
   left: 3vw;
   width: 55vw;
   height: 53vh;
+  cursor: text;
   font-size: 3.5vh;
   font-family: "Nunito", sans-serif;
   font-weight: normal;

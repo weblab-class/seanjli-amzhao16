@@ -34,6 +34,7 @@
   padding: 5px 20px !important;
   font-size: 20px !important;
   border-radius: 35px !important;
+  cursor: pointer;
 }
 
 .aboutLanding {
@@ -51,6 +52,7 @@
   display: inline-block;
   white-space: nowrap;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .subtext {

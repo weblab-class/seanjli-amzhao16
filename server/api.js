@@ -148,7 +148,7 @@ router.post("/removeFriend", (req, res) => {
 // DREAMS SECTION
 
 router.get("/dreams", (req, res) => {
-	Dream.find().then((dreams) => res.send(dreams));
+	Dream.find({"author._id" : {$in: req.query.parent}}).then((dreams) => res.send(dreams));
 });
 
 router.post("/addDream", (req, res) => {
@@ -163,9 +163,6 @@ router.post("/addDream", (req, res) => {
 
   newDream.save().then((dream) => res.send(dream));
 });
-
-
-
 
 
 // anything else falls to this "not found" case

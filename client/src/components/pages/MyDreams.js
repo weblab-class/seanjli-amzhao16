@@ -1,12 +1,19 @@
 /* TODO get my dreams with modules */
 
 import React, { useState, useEffect } from "react";
-import { GetDream } from "../modules/dreams/GetDream";
 import DreamContainer from "../modules/dreams/DreamContainer.js";
 import NavBar from "../modules/NavBar.js";
 
+import { get, post } from "../../utilities.js";
+
 const MyDreams = (props) => {
-  const dreams = GetDream().filter((dream) => dream.author._id === props.userId);
+
+  const [dreams, setDreams] = useState([]);
+
+  useEffect(() => {
+    get("/api/dreams", {parent: [props.userId]}).then((x) => setDreams(x.reverse()));
+  }, []);
+
   return (
     <div>
       <NavBar type="d" handleLogout={props.handleLogout} />

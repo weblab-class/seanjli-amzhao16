@@ -23,7 +23,7 @@ const NavBar = (props) => {
           <p className="profileUnderline"></p>
         </div>
       ) : (
-        <a className="profileNav" href="/profile">
+        <a className="profileNav" href={"/profile/" + props.userId}>
           profile
         </a>
       )}

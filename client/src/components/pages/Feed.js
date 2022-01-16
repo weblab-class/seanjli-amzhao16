@@ -23,11 +23,13 @@ const Feed = (props) => {
 
   useEffect(() => {
     get("/api/dreams", {parent: friends}).then((x) => setDreams(x.reverse()));
+    console.log(friends);
+    console.log(dreams);
   }, [me, friends]);
 
   return (
     <div>
-      <NavBar type="f" handleLogout={props.handleLogout} />
+      <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId}/>
       <br />
       <br />
       {dreams.map((dream) => (

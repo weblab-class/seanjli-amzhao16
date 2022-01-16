@@ -63,7 +63,7 @@ const Profile = (props) => {
 
   return (
     <div>
-      <NavBar type="p" handleLogout={props.handleLogout} />
+      <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId}/>
       <br />
       <br />
       <h1>Profile</h1>

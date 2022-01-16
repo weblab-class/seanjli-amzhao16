@@ -16,7 +16,7 @@ const MyDreams = (props) => {
 
   return (
     <div>
-      <NavBar type="d" handleLogout={props.handleLogout} />
+      <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId}/>
       <br />
       <br />
       {dreams.map((dream) => (

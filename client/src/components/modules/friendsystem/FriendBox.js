@@ -6,7 +6,7 @@ const FriendBox = (props) => {
 
     return (
         <div>
-            {props.friend.name}
+            <a href = {"/profile/" + props.friend._id}>{props.friend.name}</a>
             <button 
             value={props.friend._id} 
             onClick={() => props.removeFriend(props.friend._id)}

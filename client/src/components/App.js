@@ -92,7 +92,7 @@ const App = () => {
       ) : (
         <Router>
           <Landing path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-          <NotFound default />
+          <NotFound default />  
         </Router>
       )}
     </>

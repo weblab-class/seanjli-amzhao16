@@ -16,7 +16,7 @@ const WriteDream = (props) => {
   /* TODO make public/private toggle */
   return (
     <div>
-      <NavBar type="w" handleLogout={props.handleLogout} />
+      <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId}/>
       <div className="writing">
         <div className="writeTitle">
           {currHour < 12 ? (

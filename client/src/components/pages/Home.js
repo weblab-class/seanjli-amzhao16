@@ -5,22 +5,22 @@ import "./Home.css";
 const Home = (props) => {
   return (
     <div>
-      <a className="writeQuad" href="write"></a>
-      <a className="writeQuadText" href="write">
+      <a className="writeQuad" href="/write"></a>
+      <a className="writeQuadText" href="/write">
         write dream
       </a>
-      <a className="profileQuad" href="profile">
+      <a className="profileQuad" href={"/profile/" + props.userId}>
         {" "}
       </a>
-      <a className="profileQuadText" href="profile">
+      <a className="profileQuadText" href={"/profile/" + props.userId}>
         view profile
       </a>
-      <a className="dreamsQuad" href="dreams"></a>
-      <a className="dreamsQuadText" href="dreams">
+      <a className="dreamsQuad" href="/dreams"></a>
+      <a className="dreamsQuadText" href="/dreams">
         your dreams
       </a>
-      <a className="feedQuad" href="feed"></a>
-      <a className="feedQuadText" href="feed">
+      <a className="feedQuad" href="/feed"></a>
+      <a className="feedQuadText" href="/feed">
         friends' dreams
       </a>
       <div className="circle0"></div>

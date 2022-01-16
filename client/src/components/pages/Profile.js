@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import NavBar from "../modules/NavBar.js";
+import { useParams } from '@reach/router';
 
 import { get, post } from "../../utilities.js";
 
@@ -10,8 +11,17 @@ import MakeFriendRequests from "../modules/friendsystem/MakeFriendRequests";
 import AcceptFriendRequests from "../modules/friendsystem/AcceptFriendRequests";
 import OutgoingFriendRequests from "../modules/friendsystem/OutgoingFriendRequests";
 
+import NotFound from "./NotFound";
 
 const Profile = (props) => {
+
+    const { text } = useParams();
+    
+    if (text.length != 24) {
+        return <NotFound />;
+    }
+
+    const [profile, setProfile] = useState([{name: []}]);
 
     const [users, setUsers] = useState([]);
     const [me, setMe] = useState([{friends : [], id : ""}]);
@@ -20,6 +30,14 @@ const Profile = (props) => {
     const [friends, setFriends] = useState([]);
     const [requestees, setRequestees] = useState([]);
 
+    useEffect(() => {
+        get("/api/getProfile", {parent : text}).then((x) => setProfile(x));
+    }, []);
+
+    /*
+    BELOW IS FRIENDS STUFF!
+    */
+    if (text === props.userId) {
     useEffect(() => {
         get("/api/getUser").then((x) => setUsers(x));
         get("/api/getMe").then((x) => setMe(x));
@@ -41,12 +59,19 @@ const Profile = (props) => {
         )
         ));
     }, [users, friends, requests, outgoing])
+    }
 
   return (
     <div>
       <NavBar type="p" handleLogout={props.handleLogout} />
       <br />
       <br />
+      <h1>Profile</h1>
+      <h4>Name: </h4><p>{profile[0].name}</p>
+      <br />
+      <br />
+      { text === props.userId ? 
+      <div>
       <h1>Friends</h1>
       <FriendList users={users} requestees={requestees} setRequestees={setRequestees} friends={friends} setFriends={setFriends}/>
       <h1>Make Requests</h1>
@@ -56,6 +81,8 @@ const Profile = (props) => {
       <AcceptFriendRequests requests={requests} setRequests={setRequests} friends={friends} setFriends={setFriends}/>
       <h1>Outgoing Requests</h1> 
       <OutgoingFriendRequests outgoing={outgoing} setOutgoing={setOutgoing} />
+    </div> :
+      <br></br>}
     </div>
   );
 };

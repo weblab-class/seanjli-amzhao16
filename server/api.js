@@ -52,6 +52,10 @@ router.get("/getMe", (req, res) => {
   User.find({_id: req.user._id}).then((user) => res.send(user));
 });
 
+router.get("/getProfile", (req, res) => {
+  User.find({_id: req.query.parent}).then((user) => res.send(user));
+});
+
 router.get("/getUser", (req, res) => {
   User.find().then((user) => res.send(user));
 });

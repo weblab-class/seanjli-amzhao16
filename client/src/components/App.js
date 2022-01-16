@@ -74,7 +74,7 @@ const App = () => {
             username={username}
           />
           <Profile
-            path="/profile"
+            path="/profile/:text"
             handleLogin={handleLogin}
             handleLogout={handleLogout}
             userId={userId}

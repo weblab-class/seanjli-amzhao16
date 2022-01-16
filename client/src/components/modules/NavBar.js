@@ -13,7 +13,7 @@ const NavBar = (props) => {
           <p className="writeUnderline"></p>
         </div>
       ) : (
-        <a className="writeNav" href="write">
+        <a className="writeNav" href="/write">
           write
         </a>
       )}
@@ -23,7 +23,7 @@ const NavBar = (props) => {
           <p className="profileUnderline"></p>
         </div>
       ) : (
-        <a className="profileNav" href="profile">
+        <a className="profileNav" href="/profile">
           profile
         </a>
       )}
@@ -33,7 +33,7 @@ const NavBar = (props) => {
           <p className="feedUnderline"></p>
         </div>
       ) : (
-        <a className="feedNav" href="feed">
+        <a className="feedNav" href="/feed">
           friends
         </a>
       )}
@@ -43,7 +43,7 @@ const NavBar = (props) => {
           <p className="dreamsUnderline"></p>
         </div>
       ) : (
-        <a className="dreamsNav" href="dreams">
+        <a className="dreamsNav" href="/dreams">
           my dreams
         </a>
       )}

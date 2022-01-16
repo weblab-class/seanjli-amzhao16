@@ -20,7 +20,12 @@ const MyDreams = (props) => {
       <br />
       <br />
       {dreams.map((dream) => (
-        <DreamContainer date={dream.timeStamp} name={dream.author.name} content={dream.content} />
+        <DreamContainer
+          date={dream.timeStamp}
+          name={dream.author.name}
+          content={dream.content}
+          who="me"
+        />
       ))}
     </div>
   );

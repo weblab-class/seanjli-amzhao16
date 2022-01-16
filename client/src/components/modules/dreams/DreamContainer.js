@@ -10,11 +10,26 @@ import Parser from "html-react-parser";
 
 const DreamContainer = (props) => {
   return (
-    <div className="container">
-      <p className="date">{convertDate(props.date)}</p>
-      <strong className="name">{props.name}</strong>{" "}
-      <p className="content">{Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}</p>
-      {/* <p className="content">{props.content}</p> */}
+    <div>
+      {props.who === "me" ? (
+        <div className="containerMe">
+          <p className="dateMe">{convertDate(props.date)}</p>
+          <strong className="nameMe">{props.name}</strong>{" "}
+          <p className="contentMe">
+            {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
+          </p>
+          {/* <p className="content">{props.content}</p> */}
+        </div>
+      ) : (
+        <div className="container">
+          <p className="date">{convertDate(props.date)}</p>
+          <strong className="name">{props.name}</strong>{" "}
+          <p className="content">
+            {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
+          </p>
+          {/* <p className="content">{props.content}</p> */}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,25 +1,59 @@
 .name {
+  position: absolute;
+  left: 3vw;
   color: #ea9a8f;
   font-weight: normal;
 }
 
 .date {
   position: absolute;
-  right: 5%;
+  right: 3vw;
   color: #ea9a8f;
   font-weight: normal;
 }
 
 .content {
   position: absolute;
-  left: 5%;
-  padding-top: 10px;
+  left: 3vw;
+  padding-top: 5vh;
   color: #ea9a8f;
 }
 
 .container {
-  padding: 25px;
+  position: static;
+  padding-top: 3vh;
+  height: 20vh;
+  width: 97.6vw;
   background-color: #ffd5cf;
-  border: 10px solid #ea9a8f;
-  padding-bottom: 50px;
+  border: 1.2vw solid #ea9a8f;
+}
+
+.nameMe {
+  position: absolute;
+  left: 3vw;
+  color: #e8b37f;
+  font-weight: normal;
+}
+
+.dateMe {
+  position: absolute;
+  right: 3vw;
+  color: #e8b37f;
+  font-weight: normal;
+}
+
+.contentMe {
+  position: absolute;
+  left: 3vw;
+  padding-top: 5vh;
+  color: #e8b37f;
+}
+
+.containerMe {
+  position: static;
+  padding-top: 3vh;
+  height: 20vh;
+  width: 97.6vw;
+  background-color: #ffe3c8;
+  border: 1.2vw solid #e8b37f;
 }

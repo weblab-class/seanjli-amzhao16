@@ -16,7 +16,10 @@ const AboutPage = (props) => {
           <br />- angela and sean
         </div>
       ) : (
-        <div className="aboutContainerHome">whatsup homies</div>
+        <div className="aboutContainerHome">
+          welcome! now it's time to write, read, share, and sort dreams to your liking - remember,
+          more logging will win your avatar various flair!
+        </div>
       )}
     </div>
   );

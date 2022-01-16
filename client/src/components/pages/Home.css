@@ -271,17 +271,21 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 7vh;
-  width: 7vw;
+  width: 5vw;
+  border: none;
+  background-color: white;
 }
 
 .about {
   position: absolute;
   z-index: 100;
   right: 24vw;
+  border: none;
+  background-color: white;
   bottom: -1vh;
   background-image: url("aboutButton.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 7vh;
-  width: 7vw;
+  width: 5vw;
 }

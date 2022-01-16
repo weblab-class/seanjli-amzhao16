@@ -1,8 +1,29 @@
 import React, { useState, useEffect } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 import "./Home.css";
+import NotifPage from "../modules/notifs";
+import AboutPage from "../modules/about";
+
 /* TODO: make the about and notifs eventually trigger a module to show up */
 const Home = (props) => {
+  const [showAbout, setShowAbout] = useState(false);
+  const aboutPopUp = (event) => {
+    console.log("clicky");
+    if (showAbout === true) {
+      setShowAbout(false);
+    } else {
+      setShowAbout(true);
+    }
+  };
+  const [showNotif, setShowNotif] = useState(false);
+  const notifPopUp = (event) => {
+    console.log("clicky");
+    if (showNotif === true) {
+      setShowNotif(false);
+    } else {
+      setShowNotif(true);
+    }
+  };
   return (
     <div>
       <a className="writeQuad" href="/write"></a>
@@ -31,8 +52,8 @@ const Home = (props) => {
       <div className="circle5"></div>
       <div className="circle6"></div>
       <div className="centerCircle">
-        <p className="notif"></p>
-        <p className="about"></p>
+        <button className="notif" onClick={notifPopUp}></button>
+        <button className="about" onClick={aboutPopUp}></button>
         <p className="hello"> Hello,</p>
         <p className="helloName">{props.username}</p>
         <div className="centerText"> dream log </div>
@@ -40,6 +61,8 @@ const Home = (props) => {
           log out
         </button>
       </div>
+      {showAbout ? <AboutPage page="home" /> : <div></div>}
+      {showNotif ? <NotifPage /> : <div></div>}
     </div>
   );
 };

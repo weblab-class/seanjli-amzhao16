@@ -1,0 +1,14 @@
+.notifContainer {
+  background-color: white;
+  color: #ffb6c1;
+  position: absolute;
+  top: 3vh;
+  right: 36vw;
+  padding: 2vh;
+  height: 16vh;
+  font-size: 2.4vh;
+  width: 18vw;
+  text-align: center;
+  z-index: 10;
+  border-radius: 5vh;
+}

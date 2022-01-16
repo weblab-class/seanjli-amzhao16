@@ -29,10 +29,28 @@
   top: 165px;
   color: #ffd5cf !important;
   border: none;
+  left: -13px;
   background-color: white !important;
-  padding: 5px 18px !important;
+  padding: 5px 20px !important;
   font-size: 20px !important;
   border-radius: 35px !important;
+}
+
+.aboutLanding {
+  border: none;
+  text-align: center;
+  font-size: 35px;
+  position: relative;
+  color: #ffd5cf;
+  background-color: white;
+  top: 165px;
+  font-size: 20px;
+  width: 110px;
+  height: 60px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 50px;
 }
 
 .subtext {

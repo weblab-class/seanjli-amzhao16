@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
-
 import "../../utilities.css";
 import "./Landing.css";
+import AboutPage from "../modules/about";
 
 /*TODO: fix favicon icon :( */
 
@@ -10,6 +10,15 @@ const GOOGLE_CLIENT_ID = "799029787987-37thps95h1019p8mmpoi62cnv4amt0vg.apps.goo
 /* TODO: add an about page/icon (next to login?)*/
 
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {
+  const [showAbout, setShowAbout] = useState(false);
+  const aboutPopUp = (event) => {
+    console.log("clicky");
+    if (showAbout === true) {
+      setShowAbout(false);
+    } else {
+      setShowAbout(true);
+    }
+  };
   return (
     <div className="landingPage">
       <h1 className="title"> dream log</h1>
@@ -32,6 +41,11 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
           onFailure={(err) => console.log(err)}
         />
       )}
+      <button className="aboutLanding" onClick={aboutPopUp}>
+        about
+      </button>
+      <br />
+      {showAbout ? <AboutPage page="landing" /> : <div></div>}
     </div>
   );
 };

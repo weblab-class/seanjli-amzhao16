@@ -1,0 +1,18 @@
+.aboutContainerLanding {
+  border: none;
+  text-align: center;
+  font-size: 35px;
+  position: relative;
+  color: #ffd5cf;
+  background-color: white;
+  top: 220px;
+  font-size: 20px;
+  width: 600px;
+  height: 140px;
+  padding: 20px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 30px;
+  word-wrap: break-word;
+}

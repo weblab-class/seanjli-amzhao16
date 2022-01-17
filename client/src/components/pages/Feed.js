@@ -21,7 +21,7 @@ const Feed = (props) => {
   }, [me]);
 
   useEffect(() => {
-    get("/api/dreams", { parent: friends }).then((x) => setDreams(x.reverse()));
+    get("/api/dreams", { parent: [...friends, props.userId] }).then((x) => setDreams(x.reverse()));
   }, [friends]);
 
   return (

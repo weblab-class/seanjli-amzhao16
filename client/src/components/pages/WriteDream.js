@@ -4,15 +4,46 @@ import "./WriteDream.css";
 import NavBar from "../modules/NavBar.js";
 import moment from "moment";
 
+import { get, post } from "../../utilities.js";
+
 const WriteDream = (props) => {
   // const currentTime = moment().local();
   const currHour = parseInt(moment().format().substring(11, 13));
 
   const [privacy, setPrivacy] = useState(false);
 
+  const [tags, setTags] = useState([]);
+
+  const [me, setMe] = useState([{usedTags: []}]);
+
+  useEffect(() => {
+    get("/api/getMe").then((x) => setMe(x));
+  }, []);
+
+  const [usedTags, setUsedTags] = useState([]);
+
+  useEffect(() => {
+    setUsedTags(me[0].usedTags);
+  }, [me]);
+
+  const [tagInput, setTagInput] = useState("");
+
+  const handleChange = (event) => {
+    setTagInput(event.target.value);
+  }
+
+  const addTag = () => {
+    setTags([...tags, tagInput]);
+    setTagInput("");
+  }
+
+  console.log("tags:");
+  console.log(tags);
+  console.log("used tags:");
+  console.log(usedTags);
+
   const togglePrivacy = (event) => {
     setPrivacy(!privacy);
-    console.log("privacy toggled!");
   };
 
   /* TODO make public/private toggle */
@@ -20,6 +51,14 @@ const WriteDream = (props) => {
     <div>
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
+
+
+      <p>[{tags.join(",")}]</p>
+      <input type="text" value={tagInput} onChange={handleChange} />
+      <br />
+      <button onClick={addTag}>add tag</button>
+
+
         <div className="writeTitle">
           {currHour < 12 ? (
             <em className="greeting">good morning!</em>

@@ -8,6 +8,7 @@ const DreamSchema = new mongoose.Schema({
   content: String,
   timeStamp: { type: Date, default: Date.now },
   private: { type: Boolean, default: false },
+  tags: [String],
 });
 
 module.exports = mongoose.model("dream", DreamSchema);

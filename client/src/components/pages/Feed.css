@@ -1,1 +1,115 @@
 /* TODO prettify Feed page */
+
+.friendsDreamsContainer {
+  position: absolute;
+  top: 2vh;
+  width: 60vw;
+  overflow-x: auto;
+  overflow-y: auto;
+  right: 2vh;
+  bottom: 4vh;
+  height: 76vh;
+}
+
+.friendsContainerBorder {
+  position: absolute;
+  top: 11vh;
+  width: 62vw;
+  right: 2vw;
+  bottom: 3vh;
+  height: 86vh;
+  border-radius: 6vh;
+  background-color: #ffd5cf;
+}
+
+.friendsSectionContainer {
+  position: absolute;
+  top: 11vh;
+  width: 32vw;
+  right: 66vw;
+  bottom: 3vh;
+  height: 86vh;
+  border-radius: 6vh;
+  background-color: #ffd5cf;
+}
+
+.myFriendsLabel {
+  position: absolute;
+  top: 12vh;
+  width: 14vw;
+  left: 9vw;
+  height: 7vh;
+  padding-top: 1vh;
+  right: 9vw;
+  font-size: 4vh;
+  border-radius: 4vh;
+  text-align: center;
+  background-color: white;
+  color: #ffd5cf;
+}
+
+.incomingRequestsLabel {
+  position: absolute;
+  top: 44vh;
+  width: 22vw;
+  left: 5vw;
+  height: 7vh;
+  padding-top: 1vh;
+  right: 5vw;
+  font-size: 4vh;
+  border-radius: 4vh;
+  text-align: center;
+  background-color: white;
+  color: #ffd5cf;
+}
+
+.outgoingRequestsLabel {
+  position: absolute;
+  top: 65vh;
+  width: 22vw;
+  left: 5vw;
+  height: 7vh;
+  padding-top: 1vh;
+  right: 5vw;
+  font-size: 4vh;
+  border-radius: 4vh;
+  text-align: center;
+  background-color: white;
+  color: #ffd5cf;
+}
+
+.myFriendsArea {
+  position: absolute;
+  top: 20vh;
+  width: 14vw;
+  left: 3vw;
+  height: 22vh;
+  padding-top: 1vh;
+  right: 9vw;
+  font-size: 3vh;
+  overflow-y: auto;
+}
+
+.incomingRequestsArea {
+  position: absolute;
+  top: 51vh;
+  width: 25vw;
+  left: 3vw;
+  height: 12vh;
+  padding-top: 1vh;
+  right: 9vw;
+  font-size: 2vh;
+  overflow-y: auto;
+}
+
+.outgoingRequestsArea {
+  position: absolute;
+  top: 74vh;
+  width: 25vw;
+  left: 3vw;
+  height: 12vh;
+  padding-top: 1vh;
+  right: 9vw;
+  font-size: 2vh;
+  overflow-y: auto;
+}

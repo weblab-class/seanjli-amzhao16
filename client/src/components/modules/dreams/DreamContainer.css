@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0.5vh;
   width: 50vw;
-  left: 14vw;
+  left: 10vw;
   color: #ea9a8f;
   font-weight: normal;
   text-align: left;
@@ -15,7 +15,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   bottom: 6vh;
-  left: 3vw;
+  left: 1vw;
   width: 15vw;
   height: 15vh;
 }
@@ -24,7 +24,7 @@
   position: absolute;
   right: 3vw;
   padding: 1.5vh 3vh;
-  width: 80vw;
+  width: 44vw;
   top: 0.9vh;
   overflow-y: auto;
   bottom: 6vh;
@@ -46,7 +46,7 @@
   position: static;
   padding-top: 3vh;
   height: 22vh;
-  width: 100vw;
+  width: 60vw;
   background-color: #ffd5cf;
 }
 

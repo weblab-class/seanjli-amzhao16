@@ -3,12 +3,19 @@ import "./DreamContainer.css";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
 import { convertFromRaw, convertToRaw } from "draft-js";
+import DeletePopUp from "./DeletePopUp.js";
 import { stateToHTML } from "draft-js-export-html";
 import { formatInTimeZone } from "date-fns-tz";
 /* TODO: Adjust date for other things i.e. friends reqs, comments, etc. */
 import Parser from "html-react-parser";
 
 const DreamContainer = (props) => {
+  const [showDelete, setShowDelete] = useState(false);
+  const deletePopUp = (event) => {
+    if (showDelete === false) {
+      setShowDelete(true);
+    }
+  };
   return (
     <div>
       {props.who === "me" ? (
@@ -20,8 +27,11 @@ const DreamContainer = (props) => {
             <p className="contentMe">
               {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
             </p>
+            <button className="deleteButtonMe" value="delete" onClick={deletePopUp}>
+              delete dream
+            </button>
+            {showDelete ? <DeletePopUp /> : <div></div>}
           </div>
-          <button value="delete" onClick={props.deleteDream}>delete dream</button> 
         </div>
       ) : (
         <div className="container">
@@ -56,4 +66,5 @@ function convertDate(dateOld) {
   }
   return dateNew + " at " + newTime + " EST";
 }
+
 export default DreamContainer;

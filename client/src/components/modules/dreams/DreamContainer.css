@@ -94,7 +94,7 @@
 .dateMe {
   position: absolute;
   bottom: 0.5vh;
-  right: 3vw;
+  right: 16vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
@@ -112,4 +112,16 @@
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+.deleteButtonMe {
+  position: absolute;
+  bottom: 0.5vh;
+  right: 3vw;
+  color: #e8b37f;
+  font-weight: normal;
+  font-size: 3.5vh;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

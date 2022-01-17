@@ -93,10 +93,10 @@
 
 .incomingRequestsArea {
   position: absolute;
-  top: 51vh;
-  width: 25vw;
+  top: 52vh;
+  width: 30vw;
   left: 3vw;
-  height: 12vh;
+  height: 10vh;
   padding-top: 1vh;
   right: 9vw;
   font-size: 2vh;
@@ -106,9 +106,9 @@
 .outgoingRequestsArea {
   position: absolute;
   top: 74vh;
-  width: 25vw;
+  width: 30vw;
   left: 3vw;
-  height: 12vh;
+  height: 10vh;
   padding-top: 1vh;
   right: 9vw;
   font-size: 2vh;

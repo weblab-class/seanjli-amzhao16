@@ -13,7 +13,9 @@
   width: 15vw;
   font-size: 3vh;
 }
-
+.myFriendName:hover {
+  color: #ea9a8f;
+}
 .myFriendRemove {
   position: relative;
   border: none;
@@ -21,6 +23,9 @@
   color: white;
   cursor: pointer;
   left: 86%;
+}
+.myFriendRemove:hover {
+  color: #ea9a8f;
 }
 
 .removePopUpContainer {

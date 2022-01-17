@@ -17,7 +17,10 @@ const IncomingRequestBox = (props) => {
       >
         accept
       </button>
-      <button className="denyRequest" onClick={() => props.declineRequest(props.request.sender_id)}>
+      <button
+        className="declineRequest"
+        onClick={() => props.declineRequest(props.request.sender_id)}
+      >
         decline
       </button>
     </div>

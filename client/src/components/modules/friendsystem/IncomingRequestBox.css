@@ -1,0 +1,43 @@
+.incomingRequestsBox {
+  position: relative;
+  width: 26vw;
+  text-decoration: none !important;
+  overflow-x: auto;
+  height: 5vh;
+}
+
+.incomingRequestName {
+  position: absolute;
+  left: 0vw;
+  text-decoration: none;
+  color: white;
+  width: 15vw;
+  font-size: 3vh;
+}
+.incomingRequestName:hover {
+  color: #ea9a8f;
+}
+.acceptRequest {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  left: 65%;
+  padding-top: 1vh;
+}
+.acceptRequest:hover {
+  color: #ea9a8f;
+}
+
+.declineRequest {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  left: 75%;
+}
+.declineRequest:hover {
+  color: #ea9a8f;
+}

@@ -10,11 +10,10 @@ const WriteDream = (props) => {
 
   const [privacy, setPrivacy] = useState(false);
 
-  const togglePrivacy = (event) =>
-  {
+  const togglePrivacy = (event) => {
     setPrivacy(!privacy);
     console.log("privacy toggled!");
-  }
+  };
 
   /* TODO make public/private toggle */
   return (
@@ -41,10 +40,22 @@ const WriteDream = (props) => {
           <p className="plus2">+</p>
           <p className="key4">u</p>
         </div>
-        <SubmitDream privacy={privacy}/>
-        {privacy ?
-        <button value="privacy" onClick={togglePrivacy}>Private (click to change)</button> :
-        <button value="privacy" onClick={togglePrivacy}>Public (click to change)</button>}
+        <SubmitDream privacy={privacy} />
+        {privacy ? (
+          <button value="privacy" onClick={togglePrivacy}>
+            <p className="toggleContainer">
+              <p className="privateText">private</p>
+              <p className="privateCircle"></p>
+            </p>
+          </button>
+        ) : (
+          <button value="privacy" onClick={togglePrivacy}>
+            <p className="toggleContainer">
+              <p className="publicText">public</p>
+              <p className="publicCircle"></p>
+            </p>
+          </button>
+        )}
       </div>
     </div>
   );

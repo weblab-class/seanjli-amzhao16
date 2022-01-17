@@ -119,3 +119,56 @@
   top: 24vh;
   width: 3vw;
 }
+
+.toggleContainer {
+  position: absolute;
+  top: 40vh;
+  right: 7vw;
+  background-color: white;
+  width: 16vw;
+  height: 10vh;
+  cursor: pointer;
+  border-radius: 10vh;
+}
+
+.publicCircle {
+  position: absolute;
+  right: 0.1vw;
+  background-color: #ffbade;
+  top: 0.25vh;
+  height: 9.5vh;
+  width: 5vw;
+  border-radius: 5vh;
+}
+
+.publicText {
+  position: absolute;
+  left: 3vw;
+  background-color: transparent;
+  color: #ffbade;
+  top: 2vh;
+  font-size: 4vh;
+  width: 5vw;
+  border-radius: 5vh;
+}
+
+.privateCircle {
+  position: absolute;
+  left: 0.1vw;
+  background-color: #ffbade;
+  top: 0.25vh;
+  height: 9.5vh;
+  width: 5vw;
+  border-radius: 5vh;
+}
+
+.privateText {
+  position: absolute;
+  right: 3vw;
+  background-color: transparent;
+  color: #ffbade;
+  top: 2vh;
+  font-size: 4vh;
+  width: 5vw;
+  border-radius: 5vh;
+}

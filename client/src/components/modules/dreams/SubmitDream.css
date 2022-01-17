@@ -24,6 +24,7 @@
   top: 20vh;
   left: 3vw;
   width: 55vw;
+  overflow-y: auto;
   height: 53vh;
   cursor: text;
   font-size: 3.5vh;

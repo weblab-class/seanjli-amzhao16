@@ -1,59 +1,105 @@
 .name {
   position: absolute;
-  left: 3vw;
-  color: #ea9a8f;
-  font-weight: normal;
-}
-
-.date {
-  position: absolute;
-  right: 3vw;
+  bottom: 0.5vh;
+  left: 4vw;
   color: #ea9a8f;
   font-weight: normal;
 }
 
 .content {
   position: absolute;
-  left: 3vw;
-  padding-top: 5vh;
+  right: 3vw;
+  padding: 3vh;
+  width: 80vw;
+  bottom: 4vh;
+  background-color: white;
+  border-radius: 4vh;
   color: #ea9a8f;
+}
+
+.date {
+  position: absolute;
+  bottom: 0.5vh;
+  right: 3vw;
+  color: #ea9a8f;
+  font-weight: normal;
 }
 
 .container {
   position: static;
   padding-top: 3vh;
   height: 20vh;
-  width: 97.6vw;
+  width: 100vw;
   background-color: #ffd5cf;
-  border: 1.2vw solid #ea9a8f;
+}
+
+.subcontainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* TODO: THIS IS CURRENTLY A DEFAULT AVATAR */
+.avatar {
+  position: absolute;
+  background-image: url("friendsBlankAvatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 5vw;
+  top: 5vh;
+  width: 10vw;
+  height: 10vh;
 }
 
 .nameMe {
   position: absolute;
-  left: 3vw;
-  color: #e8b37f;
-  font-weight: normal;
-}
-
-.dateMe {
-  position: absolute;
-  right: 3vw;
+  bottom: 0.5vh;
+  left: 4vw;
   color: #e8b37f;
   font-weight: normal;
 }
 
 .contentMe {
   position: absolute;
-  left: 3vw;
-  padding-top: 5vh;
+  right: 3vw;
+  padding: 3vh;
+  width: 80vw;
+  bottom: 4vh;
+  background-color: white;
+  border-radius: 4vh;
   color: #e8b37f;
+}
+
+.dateMe {
+  position: absolute;
+  bottom: 0.5vh;
+  right: 3vw;
+  color: #e8b37f;
+  font-weight: normal;
 }
 
 .containerMe {
   position: static;
   padding-top: 3vh;
   height: 20vh;
-  width: 97.6vw;
+  width: 100vw;
   background-color: #ffe3c8;
-  border: 1.2vw solid #e8b37f;
+}
+
+.subcontainerMe {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* TODO: THIS IS CURRENTLY A DEFAULT AVATAR */
+.avatarMe {
+  position: absolute;
+  background-image: url("meBlankAvatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 5vw;
+  top: 5vh;
+  width: 10vw;
+  height: 10vh;
 }

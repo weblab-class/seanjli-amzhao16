@@ -7,16 +7,15 @@ import NavBar from "../modules/NavBar.js";
 import { get, post } from "../../utilities.js";
 
 const MyDreams = (props) => {
-
   const [dreams, setDreams] = useState([]);
 
   useEffect(() => {
-    get("/api/dreams", {parent: [props.userId]}).then((x) => setDreams(x.reverse()));
+    get("/api/dreams", { parent: [props.userId] }).then((x) => setDreams(x.reverse()));
   }, []);
 
   return (
     <div>
-      <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId}/>
+      <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId} />
       <br />
       <br />
       {dreams.map((dream) => (

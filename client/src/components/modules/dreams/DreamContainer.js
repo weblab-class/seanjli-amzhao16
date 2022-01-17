@@ -13,20 +13,25 @@ const DreamContainer = (props) => {
     <div>
       {props.who === "me" ? (
         <div className="containerMe">
-          <p className="dateMe">{convertDate(props.date)}</p>
-          <strong className="nameMe">{props.name}</strong>{" "}
-          <p className="contentMe">
-            {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
-          </p>
-          {/* <p className="content">{props.content}</p> */}
+          <div className="subcontainerMe">
+            <p className="avatarMe"></p>
+            <p className="dateMe">{convertDate(props.date)}</p>
+            <strong className="nameMe">{props.name}</strong>{" "}
+            <p className="contentMe">
+              {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
+            </p>
+          </div>
         </div>
       ) : (
         <div className="container">
-          <p className="date">{convertDate(props.date)}</p>
-          <strong className="name">{props.name}</strong>{" "}
-          <p className="content">
-            {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
-          </p>
+          <div className="subcontainer">
+            <p className="avatar"></p>
+            <p className="date">{convertDate(props.date)}</p>
+            <strong className="name">{props.name}</strong>{" "}
+            <p className="content">
+              {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
+            </p>
+          </div>
           {/* <p className="content">{props.content}</p> */}
         </div>
       )}
@@ -48,6 +53,6 @@ function convertDate(dateOld) {
     hour = parseInt(date.substring(12, 13));
     newTime = hour.toString() + date.substring(13, 19) + " AM";
   }
-  return "Posted on " + dateNew + " at " + newTime;
+  return dateNew + " at " + newTime + " EST";
 }
 export default DreamContainer;

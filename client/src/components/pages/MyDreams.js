@@ -10,7 +10,7 @@ const MyDreams = (props) => {
   const [dreams, setDreams] = useState([]);
 
   useEffect(() => {
-    get("/api/dreams", { parent: [props.userId] }).then((x) => setDreams(x.reverse()));
+    get("/api/myDreams").then((x) => setDreams(x.reverse()));
   }, []);
   /* TODO: make container for dreams part eventually*/
   return (

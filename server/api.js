@@ -140,7 +140,15 @@ router.post("/removeFriend", (req, res) => {
 // DREAMS SECTION
 
 router.get("/dreams", (req, res) => {
-  Dream.find({ "author._id": { $in: req.query.parent.split(",") } }).then((dreams) => {
+  Dream.find({ "author._id": { $in: req.query.parent.split(",") }, private: false }).then(
+    (dreams) => {
+      res.send(dreams);
+    }
+  );
+});
+
+router.get("/myDreams", (req, res) => {
+  Dream.find({ "author._id": req.user._id }).then((dreams) => {
     res.send(dreams);
   });
 });

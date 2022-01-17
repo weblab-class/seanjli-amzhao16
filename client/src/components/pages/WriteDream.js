@@ -6,17 +6,12 @@ import NavBar from "../modules/NavBar.js";
 import moment from "moment";
 
 const WriteDream = (props) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
   // const currentTime = moment().local();
   const currHour = parseInt(moment().format().substring(11, 13));
   /* TODO make public/private toggle */
   return (
     <div>
-      <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId}/>
+      <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
         <div className="writeTitle">
           {currHour < 12 ? (

@@ -1,0 +1,56 @@
+.singleFriendBox {
+  position: relative;
+  width: 26vw;
+  text-decoration: none !important;
+  overflow-x: auto;
+}
+
+.myFriendName {
+  position: absolute;
+  left: 0vw;
+  text-decoration: none;
+  color: white;
+  width: 15vw;
+  font-size: 3vh;
+}
+
+.myFriendRemove {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  left: 86%;
+}
+
+.removePopUpContainer {
+  position: relative;
+  color: white;
+  background-color: #ea9a8f;
+  font-size: 2vh;
+  padding: 2vh;
+  width: 24vw;
+  border-radius: 4vh;
+}
+
+.yesRemove {
+  position: relative;
+  left: 10%;
+  color: #ea9a8f;
+  cursor: pointer;
+  width: 4vw;
+  background-color: #ffd5cf;
+  border: none;
+  border-radius: 2vh;
+}
+
+.noRemove {
+  position: relative;
+  left: 25%;
+  color: #ea9a8f;
+  cursor: pointer;
+  width: 4vw;
+  background-color: #ffd5cf;
+  border: none;
+  border-radius: 2vh;
+}

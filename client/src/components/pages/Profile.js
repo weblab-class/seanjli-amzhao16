@@ -72,14 +72,6 @@ const Profile = (props) => {
       <br />
       {text === props.userId ? (
         <div>
-          <h1>Friends</h1>
-          <FriendList
-            users={users}
-            requestees={requestees}
-            setRequestees={setRequestees}
-            friends={friends}
-            setFriends={setFriends}
-          />
           <h1>Make Requests</h1>
           <MakeFriendRequests
             requestees={requestees}
@@ -88,15 +80,6 @@ const Profile = (props) => {
             setOutgoing={setOutgoing}
           />
           <br />
-          <h1>Incoming Requests</h1>
-          <AcceptFriendRequests
-            requests={requests}
-            setRequests={setRequests}
-            friends={friends}
-            setFriends={setFriends}
-          />
-          <h1>Outgoing Requests</h1>
-          <OutgoingFriendRequests outgoing={outgoing} setOutgoing={setOutgoing} />
         </div>
       ) : (
         <br></br>

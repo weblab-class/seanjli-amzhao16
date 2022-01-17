@@ -1,17 +1,27 @@
 /* TODO prettify */
 
 import React from "react";
+import "./IncomingRequestBox.css";
 
 const IncomingRequestBox = (props) => {
-    return (
-        <div>
-            <p>Request from 
-                <a href={"/profile/" + props.request.sender_id}>{props.request.sender_name}</a>
-            </p>
-            <button onClick={() => props.acceptRequest(props.request.sender_id)}>Accept</button>
-            <button onClick={() => props.declineRequest(props.request.sender_id)}>Decline</button>
-        </div>
-    );
-}
+  return (
+    <div className="incomingRequestsBox">
+      <p>
+        <a className="incomingRequestName" href={"/profile/" + props.request.sender_id}>
+          {props.request.sender_name}
+        </a>
+      </p>
+      <button
+        className="acceptRequest"
+        onClick={() => props.acceptRequest(props.request.sender_id)}
+      >
+        accept
+      </button>
+      <button className="denyRequest" onClick={() => props.declineRequest(props.request.sender_id)}>
+        decline
+      </button>
+    </div>
+  );
+};
 
 export default IncomingRequestBox;

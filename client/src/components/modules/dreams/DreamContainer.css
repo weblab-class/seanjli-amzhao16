@@ -146,10 +146,12 @@
   position: absolute;
   bottom: 1vh;
   left: 5vw;
-  color: white;
+  color: #e8b37f;
+  width: 3vw;
+  border-radius: 2vh;
   font-weight: normal;
   font-size: 2vh;
-  background-color: #e8b37f;
+  background-color: #ffe3c8;
   border: none;
   cursor: pointer;
 }
@@ -158,10 +160,12 @@
   position: absolute;
   bottom: 1vh;
   right: 5vw;
-  color: white;
+  color: #e8b37f;
+  width: 3vw;
+  border-radius: 2vh;
   font-weight: normal;
   font-size: 2vh;
-  background-color: #e8b37f;
+  background-color: #ffe3c8;
   border: none;
   cursor: pointer;
 }

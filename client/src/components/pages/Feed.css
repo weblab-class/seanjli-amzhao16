@@ -81,12 +81,13 @@
 .myFriendsArea {
   position: absolute;
   top: 20vh;
-  width: 14vw;
+  width: 30vw;
   left: 3vw;
   height: 22vh;
   padding-top: 1vh;
   right: 9vw;
   font-size: 3vh;
+  overflow-x: auto;
   overflow-y: auto;
 }
 

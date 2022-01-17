@@ -1,0 +1,31 @@
+.outgoingRequestsBox {
+  position: relative;
+  width: 26vw;
+  text-decoration: none !important;
+  overflow-x: auto;
+  height: 5vh;
+}
+
+.outgoingRequestName {
+  position: absolute;
+  left: 0vw;
+  text-decoration: none;
+  color: white;
+  width: 15vw;
+  font-size: 3vh;
+}
+.outgoingRequestName:hover {
+  color: #ea9a8f;
+}
+.cancelRequest {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  left: 75%;
+  padding-top: 0.5vh;
+}
+.cancelRequest:hover {
+  color: #ea9a8f;
+}

@@ -1,14 +1,21 @@
 /* TODO prettify */
 
 import React, { useState, useEffect } from "react";
+import "./OutgoingRequestBox.css";
 
 const OutgoingRequestBox = (props) => {
-    return (
-        <div>
-            <p>Sent request to <a href={"/profile/" + props.request.recipient_id}>{props.request.recipient_name}</a></p>
-            <button onClick={props.removeRequest}>remove request</button>
-        </div>
-    );
-}
+  return (
+    <div className="outgoingRequestBox">
+      <p>
+        <a className="outgoingRequestName" href={"/profile/" + props.request.recipient_id}>
+          {props.request.recipient_name}
+        </a>
+      </p>
+      <button className="cancelRequest" onClick={props.removeRequest}>
+        cancel
+      </button>
+    </div>
+  );
+};
 
 export default OutgoingRequestBox;

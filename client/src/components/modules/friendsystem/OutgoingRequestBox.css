@@ -1,6 +1,6 @@
 .outgoingRequestsBox {
   position: relative;
-  width: 26vw;
+  width: 30vw;
   text-decoration: none !important;
   overflow-x: auto;
   height: 5vh;
@@ -11,6 +11,8 @@
   left: 0vw;
   text-decoration: none;
   color: white;
+  overflow-x: auto;
+  overflow-y: auto;
   width: 15vw;
   font-size: 3vh;
 }

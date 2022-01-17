@@ -5,12 +5,10 @@ import "./OutgoingRequestBox.css";
 
 const OutgoingRequestBox = (props) => {
   return (
-    <div className="outgoingRequestBox">
-      <p>
-        <a className="outgoingRequestName" href={"/profile/" + props.request.recipient_id}>
-          {props.request.recipient_name}
-        </a>
-      </p>
+    <div className="outgoingRequestsBox">
+      <a className="outgoingRequestName" href={"/profile/" + props.request.recipient_id}>
+        {props.request.recipient_name}
+      </a>
       <button className="cancelRequest" onClick={props.removeRequest}>
         cancel
       </button>

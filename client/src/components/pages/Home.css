@@ -16,16 +16,6 @@
   }
 }
 
-@keyframes slideFromLeftAlt {
-  0% {
-    margin-left: -100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 .writeQuad {
   left: 0;
   z-index: 0;
@@ -42,6 +32,10 @@
   cursor: pointer;
 }
 
+.writeQuad:hover{
+  background-color: #e996c1;
+}
+
 .writeQuadText {
   left: 0;
   z-index: 0;
@@ -53,14 +47,11 @@
   height: 25vh;
   font-size: 12vh;
   width: 94vw;
-  background-color: #ffbade;
+  background-color: transparent;
   color: #d271a4;
   text-decoration: none;
   animation: slideFromLeft 1.3s;
   cursor: pointer;
-}
-.writeQuadText:hover {
-  animation: slideFromLeftAlt 1.3s;
 }
 
 .profileQuad {
@@ -78,15 +69,15 @@
   text-decoration: none;
   cursor: pointer;
 }
-.profileQuadText:hover {
-  animation: slideFromLeftAlt 1.6s;
-}
 
+.profileQuad:hover{
+  background-color: #f2a5bb;
+}
 .profileQuadText {
   left: 0;
   position: absolute;
   z-index: 0;
-  top: 25vh;
+  top: 0;
   text-align: left;
   padding-left: 6vw;
   line-height: 25vh;
@@ -94,7 +85,7 @@
   font-size: 12vh;
   width: 94vw;
   cursor: pointer;
-  background-color: #ffc7d7;
+  background-color: transparent;
   color: #e4829e;
   text-decoration: none;
   animation: slideFromLeft 1.6s;
@@ -116,14 +107,14 @@
   color: #e8b37f;
   text-decoration: none;
 }
-
-.dreamsQuadText:hover {
-  animation: slideFromLeftAlt 2.2s;
+.dreamsQuad:hover{
+  background-color: #f4cba4;
 }
+
 .dreamsQuadText {
   left: 0;
   position: absolute;
-  top: 75vh;
+  top: 0;
   z-index: 0;
   text-align: left;
   padding-left: 6vw;
@@ -132,7 +123,7 @@
   height: 25vh;
   font-size: 12vh;
   width: 94vw;
-  background-color: #ffe3c8;
+  background-color: transparent;
   color: #e8b37f;
   text-decoration: none;
   animation: slideFromLeft 2.2s;
@@ -154,11 +145,14 @@
   color: #ea9a8f;
   text-decoration: none;
 }
+.feedQuad:hover{
+  background-color: #f5b8af;
+}
 
 .feedQuadText {
   left: 0;
   position: absolute;
-  top: 50vh;
+  top: 0;
   text-align: left;
   padding-left: 6vw;
   line-height: 25vh;
@@ -167,14 +161,12 @@
   width: 94vw;
   cursor: pointer;
   z-index: 0;
-  background-color: #ffd5cf;
+  background-color: transparent;
   color: #ea9a8f;
   text-decoration: none;
   animation: slideFromLeft 1.9s;
 }
-.feedQuadText:hover {
-  animation: slideFromLeftAlt 1.9s;
-}
+
 
 /* TODO: not perfectly center */
 .logout {

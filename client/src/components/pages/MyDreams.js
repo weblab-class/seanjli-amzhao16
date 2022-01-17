@@ -8,6 +8,11 @@ import { get, post } from "../../utilities.js";
 
 const MyDreams = (props) => {
   const [dreams, setDreams] = useState([]);
+  
+  const deleteDream = (id) => {
+    post("/api/deleteDream", {dream_id: id});
+    setDreams(dreams.filter((x) => x._id != id));
+  }
 
   useEffect(() => {
     get("/api/myDreams").then((x) => setDreams(x.reverse()));
@@ -24,6 +29,7 @@ const MyDreams = (props) => {
             date={dream.timeStamp}
             name={dream.author.name}
             content={dream.content}
+            deleteDream={() => deleteDream(dream._id)}
             who="me"
           />
         ))}

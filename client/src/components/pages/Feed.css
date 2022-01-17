@@ -33,6 +33,25 @@
   background-color: #ffd5cf;
 }
 
+.findFriendsLabel {
+  position: absolute;
+  top: 1.8vh;
+  padding-bottom: 1vh;
+  width: 28vw;
+  left: 1.8vw;
+  height: 8vh;
+  padding-top: 1vh;
+  right: 9vw;
+  border: solid 0.5vh;
+  font-size: 4vh;
+  border-radius: 4vh;
+  text-align: center;
+  border-color: white;
+  background-color: #ffd5cf;
+  color: white;
+  cursor: pointer;
+}
+
 .myFriendsLabel {
   position: absolute;
   top: 12vh;
@@ -113,4 +132,25 @@
   right: 9vw;
   font-size: 2vh;
   overflow-y: auto;
+}
+
+.makeFriendsBox {
+  z-index: 100;
+  position: absolute;
+  top: 10vh;
+  padding-bottom: 1vh;
+  width: 28vw;
+  left: 1.8vw;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 70vh;
+  padding-top: 1vh;
+  right: 9vw;
+  border: solid 0.5vh;
+  font-size: 4vh;
+  border-radius: 4vh;
+  text-align: center;
+  border-color: white;
+  background-color: #ea9a8f;
+  color: white;
 }

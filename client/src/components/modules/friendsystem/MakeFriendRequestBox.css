@@ -1,0 +1,39 @@
+.findFriendBox {
+  position: relative;
+  width: 26vw;
+  text-decoration: none !important;
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 6vh;
+}
+
+.findFriendName {
+  position: absolute;
+  left: 0vw;
+  padding-top: 0.5vh;
+  text-decoration: none;
+  color: white;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 15vw;
+  cursor: pointer;
+  font-size: 3.5vh;
+}
+.findFriendName:hover {
+  color: #ffd5cf;
+}
+.addFriendButton {
+  position: relative;
+  border: none;
+  color: #ea9a8f;
+  background-color: white;
+  cursor: pointer;
+  font-size: 3vh;
+  height: 4vh;
+  width: 5vw;
+  border-radius: 1vw;
+  left: 40%;
+}
+.addFriendButton:hover {
+  color: #ffd5cf;
+}

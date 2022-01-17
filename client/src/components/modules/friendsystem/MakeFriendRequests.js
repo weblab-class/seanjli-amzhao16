@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import { get, post } from "../../../utilities.js";
+import MakeFriendRequestBox from "./MakeFriendRequestBox.js";
 
 const MakeFriendRequests = (props) => {
-
-/*     const [users, setUsers] = useState([]);
+  /*     const [users, setUsers] = useState([]);
     const [me, setMe] = useState([{friends : [], id : ""}]);
 
     useEffect(() => {
@@ -13,23 +13,19 @@ const MakeFriendRequests = (props) => {
     }, []);
 */
 
-    const addRequest = async (id, name) => {
-        const req = await post("/api/addFriendRequest", {recipient_id : id, recipient_name : name});
-        props.setOutgoing([...props.outgoing, req]);
-        props.setRequestees(props.requestees.filter((x) => x._id != id));
-    }; 
+  const addRequest = async (id, name) => {
+    const req = await post("/api/addFriendRequest", { recipient_id: id, recipient_name: name });
+    props.setOutgoing([...props.outgoing, req]);
+    props.setRequestees(props.requestees.filter((x) => x._id != id));
+  };
 
-    return (
-        <div>
-            {props.requestees.map((user) =>
-            <div>
-                <p>{user.name}</p>
-                <button value={user.name} onClick={() => addRequest(user._id, user.name)}>Make Friend Request</button>
-            </div>
-            )}
-        </div>
-    );
-    
-}
+  return (
+    <div>
+      {props.requestees.map((user) => (
+        <MakeFriendRequestBox name={user.name} addRequest={() => addRequest(user._id, user.name)} />
+      ))}
+    </div>
+  );
+};
 
 export default MakeFriendRequests;

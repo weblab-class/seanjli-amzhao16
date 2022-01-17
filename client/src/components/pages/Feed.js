@@ -60,10 +60,38 @@ const Feed = (props) => {
     );
   }, [users, friends, requests, outgoing]);
 
+  const [showAllFriends, setShowAllFriends] = useState(false);
+  const friendsPopUp = (event) => {
+    console.log("clicky");
+    if (showAllFriends === true) {
+      setShowAllFriends(false);
+    } else {
+      setShowAllFriends(true);
+    }
+  };
+
   return (
     <div>
       <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="friendsSectionContainer">
+        <div>
+          <button className="findFriendsLabel" onClick={friendsPopUp}>
+            find friends
+          </button>
+          {showAllFriends ? (
+            <div className="makeFriendsBox">
+              {" "}
+              <MakeFriendRequests
+                requestees={requestees}
+                setRequestees={setRequestees}
+                outgoing={outgoing}
+                setOutgoing={setOutgoing}
+              />{" "}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
         <div>
           <div className="myFriendsLabel">my friends</div>
           <div className="myFriendsArea">

@@ -1,9 +1,23 @@
 .name {
   position: absolute;
   bottom: 0.5vh;
-  left: 4vw;
+  width: 50vw;
+  left: 14vw;
   color: #ea9a8f;
   font-weight: normal;
+  text-align: left;
+  font-size: 3.5vh;
+}
+
+.avatar {
+  position: absolute;
+  background-image: url("friendsBlankAvatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 6vh;
+  left: 3vw;
+  width: 15vw;
+  height: 15vh;
 }
 
 .content {
@@ -13,7 +27,7 @@
   width: 80vw;
   top: 0.9vh;
   overflow-y: auto;
-  bottom: 4vh;
+  bottom: 6vh;
   background-color: white;
   border-radius: 4vh;
   color: #ea9a8f;
@@ -25,12 +39,13 @@
   right: 3vw;
   color: #ea9a8f;
   font-weight: normal;
+  font-size: 3.5vh;
 }
 
 .container {
   position: static;
   padding-top: 3vh;
-  height: 20vh;
+  height: 22vh;
   width: 100vw;
   background-color: #ffd5cf;
 }
@@ -41,26 +56,26 @@
   width: 100%;
 }
 
-.avatar {
-  position: absolute;
-  background-image: url("friendsBlankAvatar.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 4.8vw;
-  top: 3vh;
-  width: 13vw;
-  height: 13vh;
-}
-
-/* TODO: make sub container to align avatar w name, 
-so centering doesn't depend on name length */
 .nameMe {
   position: absolute;
   bottom: 0.5vh;
-  left: 4vw;
+  width: 50vw;
+  left: 14vw;
   color: #e8b37f;
-  text-align: center;
   font-weight: normal;
+  text-align: left;
+  font-size: 3.5vh;
+}
+
+.avatarMe {
+  position: absolute;
+  background-image: url("meBlankAvatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 6vh;
+  left: 3vw;
+  width: 15vw;
+  height: 15vh;
 }
 
 .contentMe {
@@ -70,7 +85,7 @@ so centering doesn't depend on name length */
   width: 80vw;
   top: 0.9vh;
   overflow-y: auto;
-  bottom: 4vh;
+  bottom: 6vh;
   background-color: white;
   border-radius: 4vh;
   color: #e8b37f;
@@ -82,12 +97,13 @@ so centering doesn't depend on name length */
   right: 3vw;
   color: #e8b37f;
   font-weight: normal;
+  font-size: 3.5vh;
 }
 
 .containerMe {
   position: static;
   padding-top: 3vh;
-  height: 20vh;
+  height: 22vh;
   width: 100vw;
   background-color: #ffe3c8;
 }
@@ -96,16 +112,4 @@ so centering doesn't depend on name length */
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-/* TODO: THIS IS CURRENTLY A DEFAULT AVATAR */
-.avatarMe {
-  position: absolute;
-  background-image: url("meBlankAvatar.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 4.8vw;
-  top: 3vh;
-  width: 13vw;
-  height: 13vh;
 }

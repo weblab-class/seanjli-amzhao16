@@ -26,8 +26,8 @@ const DreamContainer = (props) => {
         <div className="container">
           <div className="subcontainer">
             <p className="avatar"></p>
-            <p className="date">{convertDate(props.date)}</p>
             <strong className="name">{props.name}</strong>{" "}
+            <p className="date">{convertDate(props.date)}</p>
             <p className="content">
               {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
             </p>

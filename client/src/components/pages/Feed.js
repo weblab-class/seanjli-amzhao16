@@ -7,9 +7,8 @@ import NavBar from "../modules/NavBar.js";
 import { get, post } from "../../utilities.js";
 
 const Feed = (props) => {
-
   const [dreams, setDreams] = useState([]);
-  const [me, setMe] = useState([{friends : [], id : ""}]);
+  const [me, setMe] = useState([{ friends: [], id: "" }]);
 
   const [friends, setFriends] = useState([]);
 
@@ -19,17 +18,15 @@ const Feed = (props) => {
 
   useEffect(() => {
     setFriends(me[0].friends);
-  }, [me])
+  }, [me]);
 
   useEffect(() => {
-    get("/api/dreams", {parent: friends}).then((x) => setDreams(x.reverse()));
-    console.log(friends);
-    console.log(dreams);
-  }, [me, friends]);
+    get("/api/dreams", { parent: friends }).then((x) => setDreams(x.reverse()));
+  }, [friends]);
 
   return (
     <div>
-      <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId}/>
+      <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />
       <br />
       <br />
       {dreams.map((dream) => (

@@ -1,1 +1,7 @@
 /* TODO prettify mydreams page */
+.allMyDreams {
+  position: absolute;
+  top: 8vh;
+  height: 92vh;
+  width: 100vw;
+}

@@ -12,20 +12,22 @@ const MyDreams = (props) => {
   useEffect(() => {
     get("/api/dreams", { parent: [props.userId] }).then((x) => setDreams(x.reverse()));
   }, []);
-
+  /* TODO: make container for dreams part eventually*/
   return (
     <div>
       <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId} />
       <br />
       <br />
-      {dreams.map((dream) => (
-        <DreamContainer
-          date={dream.timeStamp}
-          name={dream.author.name}
-          content={dream.content}
-          who="me"
-        />
-      ))}
+      <div className="allMyDreams">
+        {dreams.map((dream) => (
+          <DreamContainer
+            date={dream.timeStamp}
+            name={dream.author.name}
+            content={dream.content}
+            who="me"
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -45,15 +45,14 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 
-
 // USER
 
 router.get("/getMe", (req, res) => {
-  User.find({_id: req.user._id}).then((user) => res.send(user));
+  User.find({ _id: req.user._id }).then((user) => res.send(user));
 });
 
 router.get("/getProfile", (req, res) => {
-  User.find({_id: req.query.parent}).then((user) => res.send(user));
+  User.find({ _id: req.query.parent }).then((user) => res.send(user));
 });
 
 router.get("/getUser", (req, res) => {
@@ -63,24 +62,24 @@ router.get("/getUser", (req, res) => {
 // FRIEND REQUESTS
 
 router.get("/getFriend", async (req, res) => {
-  const me = await User.find({_id: req.user._id});
+  const me = await User.find({ _id: req.user._id });
   res.send(me.friends);
 });
 
 router.get("/getFriendRequest", (req, res) => {
-  FriendRequest.find({recipient_id: req.user._id, status: "pending"}).then((x) => res.send(x));
+  FriendRequest.find({ recipient_id: req.user._id, status: "pending" }).then((x) => res.send(x));
 });
 
 router.get("/getOutgoingFriendRequest", (req, res) => {
-  FriendRequest.find({sender_id: req.user._id, status: "pending"}).then((x) => res.send(x));
+  FriendRequest.find({ sender_id: req.user._id, status: "pending" }).then((x) => res.send(x));
 });
 
 router.post("/addFriendRequest", async (req, res) => {
-
   const x = await FriendRequest.find({
-    sender_id: req.user._id, 
+    sender_id: req.user._id,
     recipient_id: req.body.recipient_id,
-    status: "pending" || "accepted"});
+    status: "pending" || "accepted",
+  });
 
   if (x.length > 0 || req.user._id === req.body.recipient_id) {
     return;
@@ -97,62 +96,53 @@ router.post("/addFriendRequest", async (req, res) => {
 });
 
 router.post("/acceptFriendRequest", (req, res) => {
-
   FriendRequest.updateOne(
-    {sender_id: req.body.sender_id, recipient_id: req.user._id, status: "pending"},
-    {$set: {status: "accepted"}},
-    function(err, doc) {
-
-    }
-);
-
-  User.updateOne(
-    {_id: req.user._id},
-    {$push: {friends: req.body.sender_id}},
-    function(err, doc) {
-  }
+    { sender_id: req.body.sender_id, recipient_id: req.user._id, status: "pending" },
+    { $set: { status: "accepted" } },
+    function (err, doc) {}
   );
-  
+
   User.updateOne(
-    {_id: req.body.sender_id},
-    {$push: {friends: req.user._id}},
-    function(err, doc) {
+    { _id: req.user._id },
+    { $push: { friends: req.body.sender_id } },
+    function (err, doc) {}
+  );
 
-  }
-);
-
-})
+  User.updateOne(
+    { _id: req.body.sender_id },
+    { $push: { friends: req.user._id } },
+    function (err, doc) {}
+  );
+});
 
 router.post("/declineFriendRequest", (req, res) => {
   FriendRequest.updateOne(
-    {sender_id: req.body._id, recipient_id: req.user._id, status: "pending"},
-    {$set : {status: "declined"}},
-    function(err, doc) {
-
-    }
-    );
+    { sender_id: req.body._id, recipient_id: req.user._id, status: "pending" },
+    { $set: { status: "declined" } },
+    function (err, doc) {}
+  );
 });
 
 router.post("/removeFriend", (req, res) => {
   User.updateOne(
-    {_id: req.user._id},
-    {$pull: {friends: req.body.recipient_id}},
-    function(err, doc) {
-  }
+    { _id: req.user._id },
+    { $pull: { friends: req.body.recipient_id } },
+    function (err, doc) {}
   );
 
   User.updateOne(
-    {_id: req.body.recipient_id},
-    {$pull: {friends: req.user._id}},
-    function(err, doc) {
-  }
+    { _id: req.body.recipient_id },
+    { $pull: { friends: req.user._id } },
+    function (err, doc) {}
   );
 });
 
 // DREAMS SECTION
 
 router.get("/dreams", (req, res) => {
-	Dream.find({"author._id" : {$in: req.query.parent.split(",")}}).then((dreams) => res.send(dreams));
+  Dream.find({ "author._id": { $in: req.query.parent.split(",") } }).then((dreams) => {
+    res.send(dreams);
+  });
 });
 
 router.post("/addDream", (req, res) => {
@@ -167,7 +157,6 @@ router.post("/addDream", (req, res) => {
 
   newDream.save().then((dream) => res.send(dream));
 });
-
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {

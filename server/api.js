@@ -161,6 +161,7 @@ router.post("/addDream", (req, res) => {
       name: req.user.name,
     },
     content: req.body.content,
+    private: req.body.privacy
   });
 
   newDream.save().then((dream) => res.send(dream));

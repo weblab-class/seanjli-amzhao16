@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SubmitDreamButton from "../modules/dreams/SubmitDreamButton.js";
 import SubmitDream from "../modules/dreams/SubmitDream.js";
 import "./WriteDream.css";
 import NavBar from "../modules/NavBar.js";
@@ -8,6 +7,15 @@ import moment from "moment";
 const WriteDream = (props) => {
   // const currentTime = moment().local();
   const currHour = parseInt(moment().format().substring(11, 13));
+
+  const [privacy, setPrivacy] = useState(false);
+
+  const togglePrivacy = (event) =>
+  {
+    setPrivacy(!privacy);
+    console.log("privacy toggled!");
+  }
+
   /* TODO make public/private toggle */
   return (
     <div>
@@ -33,7 +41,10 @@ const WriteDream = (props) => {
           <p className="plus2">+</p>
           <p className="key4">u</p>
         </div>
-        <SubmitDream />
+        <SubmitDream privacy={privacy}/>
+        {privacy ?
+        <button value="privacy" onClick={togglePrivacy}>Private (click to change)</button> :
+        <button value="privacy" onClick={togglePrivacy}>Public (click to change)</button>}
       </div>
     </div>
   );

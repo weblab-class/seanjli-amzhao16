@@ -167,6 +167,13 @@ router.post("/addDream", (req, res) => {
   newDream.save().then((dream) => res.send(dream));
 });
 
+router.post("/deleteDream", (req, res) => {
+  Dream.deleteOne(
+    {_id: req.body.dream_id,
+    "author._id": req.user._id} // for security purposes, verifies id of person
+  ).then((dream) => res.send(dream));
+})
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);

@@ -21,6 +21,7 @@ const DreamContainer = (props) => {
               {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
             </p>
           </div>
+          <button value="delete" onClick={props.deleteDream}>delete dream</button> 
         </div>
       ) : (
         <div className="container">

@@ -115,9 +115,17 @@ router.post("/acceptFriendRequest", (req, res) => {
   );
 });
 
+router.post("/removeFriendRequest", (req, res) => {
+  FriendRequest.updateOne(
+    { sender_id: req.user._id, recipient_id: req.body.recipient_id, status: "pending" },
+    { $set: { status: "declined" } },
+    function (err, doc) {}
+  );
+});
+
 router.post("/declineFriendRequest", (req, res) => {
   FriendRequest.updateOne(
-    { sender_id: req.body._id, recipient_id: req.user._id, status: "pending" },
+    { sender_id: req.body.sender_id, recipient_id: req.user._id, status: "pending" },
     { $set: { status: "declined" } },
     function (err, doc) {}
   );

@@ -12,7 +12,7 @@ const AcceptFriendRequests = (props) => {
 
     const declineRequest = (id) => {
         post("/api/declineFriendRequest", {sender_id: id});
-        props.setRequests(props.requests.filter((x) => x.recipient_id != id));
+        props.setRequests(props.requests.filter((x) => x.sender_id != id));
     }
 
     return (

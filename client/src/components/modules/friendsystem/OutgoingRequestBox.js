@@ -6,6 +6,7 @@ const OutgoingRequestBox = (props) => {
     return (
         <div>
             <p>Sent request to <a href={"/profile/" + props.request.recipient_id}>{props.request.recipient_name}</a></p>
+            <button onClick={props.removeRequest}>remove request</button>
         </div>
     );
 }

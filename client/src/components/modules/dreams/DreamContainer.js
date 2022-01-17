@@ -16,6 +16,18 @@ const DreamContainer = (props) => {
       setShowDelete(true);
     }
   };
+  const deletePopDown = (event) => {
+    if (showDelete === true) {
+      setShowDelete(false);
+    }
+  };
+  const deleteAndHide = (event) => {
+    props.deleteDream();
+    if (showDelete === true) {
+      setShowDelete(false);
+    }
+  };
+
   return (
     <div>
       {props.who === "me" ? (
@@ -30,7 +42,19 @@ const DreamContainer = (props) => {
             <button className="deleteButtonMe" value="delete" onClick={deletePopUp}>
               delete dream
             </button>
-            {showDelete ? <DeletePopUp /> : <div></div>}
+            {showDelete ? (
+              <div className="deletePopUpContainer">
+                Are you sure you want to delete your dream?
+                <button className="yesDelete" value="delete" onClick={deleteAndHide}>
+                  yes
+                </button>
+                <button className="noDelete" onClick={deletePopDown}>
+                  no
+                </button>
+              </div>
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       ) : (

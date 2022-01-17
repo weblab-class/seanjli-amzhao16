@@ -125,3 +125,43 @@
   border: none;
   cursor: pointer;
 }
+
+.deletePopUpContainer {
+  position: absolute;
+  bottom: 7vh;
+  right: 4vw;
+  color: white;
+  font-weight: normal;
+  height: 7vh;
+  width: 24vw;
+  text-align: center;
+  font-size: 2vh;
+  background-color: #e8b37f;
+  border: none;
+  border-radius: 2vh;
+  padding-top: 1vh;
+}
+
+.yesDelete {
+  position: absolute;
+  bottom: 1vh;
+  left: 5vw;
+  color: white;
+  font-weight: normal;
+  font-size: 2vh;
+  background-color: #e8b37f;
+  border: none;
+  cursor: pointer;
+}
+
+.noDelete {
+  position: absolute;
+  bottom: 1vh;
+  right: 5vw;
+  color: white;
+  font-weight: normal;
+  font-size: 2vh;
+  background-color: #e8b37f;
+  border: none;
+  cursor: pointer;
+}

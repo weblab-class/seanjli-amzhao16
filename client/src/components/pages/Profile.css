@@ -1,1 +1,43 @@
 /* TODO prettify Profile  page */
+.profileContainer {
+  position: absolute;
+  top: 11vh;
+  bottom: 3vh;
+  left: 3vw;
+  right: 3vw;
+  background-color: #ffc7d7;
+  border-radius: 4vw;
+}
+
+.profileTitle {
+  position: absolute;
+  top: 6vh;
+  right: 4vw;
+  background-color: #ffc7d7;
+  border-radius: 4vw;
+  font-size: 8vh;
+  color: #e4829e;
+}
+
+.profileName {
+  position: absolute;
+  top: 16vh;
+  right: 4vw;
+  background-color: #ffc7d7;
+  border-radius: 4vw;
+  font-size: 5vh;
+  color: #e4829e;
+}
+
+.defaultAvatar {
+  position: absolute;
+  left: 10vw;
+  top: 10vh;
+  background-image: url("profileBlankAvatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 58vh;
+  width: 27.5vw;
+  border: none;
+  background-color: white;
+}

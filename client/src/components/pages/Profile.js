@@ -7,6 +7,7 @@ import { useParams } from "@reach/router";
 import { get, post } from "../../utilities.js";
 
 import NotFound from "./NotFound";
+import "./Profile.css";
 
 const Profile = (props) => {
   const { text } = useParams();
@@ -24,11 +25,12 @@ const Profile = (props) => {
   return (
     <div>
       <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId} />
-      <br />
-      <br />
-      <h1>Profile</h1>
-      <h4>Name: </h4>
-      <p>{profile[0].name}</p>
+      <div className="profileContainer">
+        {" "}
+        <h1 className="profileTitle">Profile</h1>
+        <p className="profileName">Name: {profile[0].name}</p>
+        <div className="defaultAvatar"> </div>
+      </div>
     </div>
   );
 };

@@ -34,6 +34,8 @@ const WriteDream = (props) => {
   };
 
   const addNewTag = () => {
+    if (!(tags.includes(tagInput))) {
+      console.log("adding tag...");
     if (usedTags.includes(tagInput)) {
       addUsedTag(tagInput);
     } else {
@@ -41,6 +43,7 @@ const WriteDream = (props) => {
       post("/api/addUsedTag", { tag: tagInput });
     }
     setTagInput("");
+  }
   };
 
   const addUsedTag = (tag) => {

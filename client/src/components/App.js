@@ -7,6 +7,7 @@ import WriteDream from "./pages/WriteDream";
 import Profile from "./pages/Profile";
 import MyDreams from "./pages/MyDreams";
 import Feed from "./pages/Feed";
+import Loading from "./pages/Loading";
 
 import "../utilities.css";
 
@@ -20,9 +21,11 @@ import { get, post } from "../utilities";
 const App = () => {
   const [userId, setUserId] = useState(undefined);
   const [username, setUsername] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
+      setLoading(false);
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
@@ -35,6 +38,7 @@ const App = () => {
     console.log(`Logged in as ${res.profileObj.name}`);
     const userToken = res.tokenObj.id_token;
     post("/api/login", { token: userToken }).then((user) => {
+      setLoading(false);
       setUserId(user._id);
       setUsername(user.name);
       post("/api/initsocket", { socketid: socket.id });
@@ -44,13 +48,25 @@ const App = () => {
   const handleLogout = () => {
     setUserId(undefined);
     setUsername("");
+    setLoading(false);
     post("/api/logout");
     window.location.href = "/";
   };
 
+  const getComponent = () => {
+    if (loading) {
+      return <></>
+    } else if (userId) {
+      // return the main Router
+    } else {
+       // return the other Router
+    }
+  }
+
   return (
     <>
-      {userId ? (
+      {loading ? <></> :
+       userId ? (
         <Router>
           <Home
             path="/"

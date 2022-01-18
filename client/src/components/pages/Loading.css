@@ -1,0 +1,9 @@
+.loadingPage {
+    color: white;
+    font-size: 8vh;
+    padding-top: 40vh;
+    text-align: center;
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(to bottom, #ffbade 0%, #ffefc0 100%);
+}

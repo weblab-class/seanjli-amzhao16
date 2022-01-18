@@ -6,11 +6,6 @@ import { useParams } from "@reach/router";
 
 import { get, post } from "../../utilities.js";
 
-import FriendList from "../modules/friendsystem/FriendList";
-import MakeFriendRequests from "../modules/friendsystem/MakeFriendRequests";
-import AcceptFriendRequests from "../modules/friendsystem/AcceptFriendRequests";
-import OutgoingFriendRequests from "../modules/friendsystem/OutgoingFriendRequests";
-
 import NotFound from "./NotFound";
 
 const Profile = (props) => {

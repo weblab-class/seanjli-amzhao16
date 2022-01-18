@@ -1,5 +1,3 @@
-/* TODO prettify */
-
 import React from "react";
 import "./IncomingRequestBox.css";
 

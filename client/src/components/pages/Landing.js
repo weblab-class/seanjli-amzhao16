@@ -4,10 +4,7 @@ import "../../utilities.css";
 import "./Landing.css";
 import AboutPage from "../modules/about";
 
-/*TODO: fix favicon icon :( */
-
 const GOOGLE_CLIENT_ID = "799029787987-37thps95h1019p8mmpoi62cnv4amt0vg.apps.googleusercontent.com";
-/* TODO: add an about page/icon (next to login?)*/
 
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {
   const [showAbout, setShowAbout] = useState(false);

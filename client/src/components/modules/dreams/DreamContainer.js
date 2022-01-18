@@ -5,7 +5,6 @@ import "draft-js/dist/Draft.css";
 import { convertFromRaw, convertToRaw } from "draft-js";
 import { stateToHTML } from "draft-js-export-html";
 import { formatInTimeZone } from "date-fns-tz";
-/* TODO: Adjust date for other things i.e. friends reqs, comments, etc. */
 import Parser from "html-react-parser";
 
 const DreamContainer = (props) => {

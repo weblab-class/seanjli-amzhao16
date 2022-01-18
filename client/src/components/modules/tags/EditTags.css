@@ -48,6 +48,9 @@
   border-radius: 4vh;
   cursor: pointer;
 }
+.addTagButton:hover {
+  background-color: #e996c1;
+}
 
 .addedTagsLabel {
   position: absolute;
@@ -113,6 +116,10 @@
   border: none;
   cursor: pointer;
   z-index: 5;
+}
+
+.aboutTags:hover {
+  background-color: #e996c1;
 }
 
 .aboutTagsBox {

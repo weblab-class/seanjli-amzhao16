@@ -12,3 +12,7 @@
   border-color: #ffbade;
   border-width: 0.2vh;
 }
+
+.generalTag:hover {
+  color: #e996c1;
+}

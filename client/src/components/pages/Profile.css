@@ -36,8 +36,8 @@
   background-image: url("profileBlankAvatar.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 58vh;
-  width: 27.5vw;
+  height: 402px;
+  width: 360px;
   border: none;
   background-color: white;
 }

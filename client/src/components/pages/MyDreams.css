@@ -1,6 +1,86 @@
 .allMyDreams {
   position: absolute;
-  top: 8vh;
-  height: 92vh;
+  top: 21vh;
+  left: 3vw;
+  border-radius: 5vh;
+  height: 76vh;
+  width: 94vw;
+  right: 3vw;
+  padding-bottom: 1vh;
+  overflow-y: auto;
+  bottom: 3vh;
+  background-color: #ffe3c8;
+}
+
+.noDreams {
+  position: absolute;
+  color: #e8b37f;
+  font-size: 3vh;
+  top: 3vh;
+  left: 2vw;
+}
+
+.filterContainer {
+  position: absolute;
+  top: 10vh;
+  left: 3vw;
+  border-radius: 5vh;
+  height: 8vh;
+  width: 94vw;
+  right: 3vw;
+  padding-bottom: 1vh;
+  overflow-y: auto;
+  bottom: 75vh;
+  background-color: #ffe3c8;
+}
+
+.filterTitle {
+  position: absolute;
+  color: white;
+  font-size: 5vh;
+  top: 1vh;
+  left: 2vw;
+}
+
+.filterBox {
+  position: absolute;
+  font-size: 5vh;
+  top: 0.5vh;
+  left: 11vw;
+  width: 80vw;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.chosenTag {
+  font-size: 2.5vh;
+  width: 10vw;
+  overflow-x: auto;
+  color: #ffe3c8;
+  background-color: #e8b37f;
+  border: solid;
+  border-color: #ffe3c8;
+  top: 0vh;
+  height: 5vh;
+  border-radius: 2vh;
+}
+.unchosenTag {
+  font-size: 2.5vh;
+  width: 10vw;
+  overflow-x: auto;
+  color: #ffe3c8;
+  background-color: white;
+  border: solid;
+  border-color: #ffe3c8;
+  top: 0vh;
+  height: 5vh;
+  border-radius: 2vh;
+}
+
+.myDreamsBackground {
+  position: absolute;
+  z-index: -1;
+  background-color: #f4cba4;
+  height: 100vh;
   width: 100vw;
 }

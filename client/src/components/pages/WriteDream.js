@@ -34,17 +34,19 @@ const WriteDream = (props) => {
   };
 
   const addNewTag = () => {
-    if (tagInput === "") { return; }
-    if (!(tags.includes(tagInput))) {
-      console.log("adding tag...");
-    if (usedTags.includes(tagInput)) {
-      addUsedTag(tagInput);
-    } else {
-      setTags([...tags, tagInput]);
-      post("/api/addUsedTag", { tag: tagInput });
+    if (tagInput === "") {
+      return;
     }
-    setTagInput("");
-  }
+    if (!tags.includes(tagInput)) {
+      console.log("adding tag...");
+      if (usedTags.includes(tagInput)) {
+        addUsedTag(tagInput);
+      } else {
+        setTags([...tags, tagInput]);
+        post("/api/addUsedTag", { tag: tagInput });
+      }
+      setTagInput("");
+    }
   };
 
   const addUsedTag = (tag) => {
@@ -67,7 +69,7 @@ const WriteDream = (props) => {
   };
 
   return (
-    <div>
+    <div className="writeBackground">
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
         <div className="writeTitle">
@@ -92,25 +94,21 @@ const WriteDream = (props) => {
         </div>
         <SubmitDream privacy={privacy} tags={tags} />
         {privacy ? (
-          <button value="privacy" onClick={togglePrivacy}>
-            <p className="toggleContainer">
+          <button className="toggleContainer" value="privacy" onClick={togglePrivacy}>
+            <p>
               <p className="privateText">private</p>
               <p className="privateCircle"></p>
             </p>
           </button>
         ) : (
-          <button value="privacy" onClick={togglePrivacy}>
-            <p className="toggleContainer">
+          <button className="toggleContainer" value="privacy" onClick={togglePrivacy}>
+            <p>
               <p className="publicText">public</p>
               <p className="publicCircle"></p>
             </p>
           </button>
         )}
       </div>
-
-      <br />
-      <br />
-      <br />
       <EditTags
         tags={tags}
         removeTag={removeTag}

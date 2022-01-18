@@ -33,9 +33,18 @@ const DreamContainer = (props) => {
           <div className="subcontainerMe">
             <p className="avatarMe"></p>
             <p className="dateMe">{convertDate(props.date)}</p>
-
-            <h6>TAGS:</h6> {props.tags.map((tag) => <p>{tag}</p>)}
-
+            <div className="tagsBox">
+              {" "}
+              {props.tags.length === 0 ? (
+                <div className="noTags">no tags</div>
+              ) : (
+                <div>
+                  {props.tags.map((tag) => (
+                    <p className="indivTag">{tag}</p>
+                  ))}
+                </div>
+              )}
+            </div>
             <strong className="nameMe">{props.name}</strong>{" "}
             <p className="contentMe">
               {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}

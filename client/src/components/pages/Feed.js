@@ -69,7 +69,7 @@ const Feed = (props) => {
   };
 
   return (
-    <div>
+    <div className="friendsBackground">
       <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="friendsSectionContainer">
         <div>

@@ -60,7 +60,7 @@
   position: absolute;
   bottom: 0.5vh;
   width: 50vw;
-  left: 14vw;
+  left: 10vw;
   color: #e8b37f;
   font-weight: normal;
   text-align: left;
@@ -73,16 +73,16 @@
   background-size: contain;
   background-repeat: no-repeat;
   bottom: 6vh;
-  left: 3vw;
+  left: 1vw;
   width: 15vw;
   height: 15vh;
 }
 
 .contentMe {
   position: absolute;
-  right: 3vw;
+  right: 13vw;
   padding: 1.5vh 3vh;
-  width: 80vw;
+  width: 68vw;
   top: 0.9vh;
   overflow-y: auto;
   bottom: 6vh;
@@ -94,7 +94,7 @@
 .dateMe {
   position: absolute;
   bottom: 0.5vh;
-  right: 16vw;
+  right: 26vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
@@ -104,7 +104,7 @@
   position: static;
   padding-top: 3vh;
   height: 22vh;
-  width: 100vw;
+  width: 94vw;
   background-color: #ffe3c8;
 }
 
@@ -117,7 +117,7 @@
 .deleteButtonMe {
   position: absolute;
   bottom: 0.5vh;
-  right: 3vw;
+  right: 14vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
@@ -129,7 +129,7 @@
 .deletePopUpContainer {
   position: absolute;
   bottom: 7vh;
-  right: 4vw;
+  right: 14vw;
   color: white;
   font-weight: normal;
   height: 7vh;
@@ -168,4 +168,36 @@
   background-color: #ffe3c8;
   border: none;
   cursor: pointer;
+}
+
+.noTags {
+  position: absolute;
+  top: 1.5vh;
+  width: 50vw;
+  left: 1vw;
+  color: white;
+  font-weight: normal;
+  text-align: left;
+  font-size: 3vh;
+}
+
+.tagsBox {
+  position: absolute;
+  right: 1vw;
+  padding: 1vh 3vh;
+  width: 8vw;
+  top: 0.9vh;
+  overflow-y: auto;
+  bottom: 6vh;
+  background-color: #e8b37f;
+  border-radius: 4vh;
+}
+.indivTag {
+  color: #e8b37f;
+  background-color: white;
+  border: solid;
+  width: 8vw;
+  text-align: center;
+  border-radius: 2vh;
+  border-width: 0.4vh;
 }

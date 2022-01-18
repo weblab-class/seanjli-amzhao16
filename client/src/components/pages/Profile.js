@@ -23,7 +23,7 @@ const Profile = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="profileBackground">
       <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="profileContainer">
         {" "}

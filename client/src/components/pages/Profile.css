@@ -41,3 +41,11 @@
   border: none;
   background-color: white;
 }
+
+.profileBackground {
+  position: absolute;
+  z-index: -1;
+  background-color: #f2a5bb;
+  height: 100vh;
+  width: 100vw;
+}

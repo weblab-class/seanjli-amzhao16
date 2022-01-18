@@ -22,43 +22,9 @@ const Profile = (props) => {
 
   const [profile, setProfile] = useState([{ name: [] }]);
 
-  const [users, setUsers] = useState([]);
-  const [me, setMe] = useState([{ friends: [], id: "" }]);
-  const [requests, setRequests] = useState([]);
-  const [outgoing, setOutgoing] = useState([]);
-  const [friends, setFriends] = useState([]);
-  const [requestees, setRequestees] = useState([]);
-
   useEffect(() => {
     get("/api/getProfile", { parent: text }).then((x) => setProfile(x));
   }, []);
-
-  if (text === props.userId) {
-    useEffect(() => {
-      get("/api/getUser").then((x) => setUsers(x));
-      get("/api/getMe").then((x) => setMe(x));
-      get("/api/getFriendRequest").then((x) => setRequests(x));
-      get("/api/getOutgoingFriendRequest").then((x) => setOutgoing(x));
-    }, []);
-
-    useEffect(() => {
-      setFriends(me[0].friends);
-    }, [me]);
-
-    useEffect(() => {
-      setRequestees(
-        users.filter(
-          (x) =>
-            !(
-              friends.includes(x._id) ||
-              requests.map((x) => x.sender_id).includes(x._id) ||
-              outgoing.map((x) => x.recipient_id).includes(x._id) ||
-              x._id === props.userId
-            )
-        )
-      );
-    }, [users, friends, requests, outgoing]);
-  }
 
   return (
     <div>
@@ -68,22 +34,6 @@ const Profile = (props) => {
       <h1>Profile</h1>
       <h4>Name: </h4>
       <p>{profile[0].name}</p>
-      <br />
-      <br />
-      {text === props.userId ? (
-        <div>
-          <h1>Make Requests</h1>
-          <MakeFriendRequests
-            requestees={requestees}
-            setRequestees={setRequestees}
-            outgoing={outgoing}
-            setOutgoing={setOutgoing}
-          />
-          <br />
-        </div>
-      ) : (
-        <br></br>
-      )}
     </div>
   );
 };

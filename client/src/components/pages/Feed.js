@@ -1,5 +1,3 @@
-/* TODO make feed page */
-
 import React, { useState, useEffect } from "react";
 import DreamContainer from "../modules/dreams/DreamContainer.js";
 import NavBar from "../modules/NavBar.js";

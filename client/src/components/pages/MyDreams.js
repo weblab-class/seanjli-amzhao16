@@ -1,5 +1,3 @@
-/* TODO get my dreams with modules */
-
 import React, { useState, useEffect } from "react";
 import DreamContainer from "../modules/dreams/DreamContainer.js";
 import NavBar from "../modules/NavBar.js";
@@ -17,7 +15,6 @@ const MyDreams = (props) => {
   useEffect(() => {
     get("/api/myDreams").then((x) => setDreams(x.reverse()));
   }, []);
-  /* TODO: make container for dreams part eventually*/
   return (
     <div>
       <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId} />

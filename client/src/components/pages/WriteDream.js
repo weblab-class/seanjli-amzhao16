@@ -65,7 +65,6 @@ const WriteDream = (props) => {
     setPrivacy(!privacy);
   };
 
-  /* TODO make public/private toggle */
   return (
     <div>
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />

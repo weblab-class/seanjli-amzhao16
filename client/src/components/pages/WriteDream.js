@@ -34,6 +34,7 @@ const WriteDream = (props) => {
   };
 
   const addNewTag = () => {
+    if (tagInput === "") { return; }
     if (!(tags.includes(tagInput))) {
       console.log("adding tag...");
     if (usedTags.includes(tagInput)) {

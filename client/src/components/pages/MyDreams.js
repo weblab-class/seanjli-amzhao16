@@ -29,6 +29,7 @@ const MyDreams = (props) => {
             date={dream.timeStamp}
             name={dream.author.name}
             content={dream.content}
+            tags={dream.tags}
             deleteDream={() => deleteDream(dream._id)}
             who="me"
           />

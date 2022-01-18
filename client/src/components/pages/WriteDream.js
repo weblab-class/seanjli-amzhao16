@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SubmitDream from "../modules/dreams/SubmitDream.js";
+import EditTags from "../modules/tags/EditTags.js";
 import "./WriteDream.css";
 import NavBar from "../modules/NavBar.js";
 import moment from "moment";
@@ -32,9 +33,24 @@ const WriteDream = (props) => {
     setTagInput(event.target.value);
   }
 
-  const addTag = () => {
+  const addNewTag = () => {
+    if (usedTags.includes(tagInput)) {
+      addUsedTag(tagInput);
+    } else {
     setTags([...tags, tagInput]);
+    post("/api/addUsedTag", {tag: tagInput});
+    }
     setTagInput("");
+  }
+
+  const addUsedTag = (tag) => {
+    setTags([...tags, tag]);
+    setUsedTags(usedTags.filter((x) => x !== tag));
+  }
+
+  const removeTag = (tag) => {
+    setTags(tags.filter((x) => x !== tag));
+    setUsedTags([...usedTags, tag]);
   }
 
   console.log("tags:");
@@ -51,14 +67,6 @@ const WriteDream = (props) => {
     <div>
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
-
-
-      <p>[{tags.join(",")}]</p>
-      <input type="text" value={tagInput} onChange={handleChange} />
-      <br />
-      <button onClick={addTag}>add tag</button>
-
-
         <div className="writeTitle">
           {currHour < 12 ? (
             <em className="greeting">good morning!</em>
@@ -79,7 +87,7 @@ const WriteDream = (props) => {
           <p className="plus2">+</p>
           <p className="key4">u</p>
         </div>
-        <SubmitDream privacy={privacy} />
+        <SubmitDream privacy={privacy} tags={tags}/>
         {privacy ? (
           <button value="privacy" onClick={togglePrivacy}>
             <p className="toggleContainer">
@@ -96,6 +104,19 @@ const WriteDream = (props) => {
           </button>
         )}
       </div>
+
+        <br />
+        <br />
+        <br />
+      <EditTags
+        tags={tags}
+        removeTag={removeTag}
+        tagInput={tagInput}
+        handleChange={handleChange}
+        addNewTag={addNewTag}
+        usedTags={usedTags}
+        addUsedTag={addUsedTag}
+        />
     </div>
   );
 };

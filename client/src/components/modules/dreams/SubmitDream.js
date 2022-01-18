@@ -26,7 +26,7 @@ class SubmitDream extends React.Component {
 
   handleSubmit = (editorState) => {
     const addDream = (value) => {
-      const body = { content: value, privacy: this.props.privacy };
+      const body = { content: value, privacy: this.props.privacy, tags: this.props.tags };
       post("/api/addDream", body);
       // the raw state, stringified
       /* EDITED HERE*/

@@ -34,6 +34,9 @@ const DreamContainer = (props) => {
           <div className="subcontainerMe">
             <p className="avatarMe"></p>
             <p className="dateMe">{convertDate(props.date)}</p>
+
+            <h6>TAGS:</h6> {props.tags.map((tag) => <p>{tag}</p>)}
+
             <strong className="nameMe">{props.name}</strong>{" "}
             <p className="contentMe">
               {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}

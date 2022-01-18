@@ -169,7 +169,8 @@ router.post("/addDream", (req, res) => {
       name: req.user.name,
     },
     content: req.body.content,
-    private: req.body.privacy
+    private: req.body.privacy,
+    tags: req.body.tags,
   });
 
   newDream.save().then((dream) => res.send(dream));
@@ -180,7 +181,17 @@ router.post("/deleteDream", (req, res) => {
     {_id: req.body.dream_id,
     "author._id": req.user._id} // for security purposes, verifies id of person
   ).then((dream) => res.send(dream));
-})
+});
+
+// TAGS
+
+router.post("/addUsedTag", (req, res) => {
+  User.updateOne(
+    { _id: req.user._id },
+    { $push: { usedTags: req.body.tag } },
+    function (err, doc) {}
+  );
+});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {

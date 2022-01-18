@@ -5,7 +5,7 @@ const UsedTagBox = (props) => {
   return (
     <div>
       <button className="generalTag" onClick={props.addUsedTag}>
-        {props.tag} +
+        {props.tag}
       </button>
     </div>
   );

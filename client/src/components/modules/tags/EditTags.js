@@ -52,7 +52,7 @@ const EditTags = (props) => {
             add new tag
           </button>
         </div>
-        <div className="addedTagsLabel">added tags:</div>
+        <div className="addedTagsLabel">added tags: (click to remove)</div>
         <div className="addedTagsContainer">
           {props.tags.map(
             (tag) => (
@@ -66,7 +66,7 @@ const EditTags = (props) => {
             </div>*/
           )}
         </div>
-        <div className="previousTagsLabel">previous tags:</div>
+        <div className="previousTagsLabel">previous tags: (click to add)</div>
         <div className="previousTagsContainer">
           {props.usedTags.map(
             (tag) => (

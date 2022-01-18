@@ -128,6 +128,7 @@ const Feed = (props) => {
               name={dream.author.name}
               content={dream.content}
               tags={dream.tags}
+              private={dream.private}
             />
           ))}
         </div>

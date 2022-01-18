@@ -201,3 +201,31 @@
   border-radius: 2vh;
   border-width: 0.4vh;
 }
+
+.privateSymbol {
+  position: absolute;
+  bottom: 0.5vh;
+  right: 52.2vw;
+  height: 30px;
+  width: 30px;
+  background-image: url("LockSymbol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: normal;
+  text-align: right;
+  font-size: 3.5vh;
+}
+
+.publicSymbol {
+  position: absolute;
+  bottom: 0.5vh;
+  right: 52.5vw;
+  height: 30px;
+  width: 30px;
+  background-image: url("WorldSymbol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: normal;
+  text-align: right;
+  font-size: 3.5vh;
+}

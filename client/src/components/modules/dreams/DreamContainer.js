@@ -33,6 +33,11 @@ const DreamContainer = (props) => {
           <div className="subcontainerMe">
             <p className="avatarMe"></p>
             <p className="dateMe">{convertDate(props.date)}</p>
+            {props.private ? (
+              <div className="privateSymbol"></div>
+            ) : (
+              <div className="publicSymbol"></div>
+            )}
             <div className="tagsBox">
               {" "}
               {props.tags.length === 0 ? (

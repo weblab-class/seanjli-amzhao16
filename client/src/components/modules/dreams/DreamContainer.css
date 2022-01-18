@@ -60,7 +60,7 @@
   position: absolute;
   bottom: 0.5vh;
   width: 50vw;
-  left: 10vw;
+  left: 13vw;
   color: #e8b37f;
   font-weight: normal;
   text-align: left;
@@ -204,8 +204,8 @@
 
 .privateSymbol {
   position: absolute;
-  bottom: 0.5vh;
-  right: 52.2vw;
+  bottom: 0.3vh;
+  left: 10vw;
   height: 30px;
   width: 30px;
   background-image: url("LockSymbol.png");
@@ -218,8 +218,8 @@
 
 .publicSymbol {
   position: absolute;
-  bottom: 0.5vh;
-  right: 52.5vw;
+  bottom: 0.3vh;
+  left: 10vw;
   height: 30px;
   width: 30px;
   background-image: url("WorldSymbol.png");

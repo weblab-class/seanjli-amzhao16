@@ -1,0 +1,14 @@
+.generalTag {
+  float: left;
+  color: #ffbade;
+  background-color: white;
+  top: 0vh;
+  height: 4vh;
+  border-radius: 3vh;
+  font-size: 3vh;
+  width: 10vw;
+  cursor: pointer;
+  border: solid;
+  border-color: #ffbade;
+  border-width: 0.2vh;
+}

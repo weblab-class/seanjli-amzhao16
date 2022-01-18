@@ -15,7 +15,7 @@ const WriteDream = (props) => {
 
   const [tags, setTags] = useState([]);
 
-  const [me, setMe] = useState([{usedTags: []}]);
+  const [me, setMe] = useState([{ usedTags: [] }]);
 
   useEffect(() => {
     get("/api/getMe").then((x) => setMe(x));
@@ -31,27 +31,27 @@ const WriteDream = (props) => {
 
   const handleChange = (event) => {
     setTagInput(event.target.value);
-  }
+  };
 
   const addNewTag = () => {
     if (usedTags.includes(tagInput)) {
       addUsedTag(tagInput);
     } else {
-    setTags([...tags, tagInput]);
-    post("/api/addUsedTag", {tag: tagInput});
+      setTags([...tags, tagInput]);
+      post("/api/addUsedTag", { tag: tagInput });
     }
     setTagInput("");
-  }
+  };
 
   const addUsedTag = (tag) => {
     setTags([...tags, tag]);
     setUsedTags(usedTags.filter((x) => x !== tag));
-  }
+  };
 
   const removeTag = (tag) => {
     setTags(tags.filter((x) => x !== tag));
     setUsedTags([...usedTags, tag]);
-  }
+  };
 
   console.log("tags:");
   console.log(tags);
@@ -68,9 +68,9 @@ const WriteDream = (props) => {
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
         <div className="writeTitle">
-          {currHour < 12 ? (
+          {3 < currHour < 12 ? (
             <em className="greeting">good morning!</em>
-          ) : currHour < 18 ? (
+          ) : 12 <= currHour < 18 ? (
             <em className="greeting">good afternoon!</em>
           ) : (
             <em className="greeting">good evening!</em>
@@ -87,7 +87,7 @@ const WriteDream = (props) => {
           <p className="plus2">+</p>
           <p className="key4">u</p>
         </div>
-        <SubmitDream privacy={privacy} tags={tags}/>
+        <SubmitDream privacy={privacy} tags={tags} />
         {privacy ? (
           <button value="privacy" onClick={togglePrivacy}>
             <p className="toggleContainer">
@@ -105,9 +105,9 @@ const WriteDream = (props) => {
         )}
       </div>
 
-        <br />
-        <br />
-        <br />
+      <br />
+      <br />
+      <br />
       <EditTags
         tags={tags}
         removeTag={removeTag}
@@ -116,7 +116,7 @@ const WriteDream = (props) => {
         addNewTag={addNewTag}
         usedTags={usedTags}
         addUsedTag={addUsedTag}
-        />
+      />
     </div>
   );
 };

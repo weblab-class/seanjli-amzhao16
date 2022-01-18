@@ -1,0 +1,164 @@
+.editTagContainer {
+  position: absolute;
+  top: 89vh;
+  left: 7vw;
+  width: 92vw;
+  height: 7vh;
+}
+
+.addTagContainer {
+  position: absolute;
+  top: 0vh;
+  left: 4vw;
+  height: 5vh;
+  width: 18vw;
+  background-color: white;
+  padding-left: 1vw;
+  border-radius: 4vh;
+}
+
+.addTagSearch {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  height: 5vh;
+  padding-left: 1vw;
+  width: 12.5vw;
+  color: white;
+  color: #ffbade;
+  font-size: 3vh;
+  border: none;
+  border-radius: 4vh;
+}
+
+.addTagSearch:focus {
+  outline: #ffbade;
+}
+
+.addTagButton {
+  position: absolute;
+  top: 0vh;
+  left: 14vw;
+  border: solid;
+  border-color: white;
+  width: 8vw;
+  height: 5vh;
+  color: white;
+  background-color: #ffbade;
+  border-radius: 4vh;
+  cursor: pointer;
+}
+
+.addedTagsLabel {
+  position: absolute;
+  top: 0vh;
+  left: 27vw;
+  font-size: 3vh;
+  color: white;
+}
+
+::placeholder {
+  color: #ffbade;
+}
+
+.addedTagsContainer {
+  position: absolute;
+  border: none;
+  border: none;
+  overflow-x: auto;
+  left: 36vw;
+  height: 8vh;
+  font-size: 3vh;
+  width: 20vw;
+}
+
+.previousTagsLabel {
+  position: absolute;
+  top: 0vh;
+  left: 57vw;
+  font-size: 3vh;
+  width: 10vw;
+  color: white;
+}
+
+.previousTagsContainer {
+  position: absolute;
+  border: none;
+  overflow-x: auto;
+  left: 67vw;
+  height: 8vh;
+  font-size: 3vh;
+  width: 20vw;
+}
+
+.aboutTags {
+  position: absolute;
+  background-color: white;
+  top: 89vh;
+  left: 7vw;
+  height: 2.8vw;
+  padding-top: 0.2vw;
+  width: 3vw;
+  text-align: center;
+  color: #ffbade;
+  font-size: 2vw;
+  border-radius: 3vw;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.aboutTagsBox {
+  background-color: white;
+  position: absolute;
+  left: 7vw;
+  padding: 3vh;
+  width: 25vw;
+  border-radius: 3vh;
+  top: 46vh;
+  height: 34vh;
+}
+
+.aboutTagQuestion1 {
+  z-index: 7;
+  color: #d271a4;
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+}
+.aboutTagAnswer1 {
+  z-index: 7;
+  color: #ffbade;
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+}
+.aboutTagQuestion2 {
+  z-index: 7;
+  color: #d271a4;
+  position: absolute;
+  top: 13vh;
+  left: 1vw;
+}
+.aboutTagAnswer2 {
+  z-index: 7;
+  color: #ffbade;
+  position: absolute;
+  top: 16vh;
+  left: 1vw;
+}
+.aboutTagQuestion3 {
+  z-index: 7;
+  color: #d271a4;
+  position: absolute;
+  top: 32.5vh;
+  left: 1vw;
+}
+
+.aboutTagAnswer3 {
+  z-index: 7;
+  color: #ffbade;
+  position: absolute;
+  top: 35.5vh;
+  left: 1vw;
+}

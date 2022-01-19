@@ -197,6 +197,7 @@
   background-color: white;
   border: solid;
   width: 8vw;
+  cursor: default;
   text-align: center;
   border-radius: 2vh;
   border-width: 0.4vh;

@@ -26,6 +26,7 @@ const Profile = (props) => {
   const [showEditAvatar, setShowEditAvatar] = useState(false);
 
   const editAvatarPopUp = (event) => {
+    if (text !== props.userId) { return; }
     console.log("clicky");
     if (showEditAvatar === true) {
       setShowEditAvatar(false);

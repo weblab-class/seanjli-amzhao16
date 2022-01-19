@@ -64,6 +64,9 @@
   height: 5vh;
   border-radius: 2vh;
 }
+.chosenTag:hover {
+  color: white;
+}
 .unchosenTag {
   font-size: 2.5vh;
   width: 10vw;
@@ -75,6 +78,9 @@
   top: 0vh;
   height: 5vh;
   border-radius: 2vh;
+}
+.unchosenTag:hover {
+  color: #f4cba4;
 }
 
 .myDreamsBackground {

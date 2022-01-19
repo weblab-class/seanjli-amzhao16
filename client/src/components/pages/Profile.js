@@ -36,8 +36,8 @@ const Profile = (props) => {
   /* THE ACHIEVEMENTS STUFF */
   /* write 1 dream (TODO: change back, made true to see what true ones look like)*/
   const [novice, setNovice] = useState(true);
-  /* write 5 dreams*/
-  const [reporter, setReporter] = useState(false);
+  /* write 5 dreams TODO: change back, made true to see what true ones look like)*/
+  const [reporter, setReporter] = useState(true);
   /* write 15 dream*/
   const [dreamer, setDreamer] = useState(false);
   /* write 50 dream*/

@@ -1,0 +1,12 @@
+.editAvatarContainer {
+  background-color: #e4829e;
+  position: absolute;
+  color: white;
+  top: 3vh;
+  right: 2vw;
+  height: 70vh;
+  width: 50vw;
+  padding: 5vh;
+  z-index: 7;
+  border-radius: 5vh;
+}

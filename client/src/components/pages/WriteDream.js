@@ -66,6 +66,7 @@ const WriteDream = (props) => {
 
   const togglePrivacy = (event) => {
     setPrivacy(!privacy);
+    console.log("hour is" + currHour);
   };
 
   return (
@@ -73,9 +74,9 @@ const WriteDream = (props) => {
       <NavBar type="w" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="writing">
         <div className="writeTitle">
-          {3 < currHour < 12 ? (
+          {3 < currHour && currHour < 12 ? (
             <em className="greeting">good morning!</em>
-          ) : 12 <= currHour < 18 ? (
+          ) : 12 <= currHour && currHour < 18 ? (
             <em className="greeting">good afternoon!</em>
           ) : (
             <em className="greeting">good evening!</em>

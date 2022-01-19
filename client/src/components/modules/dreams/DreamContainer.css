@@ -205,7 +205,7 @@
 
 .privateSymbol {
   position: absolute;
-  bottom: 0.3vh;
+  bottom: 0.8vh;
   left: 10vw;
   height: 30px;
   width: 30px;
@@ -219,7 +219,7 @@
 
 .publicSymbol {
   position: absolute;
-  bottom: 0.3vh;
+  bottom: 0.6vh;
   left: 10vw;
   height: 30px;
   width: 30px;

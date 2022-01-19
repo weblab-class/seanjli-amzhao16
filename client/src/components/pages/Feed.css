@@ -49,6 +49,9 @@
   color: white;
   cursor: pointer;
 }
+.findFriendsLabel:hover {
+  background-color: #f5b8af;
+}
 
 .myFriendsLabel {
   position: absolute;

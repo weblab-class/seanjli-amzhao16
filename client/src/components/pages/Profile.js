@@ -10,6 +10,8 @@ import NotFound from "./NotFound";
 import "./Profile.css";
 import EditAvatarPage from "../modules/editavatar/EditAvatar.js";
 
+import Achievement from "../modules/achievements/Achievement";
+
 const Profile = (props) => {
   const { text } = useParams();
 
@@ -17,13 +19,91 @@ const Profile = (props) => {
     return <NotFound />;
   }
 
-  const [profile, setProfile] = useState([{ name: [] }]);
+  const [profile, setProfile] = useState([{ name: [], achievements: Array.from({length: 13}, i => i = false), usedTags: [], friends: []}]);
+
+  const [dreams, setDreams] = useState([]);
+
+  let earned = Array.from({length: 12}, i => i = false);
 
   useEffect(() => {
     get("/api/getProfile", { parent: text }).then((x) => setProfile(x));
+    get("/api/myDreams").then((x) => setDreams(x));
   }, []);
 
+  useEffect(() => {
+    earned = profile[0].achievements;
+  }, [profile]);
+
   const [showEditAvatar, setShowEditAvatar] = useState(false);
+
+  const dreamTextLengths = dreams.map((x) => (JSON.parse(x.content).blocks)[0].text.match(/\w+/g).length);
+
+  const tagLengths = dreams.map((x) => x.tags.length);
+  
+  // ACHIEVEMENT CHECKER 
+  // THIS SUCKS BUT THATS OKAY
+  if (text === props.userId) {
+  if (dreams.length >= 1) {
+    post("/api/achievementGot", {id: 0});
+    earned[0] = true;
+  }
+
+  if (dreams.length >= 5) {
+    post("/api/achievementGot", {id: 1});
+    earned[1] = true;
+  }
+
+  if (dreams.length >= 15) {
+    post("/api/achievementGot", {id: 2});
+    earned[2] = true;
+  }
+
+  if (dreams.length >= 50) {
+    post("/api/achievementGot", {id: 3});
+    earned[3] = true;
+  }
+
+  if (profile[0].usedTags.length >= 5) {
+    post("/api/achievementGot", {id: 4});
+    earned[4] = true;
+  }
+
+  if (profile[0].usedTags.length >= 10) {
+    post("/api/achievementGot", {id: 5});
+    earned[5] = true;
+  }
+
+  if (Math.max(...tagLengths) >= 3) {
+    post("/api/achievementGot", {id: 6});
+    earned[6] = true;
+  }
+  
+  if (Math.min(...dreamTextLengths) < 15) {
+    post("/api/achievementGot", {id: 7});
+    earned[7] = true;
+  }
+
+  if (Math.max(...dreamTextLengths) > 100) {
+    post("/api/achievementGot", {id: 8});
+    earned[8] = true;
+  }
+
+  if (Math.max(...dreamTextLengths) > 250) {
+    post("/api/achievementGot", {id: 9});
+    earned[9] = true;
+  }
+
+  if (profile[0].friends.length >= 3) {
+    post("/api/achievementGot", {id: 10});
+    earned[10] = true;
+  }
+
+  if (profile[0].friends.length >= 10) {
+    post("/api/achievementGot", {id: 11});
+    earned[11] = true;
+  }
+  }
+  //ACHIEVEMENT CHECKER END
 
   const editAvatarPopUp = (event) => {
     if (text !== props.userId) { return; }
@@ -34,34 +114,22 @@ const Profile = (props) => {
       setShowEditAvatar(true);
     }
   };
-  /* THE ACHIEVEMENTS STUFF */
-  /* write 1 dream (TODO: change back, made true to see what true ones look like)*/
-  const [novice, setNovice] = useState(true);
-  /* write 5 dreams TODO: change back, made true to see what true ones look like)*/
-  const [reporter, setReporter] = useState(true);
-  /* write 15 dream*/
-  const [dreamer, setDreamer] = useState(false);
-  /* write 50 dream*/
-  const [visionary, setVisionary] = useState(false);
-  /* make 5 tags (TODO: change back, made true to see what true ones look like)*/
-  const [classifier, setClassifier] = useState(true);
-  /* make 10 tags*/
-  const [cataloguer, setCataloguer] = useState(false);
-  /* write 3 tags on one post*/
-  const [multifaceted, setMultifaceted] = useState(false);
-  /* <15 word dream*/
-  const [laconic, setLaconic] = useState(false);
-  /* > 100 word dream */
-  const [scribe, setScribe] = useState(false);
-  /* > 250 word dream*/
-  const [novelist, setNovelist] = useState(false);
-  /* make 3 friends*/
-  const [amiable, setAmiable] = useState(false);
-  /* make 10 friends*/
-  const [socialite, setSocialite] = useState(false);
 
-  /* TODO: each individual achievement if completed will need its own css*/
-  /* because of the image of the reward, on achievements folder.*/
+  const achievements = [
+    {name: "novice", content: "write 1 dream", _id: 0},
+    {name: "reporter", content: "write 5 dreams", _id: 1},
+    {name: "dreamer", content: "write 15 dreams", _id: 2},
+    {name: "visionary", content: "write 50 dreams", _id: 3},
+    {name: "classifier", content: "make 5 tags", _id: 4},
+    {name: "cataloguer", content: "make 10 tags", _id: 5},
+    {name: "multifaceted", content: "write 3 tags on one post", _id: 6},
+    {name: "laconic", content: "write a <15 word dream", _id: 7},
+    {name: "scribe", content: "write a >100 word dream", _id: 8},
+    {name: "novelist", content: "write a >250 word dream", _id: 9},
+    {name: "amiable", content: "make 3 friends", _id: 10},
+    {name: "socialite", content: "make 10 friends", _id: 11}
+  ];
+
   return (
     <div className="profileBackground">
       <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId} />
@@ -73,210 +141,8 @@ const Profile = (props) => {
         <button className="defaultAvatar" onClick={editAvatarPopUp}></button>
         {showEditAvatar ? <EditAvatarPage /> : <div></div>}
         <div className="achievementsContainer">
-          {novice ? (
-            <div className="completeAchievement">
-              novice
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write 1 dream</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              novice
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write 1 dream</div>
-              </div>
-            </div>
-          )}
-          {reporter ? (
-            <div className="completeAchievement">
-              reporter
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write 5 dreams</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              reporter
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write 5 dreams</div>
-              </div>
-            </div>
-          )}
-          {dreamer ? (
-            <div className="completeAchievement">
-              dreamer
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write 15 dreams</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              dreamer
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write 15 dreams</div>
-              </div>
-            </div>
-          )}
-          {visionary ? (
-            <div className="completeAchievement">
-              visionary
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write 50 dreams</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              visionary
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write 50 dreams</div>
-              </div>
-            </div>
-          )}
-          {classifier ? (
-            <div className="completeAchievement">
-              classifier
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">make 5 tags</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              classifier
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">make 5 tags</div>
-              </div>
-            </div>
-          )}
-          {cataloguer ? (
-            <div className="completeAchievement">
-              cataloguer
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">make 10 tags</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              cataloguer
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">make 10 tags</div>
-              </div>
-            </div>
-          )}
-          {multifaceted ? (
-            <div className="completeAchievement">
-              multifaceted
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">add 3 tags to one post</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              multifaceted
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">add 3 tags to one post</div>
-              </div>
-            </div>
-          )}
-          {laconic ? (
-            <div className="completeAchievement">
-              laconic
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write a &lt;15 word dream</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              laconic
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write a &lt;15 word dream</div>
-              </div>
-            </div>
-          )}
-          {scribe ? (
-            <div className="completeAchievement">
-              scribe
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write a &gt;100 word dream</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              scribe
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write a &gt;100 word dream</div>
-              </div>
-            </div>
-          )}
-          {novelist ? (
-            <div className="completeAchievement">
-              novelist
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">write a &gt;250 word dream</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              novelist
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">write a &gt;250 word dream</div>
-              </div>
-            </div>
-          )}
-          {amiable ? (
-            <div className="completeAchievement">
-              amiable
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">make 3 friends</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              amiable
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">make 3 friends</div>
-              </div>
-            </div>
-          )}
-          {socialite ? (
-            <div className="completeAchievement">
-              socialite
-              <div className="knownPrize">:)</div>
-              <div className="achievementDescriptionContainer">
-                <div className="completeAchievementDescription">make 10 friends</div>
-              </div>
-            </div>
-          ) : (
-            <div className="incompleteAchievement">
-              socialite
-              <div className="unknownPrize">?</div>
-              <div className="achievementDescriptionContainer">
-                <div className="achievementDescription">make 10 friends</div>
-              </div>
-            </div>
-          )}
+          {achievements.map((x) =>
+          <Achievement name={x.name} content={x.content} earned={earned[x._id]} />)}
         </div>
       </div>
     </div>

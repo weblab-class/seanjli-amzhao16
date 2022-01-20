@@ -193,6 +193,14 @@ router.post("/addUsedTag", (req, res) => {
   );
 });
 
+router.post("/achievementGot", (req, res) => {
+  const str = "achievements." + req.body.id;
+  User.updateOne(
+    { _id: req.user._id },
+    { $set: {[str] : true}}
+  ).then((x) => res.send(x));
+});
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);

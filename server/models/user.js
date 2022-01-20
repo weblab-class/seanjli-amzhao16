@@ -5,6 +5,7 @@ const UserSchema = new mongoose.Schema({
   googleid: String,
   friends: {type: [String], default: []},
   usedTags: {type: [String], default: ["favorites"]},
+  achievements: {type: [Boolean], default: Array.from({length: 12}, i => i = false)},
 });
 
 // compile model from schema

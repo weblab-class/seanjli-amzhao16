@@ -23,7 +23,7 @@ const Profile = (props) => {
 
   const [dreams, setDreams] = useState([]);
 
-  let earned = Array.from({length: 12}, i => i = false);
+  const [earned, setEarned] = useState(Array.from({length: 12}, i => i = false));
 
   useEffect(() => {
     get("/api/getProfile", { parent: text }).then((x) => setProfile(x));
@@ -31,7 +31,7 @@ const Profile = (props) => {
   }, []);
 
   useEffect(() => {
-    earned = profile[0].achievements;
+    setEarned(profile[0].achievements);
   }, [profile]);
 
   const [showEditAvatar, setShowEditAvatar] = useState(false);
@@ -39,71 +39,78 @@ const Profile = (props) => {
   const dreamTextLengths = dreams.map((x) => (JSON.parse(x.content).blocks)[0].text.match(/\w+/g).length);
 
   const tagLengths = dreams.map((x) => x.tags.length);
-  
+
+  const changeElem = (i) => {
+    setEarned([...earned.slice(0,i), true, ...earned.slice(i+1)]);
+  }
+
   // ACHIEVEMENT CHECKER 
   // THIS SUCKS BUT THATS OKAY
+
   if (text === props.userId) {
-  if (dreams.length >= 1) {
+  if (dreams.length >= 1 && !earned[0]) {
     post("/api/achievementGot", {id: 0});
-    earned[0] = true;
+    changeElem(0);
   }
 
-  if (dreams.length >= 5) {
+  if (dreams.length >= 5 && !earned[1]) {
     post("/api/achievementGot", {id: 1});
-    earned[1] = true;
+    changeElem(1);
   }
 
-  if (dreams.length >= 15) {
+  if (dreams.length >= 15 && !earned[2]) {
     post("/api/achievementGot", {id: 2});
-    earned[2] = true;
+    changeElem(2);
   }
 
-  if (dreams.length >= 50) {
+  if (dreams.length >= 50 && !earned[3]) {
     post("/api/achievementGot", {id: 3});
-    earned[3] = true;
+    changeElem(3);
   }
 
-  if (profile[0].usedTags.length >= 5) {
+  if (profile[0].usedTags.length >= 5 && !earned[4]) {
     post("/api/achievementGot", {id: 4});
-    earned[4] = true;
+    changeElem(4);
   }
 
-  if (profile[0].usedTags.length >= 10) {
+  if (profile[0].usedTags.length >= 10 && !earned[5]) {
     post("/api/achievementGot", {id: 5});
-    earned[5] = true;
+    changeElem(5);
   }
 
-  if (Math.max(...tagLengths) >= 3) {
+  if (Math.max(...tagLengths) >= 3 && !earned[6]) {
     post("/api/achievementGot", {id: 6});
-    earned[6] = true;
+    changeElem(6);
   }
   
-  if (Math.min(...dreamTextLengths) < 15) {
+  if (Math.min(...dreamTextLengths) < 15 && !earned[7]) {
     post("/api/achievementGot", {id: 7});
-    earned[7] = true;
+    changeElem(7);
   }
 
-  if (Math.max(...dreamTextLengths) > 100) {
+  if (Math.max(...dreamTextLengths) > 100 && !earned[8]) {
     post("/api/achievementGot", {id: 8});
-    earned[8] = true;
+    changeElem(8);
   }
 
-  if (Math.max(...dreamTextLengths) > 250) {
+  if (Math.max(...dreamTextLengths) > 250 && !earned[9]) {
     post("/api/achievementGot", {id: 9});
-    earned[9] = true;
+    changeElem(9);
   }
 
-  if (profile[0].friends.length >= 3) {
+  if (profile[0].friends.length >= 3 && !earned[10]) {
     post("/api/achievementGot", {id: 10});
-    earned[10] = true;
+    changeElem(10);
   }
 
-  if (profile[0].friends.length >= 10) {
+  if (profile[0].friends.length >= 10 && !earned[11]) {
     post("/api/achievementGot", {id: 11});
-    earned[11] = true;
+    changeElem(11);
   }
   }
   //ACHIEVEMENT CHECKER END
+
+  console.log(earned);
 
   const editAvatarPopUp = (event) => {
     if (text !== props.userId) { return; }

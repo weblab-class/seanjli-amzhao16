@@ -11,6 +11,7 @@ import "./Profile.css";
 import EditAvatarPage from "../modules/editavatar/EditAvatar.js";
 
 import Achievement from "../modules/achievements/Achievement";
+import Avatar from "../modules/editavatar/Avatar";
 
 const Profile = (props) => {
   const { text } = useParams();
@@ -19,11 +20,36 @@ const Profile = (props) => {
     return <NotFound />;
   }
 
-  const [profile, setProfile] = useState([{ name: [], achievements: Array.from({length: 13}, i => i = false), usedTags: [], friends: []}]);
+  const [profile, setProfile] = useState([{ name: [], 
+    achievements: Array.from({length: 13}, i => i = false), 
+    usedTags: [], 
+    friends: [],
+    avatar: {hairColor: "blank",
+    hairType: "blank",
+    skin: "blank",
+    shirt: "blank",
+    flair: 
+      {hat: "blank", 
+      neck: "blank", 
+      glasses: "blank"}
+    }
+  }]);
 
   const [dreams, setDreams] = useState([]);
 
   const [earned, setEarned] = useState(Array.from({length: 12}, i => i = false));
+
+  const [avatar, setAvatar] = useState( 
+      {hairColor: "blank",
+      hairType: "blank",
+      skin: "blank",
+      shirt: "blank",
+      flair: 
+        {hat: "blank", 
+        neck: "blank", 
+        glasses: "blank"}
+      }
+  );
 
   useEffect(() => {
     get("/api/getProfile", { parent: text }).then((x) => setProfile(x));
@@ -32,7 +58,10 @@ const Profile = (props) => {
 
   useEffect(() => {
     setEarned(profile[0].achievements);
+    setAvatar(profile[0].avatar);
   }, [profile]);
+
+  console.log(avatar);
 
   const [showEditAvatar, setShowEditAvatar] = useState(false);
 
@@ -110,11 +139,8 @@ const Profile = (props) => {
   }
   //ACHIEVEMENT CHECKER END
 
-  console.log(earned);
-
   const editAvatarPopUp = (event) => {
     if (text !== props.userId) { return; }
-    console.log("clicky");
     if (showEditAvatar === true) {
       setShowEditAvatar(false);
     } else {
@@ -144,9 +170,9 @@ const Profile = (props) => {
         {" "}
         <h1 className="profileTitle">Profile</h1>
         <p className="profileName">Name: {profile[0].name}</p>
-        <div className="defaultAvatar"> </div>
+        <Avatar avatar={avatar}/>
         <button className="defaultAvatar" onClick={editAvatarPopUp}></button>
-        {showEditAvatar ? <EditAvatarPage /> : <div></div>}
+        {showEditAvatar ? <EditAvatarPage avatar={avatar} setAvatar={setAvatar}/> : <div></div>}
         <div className="achievementsContainer">
           {achievements.map((x) =>
           <Achievement name={x.name} content={x.content} earned={earned[x._id]} />)}

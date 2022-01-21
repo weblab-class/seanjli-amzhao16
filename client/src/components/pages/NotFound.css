@@ -1,0 +1,26 @@
+.notFoundContainer {
+  border: none;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #ffbade 0%, #ffefc0 100%);
+}
+
+.ohNo {
+  text-align: center;
+  position: relative;
+  top: 30vh;
+  color: white;
+  font-size: 15vh;
+}
+
+.dneNotFound {
+  text-align: center;
+  position: relative;
+  top: 30vh;
+  color: white;
+  font-size: 4vh;
+}
+
+.itWontCenterTheLink {
+  text-align: center;
+}

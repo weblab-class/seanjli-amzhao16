@@ -1,8 +1,8 @@
 .name {
   position: absolute;
-  bottom: 0.5vh;
-  width: 50vw;
-  left: 10vw;
+  top: -4vh;
+  width: 30vw;
+  left: 10.5vw;
   color: #ea9a8f;
   font-weight: normal;
   text-align: left;
@@ -14,20 +14,20 @@
   background-image: url("friendsBlankAvatar.png");
   background-size: contain;
   background-repeat: no-repeat;
-  bottom: 6vh;
-  left: 1vw;
+  top: 0vh;
+  left: 1.5vw;
   width: 15vw;
   height: 15vh;
 }
 
 .content {
-  position: absolute;
-  right: 3vw;
+  position: relative;
+  left: 10vw;
   padding: 1.5vh 3vh;
   width: 44vw;
   top: 0.9vh;
+  height: auto;
   overflow-y: auto;
-  bottom: 6vh;
   background-color: white;
   border-radius: 4vh;
   color: #ea9a8f;
@@ -35,7 +35,7 @@
 
 .date {
   position: absolute;
-  bottom: 0.5vh;
+  top: -4vh;
   right: 3vw;
   color: #ea9a8f;
   font-weight: normal;
@@ -43,9 +43,9 @@
 }
 
 .container {
-  position: static;
-  padding-top: 3vh;
-  height: 22vh;
+  float: top;
+  padding-top: 8vh;
+  padding-bottom: 4vh;
   width: 60vw;
   background-color: #ffd5cf;
 }
@@ -56,11 +56,19 @@
   width: 100%;
 }
 
+/* SEPARATE */
+
+.subcontainerMe {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .nameMe {
   position: absolute;
-  bottom: 0.5vh;
-  width: 50vw;
-  left: 13vw;
+  width: 40vw;
+  left: 11vw;
+  top: 0vh;
   color: #e8b37f;
   font-weight: normal;
   text-align: left;
@@ -72,52 +80,44 @@
   background-image: url("meBlankAvatar.png");
   background-size: contain;
   background-repeat: no-repeat;
-  bottom: 6vh;
-  left: 1vw;
+  top: 2.5vh;
+  left: 1.5vw;
   width: 15vw;
   height: 15vh;
 }
+.containerMe {
+  float: top;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  width: 94vw;
+  background-color: #ffe3c8;
+}
 
 .contentMe {
-  position: absolute;
-  right: 13vw;
+  position: relative;
+  left: 10vw;
   padding: 1.5vh 3vh;
   width: 68vw;
-  top: 0.9vh;
+  height: auto;
   overflow-y: auto;
-  bottom: 6vh;
   background-color: white;
   border-radius: 4vh;
   color: #e8b37f;
 }
 
 .dateMe {
-  position: absolute;
-  bottom: 0.5vh;
-  right: 26vw;
+  position: relative;
+  top: 0vh;
+  left: 43vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
 }
 
-.containerMe {
-  position: static;
-  padding-top: 3vh;
-  height: 22vh;
-  width: 94vw;
-  background-color: #ffe3c8;
-}
-
-.subcontainerMe {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
 .deleteButtonMe {
   position: absolute;
-  bottom: 0.5vh;
-  right: 14vw;
+  top: 0vh;
+  left: 70vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
@@ -128,7 +128,7 @@
 
 .deletePopUpContainer {
   position: absolute;
-  bottom: 7vh;
+  top: 5vh;
   right: 14vw;
   color: white;
   font-weight: normal;
@@ -136,6 +136,7 @@
   width: 24vw;
   text-align: center;
   font-size: 2vh;
+  z-index: 100;
   background-color: #e8b37f;
   border: none;
   border-radius: 2vh;
@@ -172,13 +173,18 @@
 
 .noTags {
   position: absolute;
-  top: 1.5vh;
+  right: 1vw;
+  padding: 1vh 3vh;
   width: 8vw;
-  left: 1vw;
+  height: 5vh;
+  top: 5vh;
+  overflow-y: auto;
+  background-color: #e8b37f;
+  border-radius: 4vh;
   color: white;
   font-weight: normal;
-  text-align: left;
-  font-size: 3vh;
+  text-align: center;
+  font-size: 2.5vh;
 }
 
 .tagsBox {
@@ -186,12 +192,12 @@
   right: 1vw;
   padding: 1vh 3vh;
   width: 8vw;
-  top: 0.9vh;
+  top: 5vh;
   overflow-y: auto;
-  bottom: 6vh;
   background-color: #e8b37f;
   border-radius: 4vh;
 }
+
 .indivTag {
   color: #e8b37f;
   background-color: white;
@@ -205,8 +211,8 @@
 
 .privateSymbol {
   position: absolute;
-  bottom: 0.8vh;
-  left: 10vw;
+  top: 0vh;
+  left: 40.2vw;
   height: 30px;
   width: 30px;
   background-image: url("LockSymbol.png");
@@ -219,8 +225,8 @@
 
 .publicSymbol {
   position: absolute;
-  bottom: 0.6vh;
-  left: 10vw;
+  top: 0.5vh;
+  left: 40vw;
   height: 30px;
   width: 30px;
   background-image: url("WorldSymbol.png");

@@ -37,23 +37,19 @@ const DreamContainer = (props) => {
               <div className="privateSymbol"></div>
             ) : (
               <div className="publicSymbol"></div>
-            )}
-            <div className="tagsBox">
-              {" "}
-              {props.tags.length === 0 ? (
-                <div className="noTags">no tags</div>
-              ) : (
+            )}{" "}
+            {props.tags.length === 0 ? (
+              <div className="noTags">no tags</div>
+            ) : (
+              <div className="tagsBox">
                 <div>
                   {props.tags.map((tag) => (
                     <p className="indivTag">{tag}</p>
                   ))}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
             <strong className="nameMe">{props.name}</strong>{" "}
-            <p className="contentMe">
-              {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
-            </p>
             <button className="deleteButtonMe" value="delete" onClick={deletePopUp}>
               delete dream
             </button>
@@ -70,6 +66,9 @@ const DreamContainer = (props) => {
             ) : (
               <div></div>
             )}
+            <p className="contentMe">
+              {Parser(stateToHTML(convertFromRaw(JSON.parse(props.content))))}
+            </p>
           </div>
         </div>
       ) : (

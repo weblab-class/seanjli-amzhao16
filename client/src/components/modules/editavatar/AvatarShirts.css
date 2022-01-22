@@ -1,0 +1,125 @@
+.shirts-lavender {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/lavender-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-light-blue {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/light-blue-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-mit {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/mit-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-navy {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/navy-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-pink {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/pink-shirt.png");
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-sage {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/sage-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.shirts-white {
+  height: 90%;
+  width: 90%;
+
+  background-image: url("./shirts/white-shirt.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}

@@ -1,0 +1,71 @@
+.skin-blank {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/grey-avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}
+
+.skin-1 {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/skin-color-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}
+
+.skin-2 {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/skin-color-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}
+
+.skin-3 {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/skin-color-3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}
+
+.skin-4 {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/skin-color-4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}
+
+.skin-5 {
+  height: 90%;
+  width: 90%;
+  background-image: url("./skin-color/skin-color-5.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  z-index: 1;
+}

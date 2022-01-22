@@ -1,0 +1,408 @@
+.long-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-curly-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-curly-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-curly-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-curly-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-curly-black-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-curly-black-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-curly-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-curly-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-curly-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-curly-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-curly-brown-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-curly-brown-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-curly-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-curly-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-curly-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-curly-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-curly-blonde-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-curly-blonde-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.long-curly-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/long-curly-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.medium-curly-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/medium-curly-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}
+.short-curly-ginger-hair {
+  height: 90%;
+  width: 90%;
+  background-image: url("./hair/short-curly-ginger-hair.png");
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  top: 10vh;
+
+  z-index: 2;
+
+  left: 6vw;
+}

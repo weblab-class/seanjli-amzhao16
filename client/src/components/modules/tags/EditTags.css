@@ -57,8 +57,8 @@
   top: 0vh;
   left: 26.5vw;
   font-size: 2.5vh;
-  width: 10vw;
-  height: 10vh;
+  width: 9vw;
+  height: 11vh;
   overflow-x: auto;
   overflow-y: auto;
   color: white;
@@ -76,16 +76,16 @@
   left: 36vw;
   height: 8vh;
   font-size: 3vh;
-  width: 20vw;
+  width: 22vw;
 }
 
 .previousTagsLabel {
   position: absolute;
   top: 0vh;
-  left: 57vw;
+  left: 58vw;
   font-size: 2.5vh;
-  width: 10vw;
-  height: 10vh;
+  width: 9vw;
+  height: 11vh;
   overflow-x: auto;
   overflow-y: auto;
   color: white;
@@ -98,7 +98,7 @@
   left: 67vw;
   height: 8vh;
   font-size: 3vh;
-  width: 20vw;
+  width: 22vw;
 }
 
 .aboutTags {

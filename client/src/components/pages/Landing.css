@@ -10,7 +10,7 @@
   text-align: center;
   font-size: 90px;
   position: relative;
-  top: 30vh;
+  top: 26vh;
 }
 
 .landingPage {
@@ -25,7 +25,7 @@
 
 .login {
   position: relative;
-  top: 26vh;
+  top: 22vh;
   color: #ffd5cf !important;
   border: none;
   left: -13px;
@@ -43,7 +43,7 @@
   position: relative;
   color: #ffd5cf;
   background-color: white;
-  top: 26vh;
+  top: 22vh;
   font-size: 20px;
   width: 110px;
   height: 60px;
@@ -60,7 +60,7 @@
   text-align: center;
   font-size: 35px;
   position: relative;
-  top: 28vh;
+  top: 24vh;
   font-size: 30px;
   text-align: center;
   overflow: hidden;

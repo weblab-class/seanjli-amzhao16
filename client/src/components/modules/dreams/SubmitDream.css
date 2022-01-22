@@ -5,8 +5,8 @@
   text-align: center;
   font-size: 3vw;
   position: absolute;
-  top: 58vh;
-  bottom: 11.5vh;
+  top: 56vh;
+  bottom: 13.5vh;
   left: 65vw;
   width: 24vw;
   cursor: pointer;
@@ -21,7 +21,7 @@
   color: white;
   background-color: #ffbade;
   position: absolute;
-  top: 20vh;
+  top: 18vh;
   left: 3vw;
   width: 55vw;
   overflow-y: auto;

@@ -26,7 +26,9 @@ const Feed = (props) => {
 
   useEffect(() => {
     if (friends.length > 0) {
-    get("/api/dreams", { parent: [...friends, props.userId] }).then((x) => setDreams(x.reverse()));
+      get("/api/dreams", { parent: [...friends, props.userId] }).then((x) =>
+        setDreams(x.reverse())
+      );
     }
   }, [friends]);
 
@@ -86,21 +88,29 @@ const Feed = (props) => {
       <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="friendsSectionContainer">
         <div>
-          <button className="findFriendsLabel" onClick={friendsPopUp}>
-            find friends
-          </button>
+          <div className="magnifyingGlass"></div>
+          <input
+            placeholder="find friends"
+            className="findFriendsLabel"
+            onClick={friendsPopUp}
+            type="text"
+            onChange={handleChange}
+            value={search}
+          />
           {showAllFriends ? (
             <div className="makeFriendsBox">
-              {" "}
-              <input type="text" onChange={handleChange} value={search} />
-              <MakeFriendRequests
-                requestees={requestees
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .filter((x) => x.name.toLowerCase().startsWith(search.toLowerCase()))}
-                setRequestees={setRequestees}
-                outgoing={outgoing}
-                setOutgoing={setOutgoing}
-              />{" "}
+              {search === "" ? (
+                <div className="emptySearchFriends"> type your friend's name above</div>
+              ) : (
+                <MakeFriendRequests
+                  requestees={requestees
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .filter((x) => x.name.toLowerCase().startsWith(search.toLowerCase()))}
+                  setRequestees={setRequestees}
+                  outgoing={outgoing}
+                  setOutgoing={setOutgoing}
+                />
+              )}
             </div>
           ) : (
             <div></div>

@@ -36,22 +36,24 @@
   padding-bottom: 1vh;
   width: 28vw;
   left: 1.8vw;
-  height: 8vh;
+  height: 5vh;
   padding-top: 1vh;
   right: 9vw;
   border: solid 0.5vh;
+  outline: none;
   font-size: 4vh;
+  cursor: text;
   border-radius: 4vh;
   text-align: center;
+  z-index: 4;
   border-color: white;
   background-color: #ffd5cf;
   color: white;
-  cursor: pointer;
 }
-.findFriendsLabel:hover {
+/* .findFriendsLabel:hover {
   background-color: #f5b8af;
 }
-
+ */
 .myFriendsLabel {
   position: absolute;
   top: 12vh;
@@ -143,7 +145,7 @@
   left: 1.8vw;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 72vh;
+  height: 30vh;
   padding-top: 1vh;
   right: 9vw;
   border: solid 0.5vh;
@@ -175,4 +177,29 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.emptySearchFriends {
+  font-size: 3vh;
+}
+
+.magnifyingGlass {
+  position: absolute;
+  top: 3.4vh;
+  padding-bottom: 1vh;
+  width: 3vw;
+  left: 3.5vw;
+  height: 5vh;
+  padding-top: 1vh;
+  right: 9vw;
+  background-image: url("search-bar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  z-index: 100;
 }

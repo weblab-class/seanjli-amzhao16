@@ -54,7 +54,7 @@
 
 .addedTagsLabel {
   position: absolute;
-  top: 0vh;
+  top: -1vh;
   left: 26.5vw;
   font-size: 2.5vh;
   width: 9vw;
@@ -73,6 +73,7 @@
   border: none;
   border: none;
   overflow-x: auto;
+  top: -1vh;
   left: 36vw;
   height: 8vh;
   font-size: 3vh;
@@ -81,7 +82,7 @@
 
 .previousTagsLabel {
   position: absolute;
-  top: 0vh;
+  top: -1vh;
   left: 58vw;
   font-size: 2.5vh;
   width: 9vw;
@@ -96,6 +97,7 @@
   border: none;
   overflow-x: auto;
   left: 67vw;
+  top: -1vh;
   height: 8vh;
   font-size: 3vh;
   width: 22vw;

@@ -90,7 +90,7 @@ const Feed = (props) => {
         <div>
           <div className="magnifyingGlass"></div>
           <input
-            placeholder="find friends"
+            placeholder="add new friends"
             className="findFriendsLabel"
             onClick={friendsPopUp}
             type="text"

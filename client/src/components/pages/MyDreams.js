@@ -70,6 +70,7 @@ const MyDreams = (props) => {
           <div>
             {displayedDreams.map((dream) => (
               <DreamContainer
+                id={dream._id}
                 date={dream.timeStamp}
                 name={dream.author.name}
                 content={dream.content}

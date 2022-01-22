@@ -1,14 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./DreamContainer.css";
-import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
-import { convertFromRaw, convertToRaw } from "draft-js";
+import { convertFromRaw } from "draft-js";
 import { stateToHTML } from "draft-js-export-html";
 import { formatInTimeZone } from "date-fns-tz";
 import Parser from "html-react-parser";
 
+import { get, post } from "../../../utilities";
+
+
 const DreamContainer = (props) => {
   const [showDelete, setShowDelete] = useState(false);
+
+  const [privacy, setPrivacy] = useState(false);
+
+  useEffect(() => {
+    setPrivacy(props.private)
+  }, []);
+
+  const togglePrivacy = () => {
+    post("/api/togglePrivacy", {dream_id: props.id});
+    setPrivacy(!privacy);
+  }
+
   const deletePopUp = (event) => {
     if (showDelete === false) {
       setShowDelete(true);
@@ -30,10 +44,13 @@ const DreamContainer = (props) => {
     <div>
       {props.who === "me" ? (
         <div className="containerMe">
+          {privacy ? 
+          <button onClick={togglePrivacy}>make public</button> : 
+          <button onClick={togglePrivacy}>make private</button>}
           <div className="subcontainerMe">
             <p className="avatarMe"></p>
             <p className="dateMe">{convertDate(props.date)}</p>
-            {props.private ? (
+            {privacy ? (
               <div className="privateSymbol"></div>
             ) : (
               <div className="publicSymbol"></div>

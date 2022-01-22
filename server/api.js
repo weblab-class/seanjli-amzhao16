@@ -179,8 +179,17 @@ router.post("/addDream", (req, res) => {
 router.post("/deleteDream", (req, res) => {
   Dream.deleteOne(
     {_id: req.body.dream_id,
-    "author._id": req.user._id} // for security purposes, verifies id of person
+      "author._id": req.user._id} // for security purposes, verifies id of person
   ).then((dream) => res.send(dream));
+});
+
+router.post("/togglePrivacy", (req, res) => {
+  Dream.updateOne(
+    {_id: req.body.dream_id,
+      "author._id": req.user._id},
+    [{$set: {private: {$not: "$private"}}}],
+    function (err, doc) {}
+  );
 });
 
 // TAGS
@@ -190,7 +199,7 @@ router.post("/addUsedTag", (req, res) => {
     { _id: req.user._id },
     { $push: { usedTags: req.body.tag } },
     function (err, doc) {}
-  );
+  ).then((x) => console.log(x));
 });
 
 router.post("/achievementGot", (req, res) => {

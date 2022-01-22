@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.writeQuad:hover{
+.writeQuad:hover {
   background-color: #e996c1;
 }
 
@@ -70,7 +70,7 @@
   cursor: pointer;
 }
 
-.profileQuad:hover{
+.profileQuad:hover {
   background-color: #f2a5bb;
 }
 .profileQuadText {
@@ -107,7 +107,7 @@
   color: #e8b37f;
   text-decoration: none;
 }
-.dreamsQuad:hover{
+.dreamsQuad:hover {
   background-color: #f4cba4;
 }
 
@@ -145,7 +145,7 @@
   color: #ea9a8f;
   text-decoration: none;
 }
-.feedQuad:hover{
+.feedQuad:hover {
   background-color: #f5b8af;
 }
 
@@ -166,7 +166,6 @@
   text-decoration: none;
   animation: slideFromLeft 1.9s;
 }
-
 
 /* TODO: not perfectly center */
 .logout {
@@ -195,8 +194,9 @@
   position: absolute;
   top: 1vh;
   right: 3vw;
+  width: 18vw;
   font-size: 5vh;
-  text-align: center;
+  text-align: right;
   z-index: 2;
   color: #ffb6c1;
 }

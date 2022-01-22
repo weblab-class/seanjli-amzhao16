@@ -5,6 +5,7 @@
   border-radius: 5vh;
   height: 76vh;
   width: 94vw;
+  overflow-x: hidden;
   right: 3vw;
   padding-bottom: 1vh;
   overflow-y: auto;

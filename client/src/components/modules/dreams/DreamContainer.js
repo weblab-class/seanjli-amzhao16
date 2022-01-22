@@ -8,20 +8,19 @@ import Parser from "html-react-parser";
 
 import { get, post } from "../../../utilities";
 
-
 const DreamContainer = (props) => {
   const [showDelete, setShowDelete] = useState(false);
 
   const [privacy, setPrivacy] = useState(false);
 
   useEffect(() => {
-    setPrivacy(props.private)
+    setPrivacy(props.private);
   }, []);
 
   const togglePrivacy = () => {
-    post("/api/togglePrivacy", {dream_id: props.id});
+    post("/api/togglePrivacy", { dream_id: props.id });
     setPrivacy(!privacy);
-  }
+  };
 
   const deletePopUp = (event) => {
     if (showDelete === false) {
@@ -39,14 +38,20 @@ const DreamContainer = (props) => {
       setShowDelete(false);
     }
   };
+  const [showDreamSettings, setShowDreamSettings] = useState(false);
+
+  const toggleDreamSettings = (event) => {
+    if (showDreamSettings === true) {
+      setShowDreamSettings(false);
+    } else {
+      setShowDreamSettings(true);
+    }
+  };
 
   return (
     <div>
       {props.who === "me" ? (
         <div className="containerMe">
-          {privacy ? 
-          <button onClick={togglePrivacy}>make public</button> : 
-          <button onClick={togglePrivacy}>make private</button>}
           <div className="subcontainerMe">
             <p className="avatarMe"></p>
             <p className="dateMe">{convertDate(props.date)}</p>
@@ -67,9 +72,30 @@ const DreamContainer = (props) => {
               </div>
             )}
             <strong className="nameMe">{props.name}</strong>{" "}
-            <button className="deleteButtonMe" value="delete" onClick={deletePopUp}>
-              delete dream
+            <button className="toggleDreamSettings" onClick={toggleDreamSettings}>
+              ...
             </button>
+            {showDreamSettings ? (
+              <div className="dreamSettingsContainer">
+                {privacy ? (
+                  <button className="dreamSetting" onClick={togglePrivacy}>
+                    make public
+                  </button>
+                ) : (
+                  <button className="dreamSetting" onClick={togglePrivacy}>
+                    make private
+                  </button>
+                )}
+                <button className="dreamSetting" value="delete" onClick={deletePopUp}>
+                  delete dream
+                </button>
+                <button className="dreamSetting" onClick={toggleDreamSettings}>
+                  close
+                </button>
+              </div>
+            ) : (
+              <div></div>
+            )}
             {showDelete ? (
               <div className="deletePopUpContainer">
                 Are you sure you want to delete your dream?

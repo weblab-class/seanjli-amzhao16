@@ -2,11 +2,10 @@
   position: absolute;
   top: 2vh;
   width: 60vw;
-  overflow-x: auto;
   overflow-y: auto;
   right: 2vh;
   bottom: 4vh;
-  height: 76vh;
+  height: 79vh;
 }
 
 .friendsContainerBorder {
@@ -102,7 +101,7 @@
   position: absolute;
   top: 20vh;
   width: 30vw;
-  left: 3vw;
+  left: 2vw;
   height: 21vh;
   padding-top: 1vh;
   right: 9vw;
@@ -114,7 +113,7 @@
 .incomingRequestsArea {
   position: absolute;
   top: 52vh;
-  width: 30vw;
+  width: 28vw;
   left: 3vw;
   height: 10vh;
   padding-top: 1vh;
@@ -126,7 +125,7 @@
 .outgoingRequestsArea {
   position: absolute;
   top: 74vh;
-  width: 30vw;
+  width: 28vw;
   left: 3vw;
   height: 10vh;
   padding-top: 1vh;
@@ -143,7 +142,7 @@
   width: 28vw;
   left: 1.8vw;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
   height: 72vh;
   padding-top: 1vh;
   right: 9vw;
@@ -162,4 +161,18 @@
   background-color: #f5b8af;
   height: 100vh;
   width: 100vw;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  height: 3px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
 }

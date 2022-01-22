@@ -2,7 +2,7 @@
   position: relative;
   width: 26vw;
   text-decoration: none !important;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   height: 5vh;
 }

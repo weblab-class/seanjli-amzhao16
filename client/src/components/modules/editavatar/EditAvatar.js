@@ -13,7 +13,7 @@ const EditAvatarPage = (props) => {
     "short",
     "short-curly",
   ];
-  const hairColor = ["blank", "black", "blonde", "brown", "ginger"];
+  const hairColor = ["blank", "black", "brown", "blonde", "ginger"];
   const shirt = ["blank", "lavender", "light-blue", "mit", "navy", "pink", "sage", "white"];
   const skin = ["blank", "1", "2", "3", "4", "5"];
 
@@ -22,29 +22,56 @@ const EditAvatarPage = (props) => {
     props.setAvatar({ ...props.avatar, [item]: newItem });
   };
 
+  /* TODO: how to highlight just the one that is currently selected?
+  I tried to do an if with props.avatar.skin but i dont think it
+  likes me referencing props inside of map*/
   return (
     <div className="editAvatarContainer">
-      {hairType.map((x) => (
-        <button onClick={() => editAvatar("hairType", x)}>change hair type to {x}</button>
-      ))}
-      <br />
-      <br />
-
-      {hairColor.map((x) => (
-        <button onClick={() => editAvatar("hairColor", x)}>change hair color to {x}</button>
-      ))}
-      <br />
-      <br />
-
-      {shirt.map((x) => (
-        <button onClick={() => editAvatar("shirt", x)}>change shirt to {x}</button>
-      ))}
-      <br />
-      <br />
-
-      {skin.map((x) => (
-        <button onClick={() => editAvatar("skin", x)}>change skin type to {x}</button>
-      ))}
+      <div className="editSkinContainer">
+        skin color:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {skin.map((x) => (
+            <button
+              className={"skinColorPicker-" + x}
+              onClick={() => editAvatar("skin", x)}
+            ></button>
+          ))}
+        </div>
+      </div>
+      <div className="editHairColorContainer">
+        hair color:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {hairColor.map((x) => (
+            <button
+              className={"hairColorPicker-" + x}
+              onClick={() => editAvatar("hairColor", x)}
+            ></button>
+          ))}
+        </div>
+      </div>
+      <div className="editHairStyleContainer">
+        hair style:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {hairType.map((x) => (
+            <button
+              className={x + "-" + props.avatar.hairColor + "-button"}
+              onClick={() => editAvatar("hairType", x)}
+            ></button>
+          ))}
+        </div>
+      </div>
+      <div className="editShirtContainer">
+        shirt color:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {shirt.map((x) => (
+            <button className={x + "-shirt-button"} onClick={() => editAvatar("shirt", x)}></button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

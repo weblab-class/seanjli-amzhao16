@@ -39,6 +39,7 @@ const Home = (props) => {
       <div className="circle5"></div>
       <div className="circle6"></div>
       <div className="centerCircle">
+        <p className="hello">Hello,</p>
         <p className="helloName">{props.username}</p>
         <div className="centerText"> dream log </div>
         <a className="howToUse" href="/tutorial">

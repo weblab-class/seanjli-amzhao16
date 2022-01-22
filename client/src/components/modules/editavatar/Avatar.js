@@ -7,7 +7,6 @@ import React from "react";
 const Avatar = (props) => {
   return (
     <div>
-      <br />
       <div className={"skin-" + props.avatar.skin}></div>
       <div className={"shirts-" + props.avatar.shirt}></div>
       <div className={props.avatar.hairType + "-" + props.avatar.hairColor + "-hair"}></div>

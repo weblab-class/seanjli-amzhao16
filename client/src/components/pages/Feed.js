@@ -38,7 +38,7 @@ const Feed = (props) => {
   const handleChange = (event) => {
     const value = event.target.value;
     setSearch(value);
-  }
+  };
 
   useEffect(() => {
     get("/api/getUser").then((x) => setUsers(x));
@@ -75,6 +75,10 @@ const Feed = (props) => {
     }
   };
 
+  console.log("BREAK");
+
+  console.log(dreams);
+
   return (
     <div className="friendsBackground">
       <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />
@@ -88,8 +92,9 @@ const Feed = (props) => {
               {" "}
               <input type="text" onChange={handleChange} value={search} />
               <MakeFriendRequests
-                requestees={requestees.sort((a, b) => a.name.localeCompare(b.name)).
-                  filter((x) => (x.name.toLowerCase().startsWith(search.toLowerCase())))}
+                requestees={requestees
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .filter((x) => x.name.toLowerCase().startsWith(search.toLowerCase()))}
                 setRequestees={setRequestees}
                 outgoing={outgoing}
                 setOutgoing={setOutgoing}
@@ -124,7 +129,10 @@ const Feed = (props) => {
         </div>
         <div>
           <div className="outgoingRequestsArea">
-            <OutgoingFriendRequests outgoing={outgoing.sort((a, b) => a.recipient_name.localeCompare(b.recipient_name))} setOutgoing={setOutgoing} />
+            <OutgoingFriendRequests
+              outgoing={outgoing.sort((a, b) => a.recipient_name.localeCompare(b.recipient_name))}
+              setOutgoing={setOutgoing}
+            />
           </div>
           <div className="outgoingRequestsLabel">outgoing requests</div>
         </div>
@@ -138,6 +146,7 @@ const Feed = (props) => {
               content={dream.content}
               tags={dream.tags}
               private={dream.private}
+              author_id={dream.author._id}
             />
           ))}
         </div>

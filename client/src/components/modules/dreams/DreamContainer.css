@@ -282,3 +282,27 @@
 .dreamSetting:hover {
   color: #f4cba4;
 }
+
+.avatarContainer {
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
+  left: -4vw;
+  top: -16vh;
+  color: #e8b37f;
+  font-weight: normal;
+  text-align: left;
+  font-size: 3.5vh;
+}
+
+.avatarContainerMe {
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
+  left: -4vw;
+  top: -12vh;
+  color: #e8b37f;
+  font-weight: normal;
+  text-align: left;
+  font-size: 3.5vh;
+}

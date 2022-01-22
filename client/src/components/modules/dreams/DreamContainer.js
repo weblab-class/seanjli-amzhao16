@@ -6,6 +6,8 @@ import { stateToHTML } from "draft-js-export-html";
 import { formatInTimeZone } from "date-fns-tz";
 import Parser from "html-react-parser";
 
+import Avatar from "../editavatar/Avatar";
+
 import { get, post } from "../../../utilities";
 
 const DreamContainer = (props) => {
@@ -13,9 +15,34 @@ const DreamContainer = (props) => {
 
   const [privacy, setPrivacy] = useState(false);
 
+  const [profile, setProfile] = useState([
+    {
+      avatar: {
+        hairColor: "blank",
+        hairType: "blank",
+        skin: "blank",
+        shirt: "blank",
+        flair: { hat: "blank", neck: "blank", glasses: "blank" },
+      },
+    },
+  ]);
+
+  const [avatar, setAvatar] = useState({
+    hairColor: "blank",
+    hairType: "blank",
+    skin: "blank",
+    shirt: "blank",
+    flair: { hat: "blank", neck: "blank", glasses: "blank" },
+  });
+
   useEffect(() => {
     setPrivacy(props.private);
-  }, []);
+    get("/api/getProfile", { parent: props.author_id }).then((x) => setProfile(x));
+  }, [props.author_id]);
+
+  useEffect(() => {
+    setAvatar(profile[0].avatar);
+  }, [profile]);
 
   const togglePrivacy = () => {
     post("/api/togglePrivacy", { dream_id: props.id });
@@ -53,7 +80,10 @@ const DreamContainer = (props) => {
       {props.who === "me" ? (
         <div className="containerMe">
           <div className="subcontainerMe">
-            <p className="avatarMe"></p>
+            <div className="avatarContainer">
+              {" "}
+              <Avatar avatar={avatar} />
+            </div>
             <p className="dateMe">{convertDate(props.date)}</p>
             {privacy ? (
               <div className="privateSymbol"></div>
@@ -117,7 +147,10 @@ const DreamContainer = (props) => {
       ) : (
         <div className="container">
           <div className="subcontainer">
-            <p className="avatar"></p>
+            <div className="avatarContainer">
+              {" "}
+              <Avatar avatar={avatar} />
+            </div>
             <strong className="name">{props.name}</strong>{" "}
             <p className="date">{convertDate(props.date)}</p>
             <p className="content">

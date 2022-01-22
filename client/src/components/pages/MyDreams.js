@@ -76,6 +76,7 @@ const MyDreams = (props) => {
                 content={dream.content}
                 tags={dream.tags}
                 private={dream.private}
+                author_id={dream.author._id}
                 deleteDream={() => deleteDream(dream._id)}
                 who="me"
               />

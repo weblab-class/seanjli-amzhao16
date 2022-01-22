@@ -1,0 +1,21 @@
+.exitTutorial {
+  background-color: white;
+  color: #ffb6c1;
+  font-size: 5vh;
+  position: absolute;
+  top: 1.4vh;
+  left: 1vw;
+  text-decoration: none;
+}
+
+.tutorialContainer {
+  border: solid;
+  border-width: thick;
+  border-color: #ffb6c1;
+  position: absolute;
+  top: 12vh;
+  bottom: 12vh;
+  left: 7vw;
+  right: 7vw;
+  border-radius: 10vh;
+}

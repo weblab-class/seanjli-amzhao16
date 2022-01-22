@@ -7,7 +7,7 @@ import WriteDream from "./pages/WriteDream";
 import Profile from "./pages/Profile";
 import MyDreams from "./pages/MyDreams";
 import Feed from "./pages/Feed";
-import Loading from "./pages/Loading";
+import Tutorial from "./pages/Tutorial";
 
 import "../utilities.css";
 
@@ -55,18 +55,19 @@ const App = () => {
 
   const getComponent = () => {
     if (loading) {
-      return <></>
+      return <></>;
     } else if (userId) {
       // return the main Router
     } else {
-       // return the other Router
+      // return the other Router
     }
-  }
+  };
 
   return (
     <>
-      {loading ? <></> :
-       userId ? (
+      {loading ? (
+        <></>
+      ) : userId ? (
         <Router>
           <Home
             path="/"
@@ -103,12 +104,13 @@ const App = () => {
             userId={userId}
             username={username}
           />
+          <Tutorial path="/tutorial" userId={userId} username={username} />
           <NotFound default />
         </Router>
       ) : (
         <Router>
           <Landing path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-          <NotFound default />  
+          <NotFound default />
         </Router>
       )}
     </>

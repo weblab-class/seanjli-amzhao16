@@ -179,6 +179,9 @@
   text-align: center;
   background-color: white;
 }
+.logout:hover {
+  color: #ffdae0;
+}
 
 .hello {
   position: absolute;
@@ -286,7 +289,7 @@
   right: 3vw;
 }
 
-.notif {
+/* .notif {
   position: absolute;
   z-index: 100;
   right: 23vw;
@@ -314,4 +317,29 @@
   background-repeat: no-repeat;
   height: 7vh;
   width: 5vw;
+} */
+
+.howToUse {
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  right: 3vw;
+  border: none;
+  color: white;
+  bottom: 17vh;
+  background-color: #ffb6c1;
+  border-radius: 6vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  padding-left: 2vh;
+  padding-top: 1vh;
+  padding-right: 2vh;
+  height: 4vh;
+  width: 10vw;
+  font-size: 4vh;
+  text-decoration: none;
+}
+
+.howToUse:hover {
+  background-color: #ffdae0;
 }

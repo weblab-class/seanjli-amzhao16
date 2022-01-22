@@ -188,6 +188,7 @@
   top: -5vh;
   right: 3vw;
   font-size: 5vh;
+  cursor: default;
   text-align: center;
   z-index: 2;
   color: #ffb6c1;
@@ -196,6 +197,7 @@
 .helloName {
   position: absolute;
   top: 1vh;
+  cursor: default;
   right: 3vw;
   width: 18vw;
   font-size: 5vh;
@@ -284,6 +286,7 @@
   font-size: 12vh;
   position: absolute;
   vertical-align: middle;
+  cursor: default;
   top: 20vh;
   bottom: 32vh;
   right: 3vw;

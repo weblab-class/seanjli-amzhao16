@@ -33,6 +33,13 @@ const Feed = (props) => {
   const [outgoing, setOutgoing] = useState([]);
   const [requestees, setRequestees] = useState([]);
 
+  const [search, setSearch] = useState("");
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setSearch(value);
+  }
+
   useEffect(() => {
     get("/api/getUser").then((x) => setUsers(x));
     get("/api/getMe").then((x) => setMe(x));
@@ -79,8 +86,10 @@ const Feed = (props) => {
           {showAllFriends ? (
             <div className="makeFriendsBox">
               {" "}
+              <input type="text" onChange={handleChange} value={search} />
               <MakeFriendRequests
-                requestees={requestees}
+                requestees={requestees.sort((a, b) => a.name.localeCompare(b.name)).
+                  filter((x) => (x.name.toLowerCase().startsWith(search.toLowerCase())))}
                 setRequestees={setRequestees}
                 outgoing={outgoing}
                 setOutgoing={setOutgoing}
@@ -94,7 +103,7 @@ const Feed = (props) => {
           <div className="myFriendsLabel">my friends</div>
           <div className="myFriendsArea">
             <FriendList
-              users={users}
+              users={users.sort((a, b) => a.name.localeCompare(b.name))}
               requestees={requestees}
               setRequestees={setRequestees}
               friends={friends}
@@ -105,7 +114,7 @@ const Feed = (props) => {
         <div>
           <div className="incomingRequestsArea">
             <AcceptFriendRequests
-              requests={requests}
+              requests={requests.sort((a, b) => a.sender_name.localeCompare(b.sender_name))}
               setRequests={setRequests}
               friends={friends}
               setFriends={setFriends}
@@ -115,7 +124,7 @@ const Feed = (props) => {
         </div>
         <div>
           <div className="outgoingRequestsArea">
-            <OutgoingFriendRequests outgoing={outgoing} setOutgoing={setOutgoing} />
+            <OutgoingFriendRequests outgoing={outgoing.sort((a, b) => a.recipient_name.localeCompare(b.recipient_name))} setOutgoing={setOutgoing} />
           </div>
           <div className="outgoingRequestsLabel">outgoing requests</div>
         </div>

@@ -61,8 +61,6 @@ const Profile = (props) => {
     setAvatar(profile[0].avatar);
   }, [profile]);
 
-  console.log(avatar);
-
   const [showEditAvatar, setShowEditAvatar] = useState(false);
 
   const dreamTextLengths = dreams.map((x) => (JSON.parse(x.content).blocks)[0].text.match(/\w+/g).length);

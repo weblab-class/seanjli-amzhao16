@@ -108,13 +108,13 @@
 .dateMe {
   position: relative;
   top: 0vh;
-  left: 43vw;
+  left: 53vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
 }
 
-.deleteButtonMe {
+/* .deleteButtonMe {
   position: absolute;
   top: 0vh;
   left: 70vw;
@@ -124,12 +124,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
+} */
 
 .deletePopUpContainer {
   position: absolute;
   top: 5vh;
-  right: 14vw;
+  right: 24vw;
   color: white;
   font-weight: normal;
   height: 7vh;
@@ -212,7 +212,7 @@
 .privateSymbol {
   position: absolute;
   top: 0vh;
-  left: 40.2vw;
+  left: 50.2vw;
   height: 30px;
   width: 30px;
   background-image: url("LockSymbol.png");
@@ -226,7 +226,7 @@
 .publicSymbol {
   position: absolute;
   top: 0.5vh;
-  left: 40vw;
+  left: 50vw;
   height: 30px;
   width: 30px;
   background-image: url("WorldSymbol.png");
@@ -235,4 +235,50 @@
   font-weight: normal;
   text-align: right;
   font-size: 3.5vh;
+}
+
+.toggleDreamSettings {
+  position: absolute;
+  top: -3.3vh;
+  left: 78vw;
+  color: #e8b37f;
+  font-weight: normal;
+  font-size: 6vh;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.toggleDreamSettings:hover {
+  color: #ffffff;
+}
+
+.dreamSettingsContainer {
+  position: absolute;
+  top: 5vh;
+  right: 14vw;
+  color: white;
+  font-weight: normal;
+  height: 11.4vh;
+  width: 9vw;
+  text-align: center;
+  font-size: 2vh;
+  z-index: 100;
+  background-color: #e8b37f;
+  border: none;
+  border-radius: 2vh;
+  padding-top: 0.5vh;
+}
+
+.dreamSetting {
+  float: top;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 0.5vh;
+  font-size: 2.5vh;
+}
+
+.dreamSetting:hover {
+  color: #f4cba4;
 }

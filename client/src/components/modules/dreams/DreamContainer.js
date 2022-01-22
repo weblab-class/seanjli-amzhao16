@@ -80,7 +80,7 @@ const DreamContainer = (props) => {
       {props.who === "me" ? (
         <div className="containerMe">
           <div className="subcontainerMe">
-            <div className="avatarContainer">
+            <div className="avatarContainerMe">
               {" "}
               <Avatar avatar={avatar} />
             </div>

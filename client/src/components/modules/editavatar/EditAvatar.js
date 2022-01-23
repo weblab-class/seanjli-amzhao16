@@ -22,6 +22,7 @@ const EditAvatarPage = (props) => {
 
   const unlocked =
     {
+      "blank": true,
       "novice": props.earned[0],
       "reporter": props.earned[1],
       "dreamer": props.earned[2],

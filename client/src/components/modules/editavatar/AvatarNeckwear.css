@@ -1,0 +1,38 @@
+.neck-cataloguer {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/neck-cataloguer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 1;
+  left: 6vw;
+  z-index: 5;
+}
+
+.neck-classifier {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/neck-classifier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 1;
+  left: 6vw;
+  z-index: 5;
+}
+
+.neck-multifaceted {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/neck-multifaceted.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 1;
+  left: 6vw;
+  z-index: 5;
+}

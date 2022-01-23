@@ -1,0 +1,51 @@
+.glasses-novice {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/glasses-novice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 70%;
+  left: 6vw;
+  z-index: 1;
+}
+
+.glasses-reporter {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/glasses-reporter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 70%;
+  left: 6vw;
+  z-index: 1;
+}
+
+.glasses-dreamer {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/glasses-dreamer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 70%;
+  left: 6vw;
+  z-index: 1;
+}
+
+.glasses-visionary {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/glasses-visionary.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 1;
+}

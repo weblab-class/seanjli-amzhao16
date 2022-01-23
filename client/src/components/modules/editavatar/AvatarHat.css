@@ -1,0 +1,63 @@
+.hat-laconic {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/hat-laconic.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 6;
+}
+
+.hat-scribe {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/hat-scribe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 11vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 6;
+}
+
+.hat-novelist {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/hat-novelist.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 6;
+}
+
+.hat-amiable {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/hat-amiable.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 6;
+}
+.hat-socialite {
+  height: 90%;
+  width: 90%;
+  background-image: url("./accessories/hat-socialite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10vh;
+  opacity: 100%;
+  left: 6vw;
+  z-index: 6;
+}

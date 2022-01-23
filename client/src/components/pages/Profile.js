@@ -171,7 +171,7 @@ const Profile = (props) => {
         <p className="profileName">Name: {profile[0].name}</p>
         <Avatar avatar={avatar} />
         <button className="defaultAvatar" onClick={editAvatarPopUp}></button>
-        {showEditAvatar ? <EditAvatarPage avatar={avatar} setAvatar={setAvatar} /> : <div></div>}
+        {showEditAvatar ? <EditAvatarPage avatar={avatar} setAvatar={setAvatar} earned={earned}/> : <div></div>}
         <div className="achievementsContainer">
           {achievements.map((x) => (
             <Achievement name={x.name} content={x.content} earned={earned[x._id]} />

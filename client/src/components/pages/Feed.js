@@ -71,9 +71,10 @@ const Feed = (props) => {
 
   const [showAllFriends, setShowAllFriends] = useState(false);
   const friendsPopUp = (event) => {
-    console.log("clicky");
     if (showAllFriends === true) {
       setShowAllFriends(false);
+      document.getElementById('findFriendsLabel').blur();
+      setSearch("");
     } else {
       setShowAllFriends(true);
     }
@@ -92,6 +93,7 @@ const Feed = (props) => {
           <input
             placeholder="add new friends"
             className="findFriendsLabel"
+            id="findFriendsLabel"
             onClick={friendsPopUp}
             type="text"
             onChange={handleChange}

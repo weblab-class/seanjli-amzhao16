@@ -16,6 +16,25 @@ const EditAvatarPage = (props) => {
   const hairColor = ["blank", "black", "brown", "blonde", "ginger"];
   const shirt = ["blank", "lavender", "light-blue", "mit", "navy", "pink", "sage", "white"];
   const skin = ["blank", "1", "2", "3", "4", "5"];
+  const glasses = ["blank", "novice", "reporter", "dreamer", "visionary"];
+  const neck = ["blank", "classifier", "cataloguer", "multifaceted"];
+  const hat = ["blank", "laconic", "scribe", "novelist", "amiable", "socialite"];
+
+  const unlocked =
+    {
+      "novice": props.earned[0],
+      "reporter": props.earned[1],
+      "dreamer": props.earned[2],
+      "visionary": props.earned[3],
+      "classifier": props.earned[4],
+      "cataloguer": props.earned[5],
+      "multifaceted": props.earned[6],
+      "laconic": props.earned[7],
+      "scribe": props.earned[8],
+      "novelist": props.earned[9],
+      "amiable": props.earned[10],
+      "socialite": props.earned[11]
+    }
 
   const editAvatar = (item, newItem) => {
     post("/api/editAvatar", { item: item, new: newItem });
@@ -103,6 +122,35 @@ const EditAvatarPage = (props) => {
           )}
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      {glasses.map((x) => unlocked[x] ?
+        <button onClick={() => editAvatar("glasses", x)}>change glasses to {x}</button> : <></>)}
+
+      <br />
+
+      {neck.map((x) => unlocked[x] ?
+        <button onClick={() => editAvatar("neck", x)}>change neck to {x}</button> : <></>)}
+
+      <br />
+
+      {hat.map((x) => unlocked[x] ?
+        <button onClick={() => editAvatar("hat", x)}>change hat to {x}</button> : <></>)}
     </div>
   );
 };

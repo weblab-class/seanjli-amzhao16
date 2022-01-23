@@ -31,7 +31,9 @@ const Profile = (props) => {
         hairType: "blank",
         skin: "blank",
         shirt: "blank",
-        hat: "blank", neck: "blank", glasses: "blank",
+        hat: "blank",
+        neck: "blank",
+        glasses: "blank",
       },
     },
   ]);
@@ -45,7 +47,9 @@ const Profile = (props) => {
     hairType: "blank",
     skin: "blank",
     shirt: "blank",
-    hat: "blank", neck: "blank", glasses: "blank",
+    hat: "blank",
+    neck: "blank",
+    glasses: "blank",
   });
 
   useEffect(() => {
@@ -166,13 +170,16 @@ const Profile = (props) => {
     <div className="profileBackground">
       <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="profileContainer">
-      {JSON.stringify(avatar)}
         {" "}
         <h1 className="profileTitle">Profile</h1>
         <p className="profileName">Name: {profile[0].name}</p>
         <Avatar avatar={avatar} />
         <button className="defaultAvatar" onClick={editAvatarPopUp}></button>
-        {showEditAvatar ? <EditAvatarPage avatar={avatar} setAvatar={setAvatar} earned={earned}/> : <div></div>}
+        {showEditAvatar ? (
+          <EditAvatarPage avatar={avatar} setAvatar={setAvatar} earned={earned} />
+        ) : (
+          <div></div>
+        )}
         <div className="achievementsContainer">
           {achievements.map((x) => (
             <Achievement name={x.name} content={x.content} earned={earned[x._id]} />

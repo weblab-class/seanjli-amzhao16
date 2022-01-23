@@ -39,6 +39,7 @@
 .skinColorPicker-blank {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 5.9vh;
   background-image: url("default-none.png");
   background-size: contain;
@@ -53,6 +54,7 @@
   float: left;
   height: 6vh;
   width: 6vh;
+  cursor: pointer;
   background-color: #f0c9b5;
   border: none;
   border-radius: 3vh;
@@ -61,6 +63,7 @@
 .white-highlight-skin-1 {
   float: left;
   height: 5.5vh;
+  cursor: pointer;
   width: 5.5vh;
   background-color: transparent;
   border: solid;
@@ -72,6 +75,7 @@
   float: left;
   height: 5.5vh;
   width: 5.5vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -82,6 +86,7 @@
   float: left;
   height: 5.5vh;
   width: 5.5vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -90,6 +95,7 @@
 }
 .white-highlight-skin-4 {
   float: left;
+  cursor: pointer;
   height: 5.5vh;
   width: 5.5vh;
   background-color: transparent;
@@ -101,6 +107,7 @@
 .white-highlight-skin-5 {
   float: left;
   height: 5.5vh;
+  cursor: pointer;
   width: 5.5vh;
   background-color: transparent;
   border: solid;
@@ -112,6 +119,7 @@
   float: left;
   height: 5.4vh;
   width: 5.4vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -122,6 +130,7 @@
   float: left;
   height: 5.4vh;
   width: 5.4vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -132,6 +141,7 @@
   float: left;
   height: 5.4vh;
   width: 5.4vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -141,6 +151,7 @@
 .white-highlight-hairColor-blonde {
   float: left;
   height: 5.4vh;
+  cursor: pointer;
   width: 5.4vh;
   background-color: transparent;
   border: solid;
@@ -151,6 +162,7 @@
 .white-highlight-hairColor-brown {
   float: left;
   height: 5.4vh;
+  cursor: pointer;
   width: 5.4vh;
   background-color: transparent;
   border: solid;
@@ -164,6 +176,7 @@
   width: 5.4vh;
   background-color: transparent;
   border: solid;
+  cursor: pointer;
   border-color: white;
   border-radius: 3.5vh;
   margin-right: 10px;
@@ -174,6 +187,7 @@
   float: left;
   height: 6vh;
   width: 6vh;
+  cursor: pointer;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -184,6 +198,7 @@
   position: relative;
   right: 0.8vh;
   float: left;
+  cursor: pointer;
   height: 6vh;
   width: 6vh;
   background-color: transparent;
@@ -196,6 +211,7 @@
   position: relative;
   right: 0.8vh;
   float: left;
+  cursor: pointer;
   height: 6vh;
   width: 6vh;
   background-color: transparent;
@@ -209,6 +225,7 @@
   right: 0.8vh;
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: transparent;
   border: solid;
@@ -221,6 +238,7 @@
   right: 0.8vh;
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: transparent;
   border: solid;
@@ -232,6 +250,7 @@
   position: relative;
   right: 0.8vh;
   float: left;
+  cursor: pointer;
   height: 6vh;
   width: 6vh;
   background-color: transparent;
@@ -247,6 +266,7 @@
   background-color: transparent;
   border: solid;
   border-color: white;
+  cursor: pointer;
   border-radius: 3.5vh;
   margin-right: 10px;
 }
@@ -256,6 +276,7 @@
   width: 6vh;
   background-color: #c7a589;
   border: none;
+  cursor: pointer;
   border-radius: 3vh;
   margin-right: 10px;
 }
@@ -263,6 +284,7 @@
 .skinColorPicker-3 {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: #b68c71;
   border: none;
@@ -273,6 +295,7 @@
 .skinColorPicker-4 {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: #956c56;
   border: none;
@@ -283,6 +306,7 @@
 .skinColorPicker-5 {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: #795644;
   border: none;
@@ -307,6 +331,7 @@
   float: left;
   height: 6vh;
   width: 6vh;
+  cursor: pointer;
   background-image: url("default-none.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -320,6 +345,7 @@
   float: left;
   height: 6vh;
   width: 6vh;
+  cursor: pointer;
   background-color: black;
   border: none;
   border-radius: 3vh;
@@ -329,6 +355,7 @@
 .hairColorPicker-brown {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 6vh;
   background-color: #894502;
   border: none;
@@ -342,6 +369,7 @@
   width: 6vh;
   background-color: #cdab21;
   border: none;
+  cursor: pointer;
   border-radius: 3vh;
   margin-right: 10px;
 }
@@ -354,6 +382,7 @@
   border: none;
   border-radius: 3vh;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .editHairStyleContainer {
@@ -371,6 +400,7 @@
 .blank-black-button {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 5.9vh;
   background-image: url("default-none.png");
   background-size: contain;
@@ -384,6 +414,7 @@
   float: left;
   height: 6vh;
   width: 5.9vh;
+  cursor: pointer;
   background-image: url("default-none.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -395,6 +426,7 @@
 .blank-blank-button {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 5.9vh;
   background-image: url("default-none.png");
   background-size: contain;
@@ -408,6 +440,7 @@
   float: left;
   height: 6vh;
   width: 5.9vh;
+  cursor: pointer;
   background-image: url("default-none.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -419,6 +452,7 @@
 .blank-ginger-button {
   float: left;
   height: 6vh;
+  cursor: pointer;
   width: 5.9vh;
   background-image: url("default-none.png");
   background-size: contain;
@@ -431,6 +465,7 @@
 .long-black-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/long-black-hair.png");
   background-size: contain;
@@ -448,6 +483,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-image: url("./hair/long-curly-black-hair.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -472,6 +508,7 @@
   position: relative;
   border: none;
   border-radius: 3vh;
+  cursor: pointer;
   margin-right: 8px;
   bottom: 1vh;
   left: 1vh;
@@ -488,12 +525,14 @@
   position: relative;
   border: none;
   border-radius: 3vh;
+  cursor: pointer;
   margin-right: 8px;
   bottom: 1vh;
   left: 1vh;
 }
 .short-black-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/short-black-hair.png");
@@ -511,6 +550,7 @@
 .short-curly-black-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/short-curly-black-hair.png");
   background-size: contain;
@@ -526,6 +566,7 @@
 }
 .long-brown-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/long-brown-hair.png");
@@ -542,6 +583,7 @@
 }
 .long-curly-brown-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/long-curly-brown-hair.png");
@@ -559,6 +601,7 @@
 .medium-brown-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/medium-brown-hair.png");
   background-size: contain;
@@ -575,6 +618,7 @@
 .medium-curly-brown-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/medium-curly-brown-hair.png");
   background-size: contain;
@@ -591,6 +635,7 @@
 .short-brown-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/short-brown-hair.png");
   background-size: contain;
@@ -607,6 +652,7 @@
 .short-curly-brown-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/short-curly-brown-hair.png");
   background-size: contain;
@@ -623,6 +669,7 @@
 .long-blonde-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/long-blonde-hair.png");
   background-size: contain;
@@ -639,6 +686,7 @@
 .long-curly-blonde-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/long-curly-blonde-hair.png");
   background-size: contain;
@@ -654,6 +702,7 @@
 }
 .medium-blonde-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/medium-blonde-hair.png");
@@ -672,6 +721,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-image: url("./hair/medium-curly-blonde-hair.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -687,6 +737,7 @@
 .short-blonde-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/short-blonde-hair.png");
   background-size: contain;
@@ -703,6 +754,7 @@
 .short-curly-blonde-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/short-curly-blonde-hair.png");
   background-size: contain;
@@ -719,6 +771,7 @@
 .long-ginger-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/long-ginger-hair.png");
   background-size: contain;
@@ -736,6 +789,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-image: url("./hair/long-curly-ginger-hair.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -750,6 +804,7 @@
 }
 .medium-ginger-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/medium-ginger-hair.png");
@@ -767,6 +822,7 @@
 .medium-curly-ginger-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./hair/medium-curly-ginger-hair.png");
   background-size: contain;
@@ -782,6 +838,7 @@
 }
 .short-ginger-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/short-ginger-hair.png");
@@ -800,6 +857,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-image: url("./hair/short-curly-ginger-hair.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -815,6 +873,7 @@
 .long-blank-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-color: transparent;
 
@@ -831,6 +890,7 @@
 .long-curly-blank-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-color: transparent;
 
@@ -845,6 +905,7 @@
 }
 .medium-blank-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-color: transparent;
@@ -863,6 +924,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-color: transparent;
 
   border: none;
@@ -881,6 +943,7 @@
   bottom: 1vh;
   left: 1vh;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   background-color: transparent;
 
@@ -895,6 +958,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   position: relative;
   bottom: 1vh;
   left: 1vh;
@@ -924,6 +988,7 @@
 .blank-shirt-button {
   float: left;
   position: relative;
+  cursor: pointer;
   top: 2vh;
   height: 6vh;
   width: 6vh;
@@ -942,6 +1007,7 @@
   position: relative;
   top: 1vh;
   left: 1vh;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./shirts/lavender-shirt.png");
@@ -955,6 +1021,7 @@
 
 .light-blue-shirt-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   position: relative;
   top: 1vh;
@@ -971,6 +1038,7 @@
 
 .mit-shirt-button {
   float: left;
+  cursor: pointer;
   height: 8vh;
   width: 8vh;
   background-image: url("./shirts/mit-shirt.png");
@@ -988,6 +1056,7 @@
 .navy-shirt-button {
   float: left;
   height: 8vh;
+  cursor: pointer;
   width: 8vh;
   position: relative;
   top: 1vh;
@@ -1005,6 +1074,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   background-image: url("./shirts/pink-shirt.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1021,6 +1091,7 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  cursor: pointer;
   position: relative;
   top: 1vh;
   left: 1vh;
@@ -1039,6 +1110,7 @@
   position: relative;
   top: 1vh;
   left: 1vh;
+  cursor: pointer;
   width: 8vh;
   background-image: url("./shirts/white-shirt.png");
   background-size: contain;
@@ -1144,6 +1216,500 @@
   float: left;
   height: 5.4vh;
   width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.editHatContainer {
+  position: absolute;
+  color: white;
+  top: 47vh;
+  right: 2vw;
+  padding-left: 2vw;
+  height: 10vh;
+  width: 49vw;
+  z-index: 102;
+  border-radius: 5vh;
+  font-size: 4vh;
+}
+
+.hat-blank-button {
+  float: left;
+  height: 6vh;
+  cursor: pointer;
+  width: 5.9vh;
+  background-image: url("default-none.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.hat-laconic-button {
+  float: left;
+  position: relative;
+  left: 1vh;
+  height: 12vh;
+  width: 10vh;
+  cursor: pointer;
+  background-image: url("./accessories/hat-laconic.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.hat-scribe-button {
+  float: left;
+  position: relative;
+  top: 0.4vh;
+  height: 12vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/hat-scribe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.hat-novelist-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  left: 1vh;
+  cursor: pointer;
+  width: 10vh;
+  top: 1vh;
+  background-image: url("./accessories/hat-novelist.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.hat-amiable-button {
+  float: left;
+  position: relative;
+  height: 15vh;
+  cursor: pointer;
+  width: 13vh;
+  top: 1vh;
+  background-image: url("./accessories/hat-amiable.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.hat-socialite-button {
+  float: left;
+  cursor: pointer;
+  position: relative;
+  height: 15vh;
+  right: 2vh;
+  width: 13vh;
+  background-image: url("./accessories/hat-socialite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+.white-highlight-hat-laconic {
+  position: relative;
+  bottom: 3vh;
+  float: left;
+  left: 0.5vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-hat-scribe {
+  position: relative;
+  bottom: 3vh;
+  float: left;
+  left: 1vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-hat-novelist {
+  position: relative;
+  bottom: 3.5vh;
+  float: left;
+  left: 1vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-hat-amiable {
+  position: relative;
+  bottom: 5vh;
+  float: left;
+  left: 1.5vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-hat-socialite {
+  position: relative;
+  bottom: 4vh;
+  float: left;
+  left: 1.5vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-hat-blank {
+  float: left;
+  position: relative;
+  right: 0.2vh;
+  cursor: pointer;
+  height: 5.5vh;
+  bottom: 0.1vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.disabled-button {
+  float: left;
+  position: relative;
+  left: 1vh;
+  height: 6vh;
+  cursor: pointer;
+  width: 5.9vh;
+  background-image: url("./accessories/locked-accessory.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.editGlassesContainer {
+  position: absolute;
+  color: white;
+  top: 57vh;
+  right: 2vw;
+  padding-left: 2vw;
+  height: 10vh;
+  width: 49vw;
+  z-index: 102;
+  border-radius: 5vh;
+  font-size: 4vh;
+}
+
+.glasses-blank-button {
+  float: left;
+  height: 6vh;
+  cursor: pointer;
+  width: 5.9vh;
+  background-image: url("default-none.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.glasses-novice-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 1vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/glasses-novice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.glasses-reporter-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 1vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/glasses-reporter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.glasses-dreamer-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 1vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/glasses-dreamer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.glasses-visionary-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 1vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/glasses-visionary.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+.white-highlight-glasses-blank {
+  float: left;
+  position: relative;
+  right: 0.2vh;
+  cursor: pointer;
+  height: 5.5vh;
+  bottom: 0.1vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-glasses-novice {
+  position: relative;
+  bottom: 2vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-glasses-reporter {
+  position: relative;
+  bottom: 2vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-glasses-dreamer {
+  position: relative;
+  bottom: 2vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-glasses-visionary {
+  position: relative;
+  bottom: 2vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.editNeckContainer {
+  position: absolute;
+  color: white;
+  top: 67vh;
+  right: 2vw;
+  padding-left: 2vw;
+  height: 10vh;
+  width: 49vw;
+  z-index: 102;
+  border-radius: 5vh;
+  font-size: 4vh;
+}
+
+.neck-blank-button {
+  float: left;
+  height: 6vh;
+  cursor: pointer;
+  width: 5.9vh;
+  background-image: url("default-none.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.neck-classifier-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 4vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/neck-classifier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.neck-cataloguer-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 4vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/neck-cataloguer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.neck-multifaceted-button {
+  float: left;
+  position: relative;
+  height: 12vh;
+  bottom: 4vh;
+  cursor: pointer;
+  width: 10vh;
+  left: 1vh;
+  background-image: url("./accessories/neck-multifaceted.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 10px;
+}
+
+.white-highlight-neck-classifier {
+  position: relative;
+  top: 1vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-neck-cataloguer {
+  position: relative;
+  top: 1vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+
+.white-highlight-neck-multifaceted {
+  position: relative;
+  top: 1vh;
+  float: left;
+  left: 0.6vh;
+  height: 6vh;
+  width: 6vh;
   background-color: transparent;
   border: solid;
   border-color: white;

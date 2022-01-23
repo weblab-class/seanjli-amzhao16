@@ -20,22 +20,21 @@ const EditAvatarPage = (props) => {
   const neck = ["blank", "classifier", "cataloguer", "multifaceted"];
   const hat = ["blank", "laconic", "scribe", "novelist", "amiable", "socialite"];
 
-  const unlocked =
-    {
-      "blank": true,
-      "novice": props.earned[0],
-      "reporter": props.earned[1],
-      "dreamer": props.earned[2],
-      "visionary": props.earned[3],
-      "classifier": props.earned[4],
-      "cataloguer": props.earned[5],
-      "multifaceted": props.earned[6],
-      "laconic": props.earned[7],
-      "scribe": props.earned[8],
-      "novelist": props.earned[9],
-      "amiable": props.earned[10],
-      "socialite": props.earned[11]
-    }
+  const unlocked = {
+    blank: true,
+    novice: props.earned[0],
+    reporter: props.earned[1],
+    dreamer: props.earned[2],
+    visionary: props.earned[3],
+    classifier: props.earned[4],
+    cataloguer: props.earned[5],
+    multifaceted: props.earned[6],
+    laconic: props.earned[7],
+    scribe: props.earned[8],
+    novelist: props.earned[9],
+    amiable: props.earned[10],
+    socialite: props.earned[11],
+  };
 
   const editAvatar = (item, newItem) => {
     post("/api/editAvatar", { item: item, new: newItem });
@@ -123,38 +122,75 @@ const EditAvatarPage = (props) => {
           )}
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      {glasses.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("glasses", x)}>change glasses to {x}</button> : 
-        <button disabled>{x} is not unlocked :(</button>)}
-
-      <br />
-
-      {neck.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("neck", x)}>change neck to {x}</button> :
-        <button disabled>{x} is not unlocked :(</button>)}
-
-      <br />
-
-      {hat.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("hat", x)}>change hat to {x}</button> :
-        <button disabled>{x} is not unlocked :(</button>)}
+      <div className="editHatContainer">
+        hat:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {hat.map((x) =>
+            unlocked[x] ? (
+              props.avatar.hat === x ? (
+                <button className={"hat-" + x + "-button"} onClick={() => editAvatar("hat", x)}>
+                  <div className={"white-highlight-hat-" + x}></div>
+                </button>
+              ) : (
+                <button
+                  className={"hat-" + x + "-button"}
+                  onClick={() => editAvatar("hat", x)}
+                ></button>
+              )
+            ) : (
+              <button className="disabled-button" disabled></button>
+            )
+          )}
+        </div>
+      </div>
+      <div className="editGlassesContainer">
+        glasses:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {glasses.map((x) =>
+            unlocked[x] ? (
+              props.avatar.glasses === x ? (
+                <button
+                  className={"glasses-" + x + "-button"}
+                  onClick={() => editAvatar("glasses", x)}
+                >
+                  <div className={"white-highlight-glasses-" + x}></div>
+                </button>
+              ) : (
+                <button
+                  className={"glasses-" + x + "-button"}
+                  onClick={() => editAvatar("glasses", x)}
+                ></button>
+              )
+            ) : (
+              <button className="disabled-button" disabled></button>
+            )
+          )}
+        </div>
+      </div>
+      <div className="editNeckContainer">
+        neckwear:
+        <div className="editFeatureSubcontainer">
+          {" "}
+          {neck.map((x) =>
+            unlocked[x] ? (
+              props.avatar.neck === x ? (
+                <button className={"neck-" + x + "-button"} onClick={() => editAvatar("neck", x)}>
+                  <div className={"white-highlight-neck-" + x}></div>
+                </button>
+              ) : (
+                <button
+                  className={"neck-" + x + "-button"}
+                  onClick={() => editAvatar("neck", x)}
+                ></button>
+              )
+            ) : (
+              <button className="disabled-button" disabled></button>
+            )
+          )}
+        </div>
+      </div>
     </div>
   );
 };

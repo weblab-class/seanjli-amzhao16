@@ -141,17 +141,20 @@ const EditAvatarPage = (props) => {
       <br />
 
       {glasses.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("glasses", x)}>change glasses to {x}</button> : <></>)}
+        <button onClick={() => editAvatar("glasses", x)}>change glasses to {x}</button> : 
+        <button disabled>{x} is not unlocked :(</button>)}
 
       <br />
 
       {neck.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("neck", x)}>change neck to {x}</button> : <></>)}
+        <button onClick={() => editAvatar("neck", x)}>change neck to {x}</button> :
+        <button disabled>{x} is not unlocked :(</button>)}
 
       <br />
 
       {hat.map((x) => unlocked[x] ?
-        <button onClick={() => editAvatar("hat", x)}>change hat to {x}</button> : <></>)}
+        <button onClick={() => editAvatar("hat", x)}>change hat to {x}</button> :
+        <button disabled>{x} is not unlocked :(</button>)}
     </div>
   );
 };

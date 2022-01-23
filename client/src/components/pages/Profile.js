@@ -31,7 +31,7 @@ const Profile = (props) => {
         hairType: "blank",
         skin: "blank",
         shirt: "blank",
-        flair: { hat: "blank", neck: "blank", glasses: "blank" },
+        hat: "blank", neck: "blank", glasses: "blank",
       },
     },
   ]);
@@ -45,7 +45,7 @@ const Profile = (props) => {
     hairType: "blank",
     skin: "blank",
     shirt: "blank",
-    flair: { hat: "blank", neck: "blank", glasses: "blank" },
+    hat: "blank", neck: "blank", glasses: "blank",
   });
 
   useEffect(() => {
@@ -166,6 +166,7 @@ const Profile = (props) => {
     <div className="profileBackground">
       <NavBar type="p" handleLogout={props.handleLogout} userId={props.userId} />
       <div className="profileContainer">
+      {JSON.stringify(avatar)}
         {" "}
         <h1 className="profileTitle">Profile</h1>
         <p className="profileName">Name: {profile[0].name}</p>

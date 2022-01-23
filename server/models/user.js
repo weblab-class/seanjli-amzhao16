@@ -12,12 +12,9 @@ const UserSchema = new mongoose.Schema({
       hairType: {type: String, default: "blank"},
       skin: {type: String, defualt: "blank"},
       shirt: {type: String, default: "blank"},
-      flair: 
-        {
-          hat: {type: String, default: "blank"},
-          neck: {type: String, default: "blank"},
-          glasses: {type: String, default: "blank"}
-        }
+      hat: {type: String, default: "blank"},
+      neck: {type: String, default: "blank"},
+      glasses: {type: String, default: "blank"}
     }
 });
 

@@ -31,45 +31,76 @@ const EditAvatarPage = (props) => {
         skin color:
         <div className="editFeatureSubcontainer">
           {" "}
-          {skin.map((x) => (
-            <button
-              className={"skinColorPicker-" + x}
-              onClick={() => editAvatar("skin", x)}
-            ></button>
-          ))}
+          {skin.map((x) =>
+            props.avatar.skin === x ? (
+              <button className={"skinColorPicker-" + x} onClick={() => editAvatar("skin", x)}>
+                <div className={"white-highlight-skin-" + x}></div>
+              </button>
+            ) : (
+              <button
+                className={"skinColorPicker-" + x}
+                onClick={() => editAvatar("skin", x)}
+              ></button>
+            )
+          )}
         </div>
       </div>
       <div className="editHairColorContainer">
         hair color:
         <div className="editFeatureSubcontainer">
           {" "}
-          {hairColor.map((x) => (
-            <button
-              className={"hairColorPicker-" + x}
-              onClick={() => editAvatar("hairColor", x)}
-            ></button>
-          ))}
+          {hairColor.map((x) =>
+            props.avatar.hairColor === x ? (
+              <button className={"hairColorPicker-" + x} onClick={() => editAvatar("hairColor", x)}>
+                <div className={"white-highlight-hairColor-" + x}></div>
+              </button>
+            ) : (
+              <button
+                className={"hairColorPicker-" + x}
+                onClick={() => editAvatar("hairColor", x)}
+              ></button>
+            )
+          )}
         </div>
       </div>
       <div className="editHairStyleContainer">
         hair style:
         <div className="editFeatureSubcontainer">
           {" "}
-          {hairType.map((x) => (
-            <button
-              className={x + "-" + props.avatar.hairColor + "-button"}
-              onClick={() => editAvatar("hairType", x)}
-            ></button>
-          ))}
+          {hairType.map((x) =>
+            props.avatar.hairType === x ? (
+              <button
+                className={x + "-" + props.avatar.hairColor + "-button"}
+                onClick={() => editAvatar("hairType", x)}
+              >
+                {" "}
+                <div className={"white-highlight-hairType-" + x}></div>
+              </button>
+            ) : (
+              <button
+                className={x + "-" + props.avatar.hairColor + "-button"}
+                onClick={() => editAvatar("hairType", x)}
+              ></button>
+            )
+          )}
         </div>
       </div>
       <div className="editShirtContainer">
         shirt color:
         <div className="editFeatureSubcontainer">
           {" "}
-          {shirt.map((x) => (
-            <button className={x + "-shirt-button"} onClick={() => editAvatar("shirt", x)}></button>
-          ))}
+          {shirt.map((x) =>
+            props.avatar.shirt === x ? (
+              <button className={x + "-shirt-button"} onClick={() => editAvatar("shirt", x)}>
+                <div className={"white-highlight-shirt-" + x}></div>
+              </button>
+            ) : (
+              <button
+                className={x + "-shirt-button"}
+                onClick={() => editAvatar("shirt", x)}
+              ></button>
+            )
+          )}
         </div>
       </div>
     </div>

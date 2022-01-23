@@ -58,7 +58,198 @@
   border-radius: 3vh;
   margin-right: 10px;
 }
-
+.white-highlight-skin-1 {
+  float: left;
+  height: 5.5vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-skin-2 {
+  float: left;
+  height: 5.5vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-skin-3 {
+  float: left;
+  height: 5.5vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-skin-4 {
+  float: left;
+  height: 5.5vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-skin-5 {
+  float: left;
+  height: 5.5vh;
+  width: 5.5vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-skin-blank {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairColor-blank {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairColor-black {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairColor-blonde {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairColor-brown {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairColor-ginger {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-medium {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-long-curly {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-medium-curly {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-long {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-short {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-short-curly {
+  position: relative;
+  right: 0.8vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-hairType-blank {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
 .skinColorPicker-2 {
   float: left;
   height: 6vh;
@@ -242,432 +433,384 @@
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/long-black-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .long-curly-black-button {
   float: left;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/long-curly-black-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .medium-black-button {
   float: left;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/medium-black-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
-}
-.short-black-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-black-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.short-curly-black-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-curly-black-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-curly-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-curly-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-curly-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-curly-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.short-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.short-curly-brown-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-curly-brown-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-curly-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-curly-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-curly-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-curly-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.short-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.short-curly-blonde-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/short-curly-blonde-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-ginger-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-ginger-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.long-curly-ginger-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/long-curly-ginger-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-ginger-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-ginger-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
-}
-.medium-curly-ginger-button {
-  float: left;
-  height: 8vh;
-  width: 8vh;
-  background-image: url("./hair/medium-curly-ginger-hair.png");
-
-  background-size: contain;
-
-  background-repeat: no-repeat;
-
-  background-color: transparent;
-
-  border: none;
-
-  border-radius: 3vh;
-
-  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .medium-curly-black-button {
   float: left;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/medium-curly-black-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-black-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-black-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-curly-black-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-curly-black-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-curly-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-curly-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-curly-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-curly-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-curly-brown-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-curly-brown-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-curly-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-curly-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-curly-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-curly-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.short-curly-blonde-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/short-curly-blonde-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-ginger-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-ginger-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.long-curly-ginger-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/long-curly-ginger-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-ginger-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-ginger-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
+}
+.medium-curly-ginger-button {
+  float: left;
+  height: 8vh;
+  width: 8vh;
+  background-image: url("./hair/medium-curly-ginger-hair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  border-radius: 3vh;
+  margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .short-ginger-button {
   float: left;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/short-ginger-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .short-curly-ginger-button {
   float: left;
   height: 8vh;
   width: 8vh;
   background-image: url("./hair/short-curly-ginger-hair.png");
-
   background-size: contain;
-
   background-repeat: no-repeat;
-
+  position: absolute;
   background-color: transparent;
-
+  position: relative;
   border: none;
-
   border-radius: 3vh;
-
   margin-right: 8px;
+  bottom: 1vh;
+  left: 1vh;
 }
 .long-blank-button {
   float: left;
@@ -680,6 +823,9 @@
   border-radius: 3vh;
 
   margin-right: 8px;
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
 }
 
 .long-curly-blank-button {
@@ -693,6 +839,9 @@
   border-radius: 3vh;
 
   margin-right: 8px;
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
 }
 .medium-blank-button {
   float: left;
@@ -704,6 +853,9 @@
 
   border-radius: 3vh;
 
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
   margin-right: 8px;
 }
 
@@ -715,6 +867,9 @@
 
   border: none;
 
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
   border-radius: 3vh;
 
   margin-right: 8px;
@@ -722,6 +877,9 @@
 
 .short-blank-button {
   float: left;
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
   height: 8vh;
   width: 8vh;
   background-color: transparent;
@@ -737,6 +895,9 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  position: relative;
+  bottom: 1vh;
+  left: 1vh;
   background-color: transparent;
 
   border: none;
@@ -749,9 +910,9 @@
 .editShirtContainer {
   position: absolute;
   color: white;
-  top: 35vh;
+  top: 34vh;
   right: 2vw;
-  padding-top: 2vh;
+  padding-top: 3vh;
   padding-left: 2vw;
   height: 10vh;
   width: 49vw;
@@ -762,6 +923,8 @@
 
 .blank-shirt-button {
   float: left;
+  position: relative;
+  top: 2vh;
   height: 6vh;
   width: 6vh;
   margin-top: 8px;
@@ -776,6 +939,9 @@
 
 .lavender-shirt-button {
   float: left;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   height: 8vh;
   width: 8vh;
   background-image: url("./shirts/lavender-shirt.png");
@@ -790,6 +956,9 @@
 .light-blue-shirt-button {
   float: left;
   height: 8vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   width: 8vh;
   background-image: url("./shirts/light-blue-shirt.png");
   background-size: contain;
@@ -810,6 +979,9 @@
   background-color: transparent;
   border: none;
   border-radius: 3vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   margin-right: 8px;
 }
 
@@ -817,6 +989,9 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   background-image: url("./shirts/navy-shirt.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -835,6 +1010,9 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   border-radius: 3vh;
   margin-right: 8px;
 }
@@ -843,6 +1021,9 @@
   float: left;
   height: 8vh;
   width: 8vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   background-image: url("./shirts/sage-shirt.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -855,6 +1036,9 @@
 .white-shirt-button {
   float: left;
   height: 8vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
   width: 8vh;
   background-image: url("./shirts/white-shirt.png");
   background-size: contain;
@@ -863,4 +1047,106 @@
   border: none;
   border-radius: 3vh;
   margin-right: 8px;
+}
+
+.white-highlight-shirt-lavender {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-mit {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-white {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-navy {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-light-blue {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-sage {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-pink {
+  position: relative;
+  right: 0.7vh;
+  top: 1vh;
+  float: left;
+  height: 6vh;
+  width: 6vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}
+.white-highlight-shirt-blank {
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
 }

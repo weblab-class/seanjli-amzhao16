@@ -97,8 +97,9 @@
   position: relative;
   left: 10vw;
   padding: 1.5vh 3vh;
-  width: 68vw;
+  width: 66vw;
   height: auto;
+  bottom: 3vh;
   overflow-y: auto;
   background-color: white;
   border-radius: 4vh;
@@ -107,24 +108,13 @@
 
 .dateMe {
   position: relative;
+  float: right;
   top: 0vh;
-  left: 53vw;
   color: #e8b37f;
   font-weight: normal;
   font-size: 3.5vh;
+  margin-right: 5px;
 }
-
-/* .deleteButtonMe {
-  position: absolute;
-  top: 0vh;
-  left: 70vw;
-  color: #e8b37f;
-  font-weight: normal;
-  font-size: 3.5vh;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-} */
 
 .deletePopUpContainer {
   position: absolute;
@@ -189,7 +179,7 @@
 
 .tagsBox {
   position: absolute;
-  right: 1vw;
+  right: 1.4vw;
   padding: 1vh 3vh;
   width: 8vw;
   top: 5vh;
@@ -208,11 +198,10 @@
   border-radius: 2vh;
   border-width: 0.4vh;
 }
-
 .privateSymbol {
-  position: absolute;
+  float: right;
+  position: relative;
   top: 0vh;
-  left: 50.2vw;
   height: 30px;
   width: 30px;
   background-image: url("LockSymbol.png");
@@ -221,12 +210,13 @@
   font-weight: normal;
   text-align: right;
   font-size: 3.5vh;
+  margin-right: 10px;
 }
 
 .publicSymbol {
-  position: absolute;
+  float: right;
+  position: relative;
   top: 0.5vh;
-  left: 50vw;
   height: 30px;
   width: 30px;
   background-image: url("WorldSymbol.png");
@@ -235,9 +225,19 @@
   font-weight: normal;
   text-align: right;
   font-size: 3.5vh;
+  margin-right: 10px;
+}
+.infoMeContainer {
+  position: relative;
+  top: 0vh;
+  left: 37vw;
+  width: 42vw;
+  color: #e8b37f;
+  font-weight: normal;
+  font-size: 3.5vh;
 }
 
-.toggleDreamSettings {
+/* .toggleDreamSettings {
   position: absolute;
   top: -3.3vh;
   left: 78vw;
@@ -247,6 +247,19 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+} */
+
+.toggleDreamSettings {
+  float: right;
+  position: relative;
+  bottom: 3.2vh;
+  color: #e8b37f;
+  font-weight: normal;
+  font-size: 6vh;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #e8b37f;
 }
 .toggleDreamSettings:hover {
   color: #ffffff;

@@ -101,11 +101,10 @@ const DreamContainer = (props) => {
               <div className="noTags">no tags</div>
             ) : (
               <div className="tagsBox">
-                <div>
-                  {props.tags.map((tag) => (
-                    <p className="indivTag">{tag}</p>
-                  ))}
-                </div>
+                {props.tags.map((tag) =>
+                props.usedTags.includes(tag) ? 
+                <button className="chosenIndivTag" onClick={() => props.clickTag(tag)}>{tag}</button> : 
+                <button className="indivTag" onClick={() => props.clickTag(tag)}>{tag}</button>)}
               </div>
             )}
             <strong className="nameMe">{props.name}</strong>{" "}

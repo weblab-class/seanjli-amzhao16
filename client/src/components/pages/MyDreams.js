@@ -94,6 +94,8 @@ const MyDreams = (props) => {
                 author_id={dream.author._id}
                 deleteDream={() => deleteDream(dream._id)}
                 who="me"
+                clickTag={clickTag}
+                usedTags={tags}
               />
             ))}
           </div>

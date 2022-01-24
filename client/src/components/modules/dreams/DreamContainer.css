@@ -198,6 +198,25 @@
   border-radius: 2vh;
   border-width: 0.4vh;
 }
+
+.indivTag:hover {
+  color: #f4cba4;
+}
+
+.chosenIndivTag:hover {
+  color: white;
+}
+
+.chosenIndivTag {
+  color: #e8b37f;
+  background-color: #f0c9a1;
+  border: solid;
+  width: 8vw;
+  cursor: default;
+  text-align: center;
+  border-radius: 2vh;
+  border-width: 0.4vh;
+}
 .privateSymbol {
   float: right;
   position: relative;

@@ -78,10 +78,38 @@ router.post("/addFriendRequest", async (req, res) => {
   const x = await FriendRequest.find({
     sender_id: req.user._id,
     recipient_id: req.body.recipient_id,
-    status: "pending" || "accepted",
+    status: "pending",
   });
 
   if (x.length > 0 || req.user._id === req.body.recipient_id) {
+    return;
+  }
+
+  const y = await FriendRequest.find({
+    sender_id: req.body.recipient_id,
+    recipient_id: req.user._id,
+    status: "pending",
+  });
+
+  if (y.length > 0) {
+    FriendRequest.updateOne({
+      sender_id: req.body.recipient_id,
+      recipient_id: req.user._id,
+      status: "pending",
+    }, {$set: {status: "accepted"}});
+
+    User.updateOne(
+      { _id: req.user._id },
+      { $addToSet: { friends: req.body.sender_id } },
+      function (err, doc) {}
+    );
+  
+    User.updateOne(
+      { _id: req.body.sender_id },
+      { $addToSet: { friends: req.user._id } },
+      function (err, doc) {}
+    );
+
     return;
   }
 

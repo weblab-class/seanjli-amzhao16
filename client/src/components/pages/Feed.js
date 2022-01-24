@@ -12,9 +12,9 @@ import OutgoingFriendRequests from "../modules/friendsystem/OutgoingFriendReques
 
 const Feed = (props) => {
   const [dreams, setDreams] = useState([]);
-  const [me, setMe] = useState([{ friends: [], id: "" }]);
+  const [me, setMe] = useState([{ friends: ["none"], id: "" }]);
 
-  const [friends, setFriends] = useState([]);
+  const [friends, setFriends] = useState(["none"]);
 
   useEffect(() => {
     get("/api/getMe").then((x) => setMe(x));
@@ -25,7 +25,7 @@ const Feed = (props) => {
   }, [me]);
 
   useEffect(() => {
-    if (friends.length > 0) {
+    if (friends.length !== 1 || friends[0] !== "none") {
       get("/api/dreams", { parent: [...friends, props.userId] }).then((x) =>
         setDreams(x.reverse())
       );

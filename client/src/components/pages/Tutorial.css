@@ -19,3 +19,39 @@
   right: 7vw;
   border-radius: 10vh;
 }
+
+.previousPage {
+  position: absolute;
+  bottom: 2vh;
+  border: none;
+  color: #ffb6c1;
+  height: 10vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  padding-left: 2vw;
+  background-color: transparent;
+  padding-right: 2vw;
+  cursor: pointer;
+  width: 8vw;
+  font-size: 4vh;
+  left: 1vw;
+}
+
+.nextPage {
+  position: absolute;
+  bottom: 2vh;
+  border: none;
+  color: #ffb6c1;
+  height: 10vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  padding-left: 2vw;
+  background-color: transparent;
+  padding-right: 2vw;
+  cursor: pointer;
+  width: 8vw;
+  font-size: 4vh;
+  right: 1vw;
+}

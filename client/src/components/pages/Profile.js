@@ -12,6 +12,7 @@ import EditAvatarPage from "../modules/editavatar/EditAvatar.js";
 
 import Achievement from "../modules/achievements/Achievement";
 import Avatar from "../modules/editavatar/Avatar";
+import "../modules/achievements/AchievementImages.css";
 
 const Profile = (props) => {
   const { text } = useParams();

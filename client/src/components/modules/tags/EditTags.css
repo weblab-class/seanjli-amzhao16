@@ -131,8 +131,8 @@
   padding: 3vh;
   width: 25vw;
   border-radius: 3vh;
-  top: 46vh;
-  height: 34vh;
+  top: 52vh;
+  height: 26vh;
 }
 
 .aboutTagQuestion1 {
@@ -161,20 +161,5 @@
   color: #ffbade;
   position: absolute;
   top: 16vh;
-  left: 1vw;
-}
-.aboutTagQuestion3 {
-  z-index: 7;
-  color: #d271a4;
-  position: absolute;
-  top: 32.5vh;
-  left: 1vw;
-}
-
-.aboutTagAnswer3 {
-  z-index: 7;
-  color: #ffbade;
-  position: absolute;
-  top: 35.5vh;
   left: 1vw;
 }

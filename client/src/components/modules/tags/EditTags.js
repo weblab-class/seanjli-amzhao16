@@ -32,8 +32,6 @@ const EditTags = (props) => {
             space), certain people (my sister, Taylor Swift), recurring events (flying!), themes
             (calm dreams, nightmares), etc.
           </div>
-          <div className="aboutTagQuestion3"> Can't see all the tags? </div>
-          <div className="aboutTagAnswer3"> just scroll! </div>
         </div>
       ) : (
         <div></div>

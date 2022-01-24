@@ -13,7 +13,7 @@
   padding-top: 0.5vh;
   text-decoration: none;
   color: white;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   width: 15vw;
   cursor: pointer;

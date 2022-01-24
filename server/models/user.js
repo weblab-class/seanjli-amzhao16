@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
     {
       hairColor: {type: String, default: "blank"},
       hairType: {type: String, default: "blank"},
-      skin: {type: String, defualt: "blank"},
+      skin: {type: String, default: "blank"},
       shirt: {type: String, default: "blank"},
       hat: {type: String, default: "blank"},
       neck: {type: String, default: "blank"},

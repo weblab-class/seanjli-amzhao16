@@ -205,3 +205,12 @@
   width: 30px;
   z-index: 100;
 }
+
+.noDreamsFeed {
+  position: absolute;
+  color: #ea9a8f;
+  font-size: 3vh;
+  top: 3vh;
+  left: 2vw;
+  right: 2vw;
+}

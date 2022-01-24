@@ -73,7 +73,7 @@ const Feed = (props) => {
   const friendsPopUp = (event) => {
     if (showAllFriends === true) {
       setShowAllFriends(false);
-      document.getElementById('findFriendsLabel').blur();
+      document.getElementById("findFriendsLabel").blur();
       setSearch("");
     } else {
       setShowAllFriends(true);
@@ -152,18 +152,24 @@ const Feed = (props) => {
         </div>
       </div>
       <div className="friendsContainerBorder">
-        <div className="friendsDreamsContainer">
-          {dreams.map((dream) => (
-            <DreamContainer
-              date={dream.timeStamp}
-              name={dream.author.name}
-              content={dream.content}
-              tags={dream.tags}
-              private={dream.private}
-              author_id={dream.author._id}
-            />
-          ))}
-        </div>
+        {dreams.length === 0 ? (
+          <div className="noDreamsFeed">
+            there are no dreams here. write a public one and add friends!
+          </div>
+        ) : (
+          <div className="friendsDreamsContainer">
+            {dreams.map((dream) => (
+              <DreamContainer
+                date={dream.timeStamp}
+                name={dream.author.name}
+                content={dream.content}
+                tags={dream.tags}
+                private={dream.private}
+                author_id={dream.author._id}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

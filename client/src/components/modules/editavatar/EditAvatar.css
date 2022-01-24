@@ -1328,7 +1328,7 @@
   background-color: transparent;
   border: none;
   border-radius: 3vh;
-  margin-right: 2px;
+  margin-right: 0px;
 }
 
 .hat-socialite-button {
@@ -1336,7 +1336,7 @@
   cursor: pointer;
   position: relative;
   height: 15vh;
-  right: 2.5vh;
+  right: 2.4vh;
   width: 13vh;
   background-image: url("./accessories/hat-socialite.png");
   background-size: contain;
@@ -1445,6 +1445,7 @@
   border: none;
   border-radius: 3vh;
   margin-left: 10px;
+  cursor: default;
   margin-right: 20px;
 }
 

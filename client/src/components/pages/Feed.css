@@ -122,6 +122,7 @@
   right: 9vw;
   font-size: 2vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .outgoingRequestsArea {
@@ -134,6 +135,7 @@
   right: 9vw;
   font-size: 2vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .makeFriendsBox {

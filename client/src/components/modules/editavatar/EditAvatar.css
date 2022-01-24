@@ -1737,3 +1737,15 @@
   border-radius: 3.5vh;
   margin-right: 10px;
 }
+
+.white-highlight-neck-blank {
+  position: relative;
+  float: left;
+  height: 5.4vh;
+  width: 5.4vh;
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 3.5vh;
+  margin-right: 10px;
+}

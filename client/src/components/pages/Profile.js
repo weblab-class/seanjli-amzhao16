@@ -181,6 +181,11 @@ const Profile = (props) => {
         ) : (
           <div></div>
         )}
+        {text === props.userId ? (
+          <div className="clickToEdit"> click avatar to edit</div>
+        ) : (
+          <div></div>
+        )}
         <div className="achievementsContainer">
           {achievements.map((x) => (
             <Achievement name={x.name} content={x.content} earned={earned[x._id]} />

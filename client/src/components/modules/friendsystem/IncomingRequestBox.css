@@ -3,7 +3,7 @@
   width: 26vw;
   text-decoration: none !important;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   height: 5vh;
 }
 

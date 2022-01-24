@@ -64,6 +64,7 @@ const DreamContainer = (props) => {
     if (showDelete === true) {
       setShowDelete(false);
     }
+    setShowDreamSettings(false);
   };
   const [showDreamSettings, setShowDreamSettings] = useState(false);
 

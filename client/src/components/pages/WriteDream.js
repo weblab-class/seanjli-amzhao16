@@ -44,7 +44,7 @@ const WriteDream = (props) => {
       } else {
         setTags([...tags, tagInput]);
         setUsedTags([...usedTags, tagInput]);
-        post("/api/addUsedTag", { tag: tagInput });
+        post("/api/addUsedTag", { tag: tagInput }).then(console.log("posted " + tagInput));
       }
       setTagInput("");
     }

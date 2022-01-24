@@ -104,13 +104,13 @@ router.post("/acceptFriendRequest", (req, res) => {
 
   User.updateOne(
     { _id: req.user._id },
-    { $push: { friends: req.body.sender_id } },
+    { $addToSet: { friends: req.body.sender_id } },
     function (err, doc) {}
   );
 
   User.updateOne(
     { _id: req.body.sender_id },
-    { $push: { friends: req.user._id } },
+    { $addToSet: { friends: req.user._id } },
     function (err, doc) {}
   );
 });
@@ -195,9 +195,10 @@ router.post("/togglePrivacy", (req, res) => {
 // TAGS
 
 router.post("/addUsedTag", (req, res) => {
+  console.log(req.body.tag);
   User.updateOne(
     { _id: req.user._id },
-    { $push: { usedTags: req.body.tag } },
+    { $addToSet: { usedTags: req.body.tag } },
     function (err, doc) {}
   ).then((x) => console.log(x));
 });

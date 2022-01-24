@@ -1,0 +1,187 @@
+.prizeContainer {
+  background-color: #e4829e;
+  position: relative;
+  height: 8vh;
+  width: 6vw;
+  top: 0.5vh;
+  left: 2vw;
+  border-radius: 3vh;
+}
+
+.prize-novice {
+  float: top;
+  position: relative;
+  bottom: 2vh;
+  right: 0.2vw;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/glasses-novice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-reporter {
+  float: top;
+  position: relative;
+  bottom: 2vh;
+  right: 0.2vw;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/glasses-reporter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-dreamer {
+  float: top;
+  position: relative;
+  bottom: 2vh;
+  right: 0.2vw;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/glasses-dreamer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-visionary {
+  float: top;
+  position: relative;
+  bottom: 2vh;
+  right: 0.2vw;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/glasses-visionary.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-classifier {
+  float: top;
+  position: relative;
+  bottom: 7vh;
+  right: 0.3vh;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/neck-classifier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-cataloguer {
+  float: top;
+  position: relative;
+  bottom: 7vh;
+  right: 0.3vh;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/neck-cataloguer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-multifaceted {
+  float: top;
+  position: relative;
+  bottom: 8vh;
+  right: 0.3vh;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/neck-multifaceted.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-laconic {
+  float: top;
+  position: relative;
+  top: 0.8vh;
+  left: 0.4vw;
+  height: 16vh;
+  width: 16vh;
+  background-image: url("../editavatar/accessories/hat-laconic.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-scribe {
+  float: top;
+  position: relative;
+  left: 0.4vw;
+  top: 0.8vh;
+  height: 16vh;
+  width: 16vh;
+  background-image: url("../editavatar/accessories/hat-scribe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-novelist {
+  float: top;
+  position: relative;
+  top: 1.4vh;
+  right: 0.3vh;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/hat-novelist.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-amiable {
+  float: top;
+  position: relative;
+  top: 2vh;
+  height: 18vh;
+  width: 18vh;
+  background-image: url("../editavatar/accessories/hat-amiable.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}
+
+.prize-socialite {
+  float: top;
+  position: relative;
+  right: 0.2vw;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../editavatar/accessories/hat-socialite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 3vh;
+}

@@ -3,9 +3,9 @@
   position: absolute;
   color: white;
   top: 3vh;
-  right: 2vw;
+  right: 1.5vw;
   height: 70vh;
-  width: 50vw;
+  width: 53vw;
   padding: 5vh;
   z-index: 100;
   border-radius: 5vh;
@@ -18,7 +18,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -27,10 +29,11 @@
 .editFeatureSubcontainer {
   position: absolute;
   color: white;
-  top: 0vh;
+  top: 0.4vh;
   right: 0vw;
   height: 10vh;
-  width: 39vw;
+  width: 40vw;
+  background-color: transparent;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -139,6 +142,8 @@
 }
 .white-highlight-hairColor-black {
   float: left;
+  position: relative;
+  right: 0.1vh;
   height: 5.4vh;
   width: 5.4vh;
   cursor: pointer;
@@ -201,6 +206,7 @@
   cursor: pointer;
   height: 6vh;
   width: 6vh;
+  z-index: 5000;
   background-color: transparent;
   border: solid;
   border-color: white;
@@ -321,7 +327,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -392,7 +400,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -979,7 +989,9 @@
   padding-top: 3vh;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -1230,7 +1242,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -1240,6 +1254,7 @@
   float: left;
   height: 6vh;
   cursor: pointer;
+  position: relative;
   width: 5.9vh;
   background-image: url("default-none.png");
   background-size: contain;
@@ -1440,7 +1455,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;
@@ -1448,6 +1465,7 @@
 
 .glasses-blank-button {
   float: left;
+  position: relative;
   height: 6vh;
   cursor: pointer;
   width: 5.9vh;
@@ -1544,7 +1562,7 @@
 
 .white-highlight-glasses-novice {
   position: relative;
-  bottom: 2vh;
+  bottom: 1.5vh;
   float: left;
   left: 0.6vh;
   height: 6vh;
@@ -1558,7 +1576,7 @@
 
 .white-highlight-glasses-reporter {
   position: relative;
-  bottom: 2vh;
+  bottom: 1.5vh;
   float: left;
   left: 0.6vh;
   height: 6vh;
@@ -1572,7 +1590,7 @@
 
 .white-highlight-glasses-dreamer {
   position: relative;
-  bottom: 2vh;
+  bottom: 1.5vh;
   float: left;
   left: 0.6vh;
   height: 6vh;
@@ -1585,7 +1603,7 @@
 }
 .white-highlight-glasses-visionary {
   position: relative;
-  bottom: 2vh;
+  bottom: 1.5vh;
   float: left;
   left: 0.6vh;
   height: 6vh;
@@ -1604,7 +1622,9 @@
   right: 2vw;
   padding-left: 2vw;
   height: 10vh;
-  width: 49vw;
+  width: 52vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 102;
   border-radius: 5vh;
   font-size: 4vh;

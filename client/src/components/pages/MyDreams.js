@@ -16,7 +16,7 @@ const MyDreams = (props) => {
   const handleChange = (event) => {
     const value = event.target.value;
     setSearch(value);
-  }
+  };
 
   const deleteDream = (id) => {
     post("/api/deleteDream", { dream_id: id });
@@ -45,19 +45,21 @@ const MyDreams = (props) => {
   }, [dreams]);
 
   useEffect(() => {
-    setDisplayedDreams(dreams.filter((dream) => tags.every((tag) => dream.tags.includes(tag)))
-      .filter((dream) => JSON.parse(dream.content).blocks[0].text.includes(search)));
+    setDisplayedDreams(
+      dreams
+        .filter((dream) => tags.every((tag) => dream.tags.includes(tag)))
+        .filter((dream) => JSON.parse(dream.content).blocks[0].text.includes(search))
+    );
   }, [tags, search]);
 
   return (
     <div className="myDreamsBackground">
       <NavBar type="d" handleLogout={props.handleLogout} userId={props.userId} />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
-      <input value={search} onChange={handleChange} />
+      <div className="searchDreamsContainer">
+        search:
+        <div className="magnifyingGlassDreams"></div>
+        <input className="searchBarDreams" value={search} onChange={handleChange}></input>
+      </div>
       <div className="filterContainer">
         <div className="filterTitle">filters:</div>
         <div className="filterBox">

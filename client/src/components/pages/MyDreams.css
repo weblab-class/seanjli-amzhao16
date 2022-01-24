@@ -27,10 +27,9 @@
   left: 3vw;
   border-radius: 5vh;
   height: 8vh;
-  width: 94vw;
+  width: 64vw;
   right: 3vw;
   padding-bottom: 1vh;
-  overflow-y: auto;
   bottom: 75vh;
   background-color: #ffe3c8;
 }
@@ -47,10 +46,10 @@
   position: absolute;
   font-size: 5vh;
   top: 0.5vh;
+  height: 7vh;
   left: 11vw;
-  width: 80vw;
-  overflow-x: auto;
-  overflow-y: auto;
+  width: 52vw;
+  overflow-y: scroll;
 }
 
 .chosenTag {
@@ -92,4 +91,59 @@
   background-color: #f4cba4;
   height: 100vh;
   width: 100vw;
+}
+
+.searchDreamsContainer {
+  position: absolute;
+  top: 10vh;
+  right: 2vw;
+  border-radius: 5vh;
+  height: 6.6vh;
+  padding-top: 1.4vh;
+  width: 26vw;
+  padding-left: 2vw;
+  right: 3vw;
+  padding-bottom: 1vh;
+  bottom: 75vh;
+  font-size: 4vh;
+  color: white;
+  background-color: #ffe3c8;
+}
+
+.searchBarDreams {
+  z-index: 100;
+  position: absolute;
+  padding-bottom: 1vh;
+  width: 17vw;
+  left: 9.5vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 3vh;
+  padding-top: 1vh;
+  right: 9vw;
+  border: solid 0.5vh;
+  font-size: 3vh;
+  border-radius: 4vh;
+  outline: none;
+  color: #e8b37f;
+  text-align: center;
+  border-color: white;
+  background-color: white;
+}
+
+.magnifyingGlassDreams {
+  position: absolute;
+  top: 2.7vh;
+  padding-bottom: 1vh;
+  width: 3vw;
+  left: 10.4vw;
+  height: 5vh;
+  padding-top: 1vh;
+  right: 9vw;
+  background-image: url("search-bar-dreams.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  z-index: 102;
 }

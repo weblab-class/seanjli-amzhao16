@@ -43,6 +43,7 @@ const WriteDream = (props) => {
         addUsedTag(tagInput);
       } else {
         setTags([...tags, tagInput]);
+        setUsedTags([...usedTags, tagInput]);
         post("/api/addUsedTag", { tag: tagInput });
       }
       setTagInput("");
@@ -51,23 +52,18 @@ const WriteDream = (props) => {
 
   const addUsedTag = (tag) => {
     setTags([...tags, tag]);
-    setUsedTags(usedTags.filter((x) => x !== tag));
   };
 
   const removeTag = (tag) => {
     setTags(tags.filter((x) => x !== tag));
-    setUsedTags([...usedTags, tag]);
   };
 
-  console.log("tags:");
-  console.log(tags);
-  console.log("used tags:");
-  console.log(usedTags);
 
   const togglePrivacy = (event) => {
     setPrivacy(!privacy);
-    console.log("hour is" + currHour);
   };
+
+  console.log(tags, usedTags);
 
   return (
     <div className="writeBackground">
@@ -116,7 +112,7 @@ const WriteDream = (props) => {
         tagInput={tagInput}
         handleChange={handleChange}
         addNewTag={addNewTag}
-        usedTags={usedTags}
+        usedTags={usedTags.filter((x) => !tags.includes(x))}
         addUsedTag={addUsedTag}
       />
     </div>

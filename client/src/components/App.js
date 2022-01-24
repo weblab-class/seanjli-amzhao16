@@ -46,11 +46,11 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    window.location.href = "/";
+    post("/api/logout");
     setUserId(undefined);
     setUsername("");
     setLoading(false);
-    post("/api/logout");
-    window.location.href = "/";
   };
 
   const getComponent = () => {

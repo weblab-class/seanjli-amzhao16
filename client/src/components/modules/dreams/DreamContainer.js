@@ -85,12 +85,18 @@ const DreamContainer = (props) => {
               {" "}
               <Avatar avatar={avatar} />
             </div>
-            <p className="dateMe">{convertDate(props.date)}</p>
-            {privacy ? (
-              <div className="privateSymbol"></div>
-            ) : (
-              <div className="publicSymbol"></div>
-            )}{" "}
+            <div className="infoMeContainer">
+              {" "}
+              <button className="toggleDreamSettings" onClick={toggleDreamSettings}>
+                ...
+              </button>
+              <p className="dateMe">{convertDate(props.date)}</p>
+              {privacy ? (
+                <div className="privateSymbol"></div>
+              ) : (
+                <div className="publicSymbol"></div>
+              )}{" "}
+            </div>
             {props.tags.length === 0 ? (
               <div className="noTags">no tags</div>
             ) : (
@@ -103,9 +109,6 @@ const DreamContainer = (props) => {
               </div>
             )}
             <strong className="nameMe">{props.name}</strong>{" "}
-            <button className="toggleDreamSettings" onClick={toggleDreamSettings}>
-              ...
-            </button>
             {showDreamSettings ? (
               <div className="dreamSettingsContainer">
                 {privacy ? (

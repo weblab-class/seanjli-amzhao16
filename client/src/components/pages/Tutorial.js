@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Tutorial.css";
 
 const Tutorial = (props) => {
-
   const [page, setPage] = useState(0);
 
   const pages = [
@@ -13,16 +12,16 @@ const Tutorial = (props) => {
     <div>more bonk</div>,
     <div>im bored</div>,
     <div>help</div>,
-    <div>fin</div>
-  ]
+    <div>fin</div>,
+  ];
 
   const nextPage = () => {
     setPage(page + 1);
-  }
+  };
 
   const prevPage = () => {
     setPage(page - 1);
-  }
+  };
 
   return (
     <div>
@@ -31,9 +30,20 @@ const Tutorial = (props) => {
       </a>
       <div className="tutorialContainer">
         {pages[page]}
-        {(page > 0) ? <button onClick={prevPage}>previous page</button> : <></>}
-        {(page < pages.length - 1) ? <button onClick={nextPage}>next page</button> : <></>}
-
+        {page > 0 ? (
+          <button className="previousPage" onClick={prevPage}>
+            prev
+          </button>
+        ) : (
+          <></>
+        )}
+        {page < pages.length - 1 ? (
+          <button className="nextPage" onClick={nextPage}>
+            next
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

@@ -148,7 +148,7 @@
 }
 
 .makeFriendsBox {
-  z-index: 100;
+  z-index: 102;
   position: absolute;
   top: 10vh;
   padding-bottom: 1vh;

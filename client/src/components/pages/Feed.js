@@ -86,10 +86,6 @@ const Feed = (props) => {
     }
   };
 
-  console.log("BREAK");
-
-  console.log(dreams);
-
   return (
     <div className="friendsBackground">
       <NavBar type="f" handleLogout={props.handleLogout} userId={props.userId} />

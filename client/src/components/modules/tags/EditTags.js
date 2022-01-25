@@ -6,7 +6,6 @@ import "./EditTags.css";
 const EditTags = (props) => {
   const [showAboutTag, setShowAboutTag] = useState(false);
   const toggleAboutTags = (event) => {
-    console.log("clicky");
     if (showAboutTag === true) {
       setShowAboutTag(false);
     } else {

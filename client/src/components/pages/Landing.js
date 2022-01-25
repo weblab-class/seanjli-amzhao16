@@ -9,7 +9,6 @@ const GOOGLE_CLIENT_ID = "799029787987-37thps95h1019p8mmpoi62cnv4amt0vg.apps.goo
 const Skeleton = ({ userId, handleLogin, handleLogout }) => {
   const [showAbout, setShowAbout] = useState(false);
   const aboutPopUp = (event) => {
-    console.log("clicky");
     if (showAbout === true) {
       setShowAbout(false);
     } else {

@@ -38,7 +38,6 @@ const WriteDream = (props) => {
       return;
     }
     if (!tags.includes(tagInput)) {
-      console.log("adding tag...");
       if (usedTags.includes(tagInput)) {
         addUsedTag(tagInput);
       } else {
@@ -58,12 +57,9 @@ const WriteDream = (props) => {
     setTags(tags.filter((x) => x !== tag));
   };
 
-
   const togglePrivacy = (event) => {
     setPrivacy(!privacy);
   };
-
-  console.log(tags, usedTags);
 
   return (
     <div className="writeBackground">

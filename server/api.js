@@ -92,18 +92,21 @@ router.post("/addFriendRequest", async (req, res) => {
   });
 
   if (y.length > 0) {
-    FriendRequest.updateOne({
-      sender_id: req.body.recipient_id,
-      recipient_id: req.user._id,
-      status: "pending",
-    }, {$set: {status: "accepted"}});
+    FriendRequest.updateOne(
+      {
+        sender_id: req.body.recipient_id,
+        recipient_id: req.user._id,
+        status: "pending",
+      },
+      { $set: { status: "accepted" } }
+    );
 
     User.updateOne(
       { _id: req.user._id },
       { $addToSet: { friends: req.body.sender_id } },
       function (err, doc) {}
     );
-  
+
     User.updateOne(
       { _id: req.body.sender_id },
       { $addToSet: { friends: req.user._id } },
@@ -190,7 +193,6 @@ router.get("/myDreams", (req, res) => {
 });
 
 router.post("/addDream", (req, res) => {
-  console.log("added dream to database");
   const newDream = new Dream({
     author: {
       _id: req.user._id,
@@ -206,16 +208,14 @@ router.post("/addDream", (req, res) => {
 
 router.post("/deleteDream", (req, res) => {
   Dream.deleteOne(
-    {_id: req.body.dream_id,
-      "author._id": req.user._id} // for security purposes, verifies id of person
+    { _id: req.body.dream_id, "author._id": req.user._id } // for security purposes, verifies id of person
   ).then((dream) => res.send(dream));
 });
 
 router.post("/togglePrivacy", (req, res) => {
   Dream.updateOne(
-    {_id: req.body.dream_id,
-      "author._id": req.user._id},
-    [{$set: {private: {$not: "$private"}}}],
+    { _id: req.body.dream_id, "author._id": req.user._id },
+    [{ $set: { private: { $not: "$private" } } }],
     function (err, doc) {}
   );
 });
@@ -223,7 +223,6 @@ router.post("/togglePrivacy", (req, res) => {
 // TAGS
 
 router.post("/addUsedTag", (req, res) => {
-  console.log(req.body.tag);
   User.updateOne(
     { _id: req.user._id },
     { $addToSet: { usedTags: req.body.tag } },
@@ -233,20 +232,14 @@ router.post("/addUsedTag", (req, res) => {
 
 router.post("/achievementGot", (req, res) => {
   const str = "achievements." + req.body.id;
-  User.updateOne(
-    { _id: req.user._id },
-    { $set: {[str] : true}}
-  ).then((x) => res.send(x));
+  User.updateOne({ _id: req.user._id }, { $set: { [str]: true } }).then((x) => res.send(x));
 });
 
 // EDIT AVATAR
 
 router.post("/editAvatar", (req, res) => {
   const str = "avatar." + req.body.item;
-  User.updateOne(
-    {_id: req.user._id},
-    { $set: {[str] : req.body.new}}
-  ).then((x) => res.send(x));
+  User.updateOne({ _id: req.user._id }, { $set: { [str]: req.body.new } }).then((x) => res.send(x));
 });
 
 // anything else falls to this "not found" case

@@ -15,7 +15,7 @@ const Tutorial = (props) => {
       <div className="tutorialTitle">write dream:</div>
       <p className="tutorialContent">
         write about your dream in as much or as little detail as you choose. <br /> <br />
-        When you’re done, make sure to click the public/private switch if you don’t want to share
+        when you’re done, make sure to click the public/private switch if you don’t want to share
         the dream with friends <br />
         <br />
         to add a new tag, type in a custom tag in the bottom left <br />

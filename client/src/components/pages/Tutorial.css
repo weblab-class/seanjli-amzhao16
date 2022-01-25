@@ -100,12 +100,14 @@
   height: 100%;
   width: 100%;
   background-size: contain;
+  background-image: url("../../public/gifs/write.gif");
   background-repeat: no-repeat;
 }
 
 .gifProfile {
   height: 100%;
   width: 100%;
+  background-image: url("../../public/gifs/profile.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -113,6 +115,7 @@
 .gifFeed {
   height: 100%;
   width: 100%;
+  background-image: url("../../public/gifs/friends.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -120,6 +123,7 @@
 .gifDreams {
   height: 100%;
   width: 100%;
+  background-image: url("../../public/gifs/filters.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }

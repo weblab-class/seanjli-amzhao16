@@ -94,7 +94,7 @@ webpack.config.js
 ```
 
 CITATIONS
-packages: draft.js, moment
+packages: React.js, Node.js, draft.js, moment
 images/icons:
 https://www.jbrhomes.com/home/blank-avatar/
 https://en.m.wikipedia.org/wiki/File:Google_Magnifying_Glass.svg

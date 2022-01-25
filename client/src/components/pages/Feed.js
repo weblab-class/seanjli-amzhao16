@@ -44,6 +44,12 @@ const Feed = (props) => {
     setSearch(value);
   };
 
+  const [search1, setSearch1] = useState("");
+
+  const handleChange1 = (event) => {
+    const value = event.target.value;
+    setSearch1(value);
+  };
   useEffect(() => {
     get("/api/getUser").then((x) => setUsers(x));
     get("/api/getMe").then((x) => setMe(x));
@@ -119,11 +125,33 @@ const Feed = (props) => {
             <div></div>
           )}
         </div>
-        <div>
+        {/* <div>
           <div className="myFriendsLabel">my friends</div>
           <div className="myFriendsArea">
             <FriendList
               users={users.sort((a, b) => a.name.localeCompare(b.name))}
+              requestees={requestees}
+              setRequestees={setRequestees}
+              friends={friends}
+              setFriends={setFriends}
+            />
+          </div>
+        </div> */}
+        <div>
+          <div className="magnifyingGlass1"></div>
+          <input
+            autocomplete="off"
+            placeholder="my friends"
+            className="myFriendsLabel"
+            type="text"
+            onChange={handleChange1}
+            value={search1}
+          />
+          <div className="myFriendsArea">
+            <FriendList
+              users={users
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .filter((x) => x.name.toLowerCase().startsWith(search1.toLowerCase()))}
               requestees={requestees}
               setRequestees={setRequestees}
               friends={friends}

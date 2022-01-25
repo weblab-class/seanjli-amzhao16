@@ -55,3 +55,73 @@
   font-size: 4vh;
   right: 1vw;
 }
+
+.tutorialIntro {
+  font-size: 10vh;
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  right: 2vw;
+  color: #ffb6c1;
+}
+
+.gifContainer {
+  position: absolute;
+  top: 15vh;
+  left: 4vw;
+  height: 45vh;
+  width: 42vw;
+  right: 2vw;
+}
+
+.tutorialTitle {
+  font-size: 6vh;
+  position: absolute;
+  top: 3vh;
+  left: 4vw;
+  right: 2vw;
+  color: #ffb6c1;
+}
+
+.tutorialContent {
+  position: absolute;
+  top: 15vh;
+  left: 49vw;
+  color: #ffb6c1;
+  font-size: 3vh;
+  height: 45vh;
+  width: 33vw;
+  right: 2vw;
+}
+
+.gifWrite {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../public/gifs/write.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gifProfile {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../public/gifs/profile.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gifFeed {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../public/gifs/friends.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gifDreams {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../public/gifs/filters.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}

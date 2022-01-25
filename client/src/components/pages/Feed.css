@@ -1,7 +1,7 @@
 .friendsDreamsContainer {
   position: absolute;
   top: 2vh;
-  width: 60vw;
+  width: 59vw;
   overflow-y: auto;
   right: 2vh;
   bottom: 4vh;
@@ -11,8 +11,8 @@
 .friendsContainerBorder {
   position: absolute;
   top: 11vh;
-  width: 62vw;
-  right: 2vw;
+  width: 61vw;
+  right: 2.5vw;
   bottom: 3vh;
   height: 86vh;
   border-radius: 6vh;
@@ -23,7 +23,7 @@
   position: absolute;
   top: 11vh;
   width: 32vw;
-  right: 66vw;
+  left: 2.5vw;
   bottom: 3vh;
   height: 86vh;
   border-radius: 6vh;

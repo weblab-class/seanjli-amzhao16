@@ -81,30 +81,32 @@ const MyDreams = (props) => {
           )}
         </div>
       </div>
-      <div className="allMyDreams">
-        {dreams.length === 0 ? (
-          <div className="noDreams">you have no dreams. write one!</div>
-        ) : displayedDreams.length === 0 ? (
-          <div className="noDreams">you have no dreams with all the selected filters</div>
-        ) : (
-          <div>
-            {displayedDreams.map((dream) => (
-              <DreamContainer
-                id={dream._id}
-                date={dream.timeStamp}
-                name={dream.author.name}
-                content={dream.content}
-                tags={dream.tags}
-                private={dream.private}
-                author_id={dream.author._id}
-                deleteDream={() => deleteDream(dream._id)}
-                who="me"
-                clickTag={clickTag}
-                usedTags={tags}
-              />
-            ))}
-          </div>
-        )}
+      <div className="allMyDreamsContainer">
+        <div className="allMyDreams">
+          {dreams.length === 0 ? (
+            <div className="noDreams">you have no dreams. write one!</div>
+          ) : displayedDreams.length === 0 ? (
+            <div className="noDreams">you have no dreams with all the selected filters</div>
+          ) : (
+            <div>
+              {displayedDreams.map((dream) => (
+                <DreamContainer
+                  id={dream._id}
+                  date={dream.timeStamp}
+                  name={dream.author.name}
+                  content={dream.content}
+                  tags={dream.tags}
+                  private={dream.private}
+                  author_id={dream.author._id}
+                  deleteDream={() => deleteDream(dream._id)}
+                  who="me"
+                  clickTag={clickTag}
+                  usedTags={tags}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

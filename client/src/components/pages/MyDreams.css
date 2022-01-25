@@ -1,15 +1,26 @@
+.allMyDreamsContainer {
+  position: absolute;
+  left: 2.5vw;
+  border-radius: 5vh;
+  height: 73vh;
+  width: 95vw;
+  right: 2.5vw;
+  padding-bottom: 1vh;
+  bottom: 3vh;
+  background-color: #ffe3c8;
+}
+
 .allMyDreams {
   position: absolute;
-  top: 21vh;
-  left: 3vw;
   border-radius: 5vh;
-  height: 76vh;
+  top: 1vh;
+  bottom: 1vh;
+  height: 71vh;
   width: 94vw;
+  right: 1vw;
   overflow-x: hidden;
-  right: 3vw;
-  padding-bottom: 1vh;
   overflow-y: auto;
-  bottom: 3vh;
+  padding-bottom: 1vh;
   background-color: #ffe3c8;
 }
 
@@ -23,8 +34,8 @@
 
 .filterContainer {
   position: absolute;
-  top: 10vh;
-  left: 3vw;
+  top: 11vh;
+  left: 2.5vw;
   border-radius: 5vh;
   height: 8vh;
   width: 64vw;
@@ -97,12 +108,12 @@
 
 .searchDreamsContainer {
   position: absolute;
-  top: 10vh;
-  right: 2vw;
+  top: 11vh;
+  right: 2.5vw;
   border-radius: 5vh;
   height: 6.6vh;
   padding-top: 1.4vh;
-  width: 26vw;
+  width: 26.5vw;
   padding-left: 2vw;
   right: 3vw;
   padding-bottom: 1vh;

@@ -3,10 +3,10 @@
   position: absolute;
   top: 11vh;
   bottom: 3vh;
-  left: 3vw;
+  left: 2.5vw;
   overflow-y: hidden;
   overflow-x: hidden;
-  right: 3vw;
+  right: 2.5vw;
   background-color: #ffc7d7;
   border-radius: 4vw;
 }

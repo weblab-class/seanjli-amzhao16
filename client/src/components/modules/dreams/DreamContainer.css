@@ -1,12 +1,15 @@
 .name {
   position: absolute;
   top: -4vh;
-  width: 30vw;
+  width: 20vw;
+  height: 5vh;
   left: 10.5vw;
   color: #ea9a8f;
   font-weight: normal;
+  overflow-x: hidden;
+  overflow-y: hidden;
   text-align: left;
-  font-size: 3.5vh;
+  font-size: 1.8vw;
 }
 
 .avatar {
@@ -36,10 +39,10 @@
 .date {
   position: absolute;
   top: -4vh;
-  right: 3vw;
+  right: 2vw;
   color: #ea9a8f;
   font-weight: normal;
-  font-size: 3.5vh;
+  font-size: 1.8vw;
 }
 
 .container {
@@ -72,7 +75,7 @@
   color: #e8b37f;
   font-weight: normal;
   text-align: left;
-  font-size: 3.5vh;
+  font-size: 1.8vw;
 }
 
 .avatarMe {
@@ -112,7 +115,7 @@
   top: 0vh;
   color: #e8b37f;
   font-weight: normal;
-  font-size: 3.5vh;
+  font-size: 1.8vw;
   margin-right: 5px;
 }
 

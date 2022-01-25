@@ -58,7 +58,12 @@ const MyDreams = (props) => {
       <div className="searchDreamsContainer">
         search:
         <div className="magnifyingGlassDreams"></div>
-        <input className="searchBarDreams" value={search} onChange={handleChange}></input>
+        <input
+          className="searchBarDreams"
+          autocomplete="off"
+          value={search}
+          onChange={handleChange}
+        ></input>
       </div>
       <div className="filterContainer">
         <div className="filterTitle">filters:</div>

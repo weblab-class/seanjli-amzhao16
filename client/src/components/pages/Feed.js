@@ -91,6 +91,7 @@ const Feed = (props) => {
         <div>
           <div className="magnifyingGlass"></div>
           <input
+            autocomplete="off"
             placeholder="add new friends"
             className="findFriendsLabel"
             id="findFriendsLabel"

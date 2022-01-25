@@ -88,6 +88,8 @@
 .myDreamsBackground {
   position: absolute;
   z-index: -1;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background-color: #f4cba4;
   height: 100vh;
   width: 100vw;

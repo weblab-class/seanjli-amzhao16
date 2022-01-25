@@ -4,6 +4,8 @@
   top: 11vh;
   bottom: 3vh;
   left: 3vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
   right: 3vw;
   background-color: #ffc7d7;
   border-radius: 4vw;

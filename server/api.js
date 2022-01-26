@@ -227,7 +227,7 @@ router.post("/addUsedTag", (req, res) => {
     { _id: req.user._id },
     { $addToSet: { usedTags: req.body.tag } },
     function (err, doc) {}
-  ).then((x) => console.log(x));
+  );
 });
 
 router.post("/achievementGot", (req, res) => {

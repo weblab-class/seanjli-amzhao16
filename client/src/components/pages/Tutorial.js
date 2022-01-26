@@ -7,12 +7,12 @@ const Tutorial = (props) => {
   const pages = [
     <div>
       <p className="tutorialIntro">
-        Welcome to dream log! Before you get started, we'd like to help get you familiar with the
+        welcome to dream log! before you get started, we'd like to help get you familiar with the
         site.
       </p>
     </div>,
     <div>
-      <div className="tutorialTitle">write dream:</div>
+      <div className="tutorialTitle">write dream</div>
       <p className="tutorialContent">
         write about your dream in as much or as little detail as you choose <br /> <br />
         when you’re done, make sure to click the public/private switch if you don’t want to share
@@ -27,7 +27,7 @@ const Tutorial = (props) => {
       </div>
     </div>,
     <div>
-      <div className="tutorialTitle">profile:</div>
+      <div className="tutorialTitle">profile</div>
       <p className="tutorialContent">
         click on the avatar to edit your profile (note that accessories will be locked until you win
         its corresponding achievement) <br /> <br /> hover over an achievement to find out how to
@@ -50,7 +50,7 @@ const Tutorial = (props) => {
       </div>
     </div>,
     <div>
-      <div className="tutorialTitle">your dreams:</div>
+      <div className="tutorialTitle">your dreams</div>
       <p className="tutorialContent">
         click on a tag to filter the dreams by that tag (you can filter by multiple tags at once)
         <br /> <br />

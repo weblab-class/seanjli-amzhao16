@@ -175,7 +175,7 @@ const Profile = (props) => {
         <h1 className="profileTitle">Profile</h1>
         <p className="profileName">Name: {profile[0].name}</p>
         <Avatar avatar={avatar} />
-        <button className="defaultAvatar" onClick={editAvatarPopUp}></button>
+        <button className="clickPopUp" onClick={editAvatarPopUp}></button>
         {showEditAvatar ? (
           <EditAvatarPage avatar={avatar} setAvatar={setAvatar} earned={earned} />
         ) : (

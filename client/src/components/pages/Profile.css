@@ -31,15 +31,15 @@
   color: #e4829e;
 }
 
-.defaultAvatar {
+.clickPopUp {
   position: absolute;
   left: 6vw;
   top: 10vh;
-  background-color: transparent;
-  height: 402px;
-  width: 360px;
-  z-index: 69;
+  bottom: 5vh;
   border: none;
+  background-color: transparent;
+  width: 28vw;
+  z-index: 69;
   cursor: pointer;
 }
 
@@ -96,10 +96,10 @@
   height: 10vh;
   padding-top: 2.5vh;
   opacity: 0;
+  top: -13vh;
   width: 10vw;
   cursor: default;
   border-radius: 2vh;
-  top: 1vh;
 }
 
 .completeAchievement {
@@ -135,17 +135,18 @@
   position: absolute;
   background-color: #f2a5bb;
   height: 10vh;
-  padding-top: 2.5vh;
+  padding-top: 3vh;
   opacity: 0;
   width: 10vw;
-  border-radius: 2vh;
-  top: 11vh;
+  border: none;
+  top: -4vh;
+  border-radius: 4vh;
   cursor: default;
 }
 
 .achievementDescriptionContainer {
   position: relative;
-  top: -100%;
+  top: 0%;
   left: 0%;
 }
 

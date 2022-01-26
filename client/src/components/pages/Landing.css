@@ -8,7 +8,7 @@
   color: white;
   border: none;
   text-align: center;
-  font-size: 90px;
+  font-size: 8vw;
   position: relative;
   top: 26vh;
 }
@@ -28,7 +28,7 @@
   top: 22vh;
   color: #ffd5cf !important;
   border: none;
-  left: -13px;
+  left: -1vw;
   background-color: white !important;
   padding: 5px 20px !important;
   font-size: 20px !important;
@@ -39,18 +39,17 @@
 .aboutLanding {
   border: none;
   text-align: center;
-  font-size: 35px;
   position: relative;
   color: #ffd5cf;
   background-color: white;
   top: 22vh;
-  font-size: 20px;
-  width: 110px;
-  height: 60px;
+  font-size: 3vh;
+  width: 8vw;
+  height: 8.6vh;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
-  border-radius: 50px;
+  border-radius: 6vh;
   cursor: pointer;
 }
 
@@ -58,10 +57,10 @@
   color: white;
   border: none;
   text-align: center;
-  font-size: 35px;
+
   position: relative;
   top: 24vh;
-  font-size: 30px;
+  font-size: 2.5vw;
   text-align: center;
   overflow: hidden;
   display: inline-block;

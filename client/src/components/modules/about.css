@@ -1,33 +1,17 @@
 .aboutContainerLanding {
   border: none;
   text-align: center;
-  font-size: 35px;
   position: relative;
   color: #ffd5cf;
   background-color: white;
   top: 24vh;
-  font-size: 20px;
-  width: 600px;
-  height: 140px;
-  padding: 20px;
+  font-size: 1.5vw;
+  width: 45vw;
+  height: 20vh;
+  padding: 1vw;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
-  border-radius: 30px;
+  border-radius: 3vw;
   word-wrap: break-word;
-}
-
-.aboutContainerHome {
-  background-color: white;
-  color: #ffb6c1;
-  position: absolute;
-  bottom: 3vh;
-  right: 36vw;
-  padding: 2vh;
-  height: 16vh;
-  font-size: 2.4vh;
-  width: 18vw;
-  text-align: center;
-  z-index: 10;
-  border-radius: 5vh;
 }

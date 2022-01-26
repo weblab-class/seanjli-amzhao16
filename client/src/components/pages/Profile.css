@@ -138,7 +138,6 @@
   padding-top: 3vh;
   opacity: 0;
   width: 10vw;
-  border: none;
   top: -4vh;
   border-radius: 4vh;
   cursor: default;
@@ -152,14 +151,15 @@
 
 .clickToEdit {
   position: absolute;
-  left: 10.6vw;
+  left: 6.5vw;
   top: 72vh;
   background-color: transparent;
-  height: 402px;
-  width: 360px;
+  height: 7vh;
+  width: 25vw;
   font-size: 4vh;
   z-index: 69;
-  border: none;
+  text-align: center;
   color: #e4829e;
+  overflow: hidden;
   cursor: default;
 }

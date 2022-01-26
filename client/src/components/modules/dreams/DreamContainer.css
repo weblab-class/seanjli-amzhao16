@@ -221,8 +221,8 @@
   float: right;
   position: relative;
   top: 0vh;
-  height: 30px;
-  width: 30px;
+  height: 4.6vh;
+  width: 4.6vh;
   background-image: url("LockSymbol.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -236,8 +236,8 @@
   float: right;
   position: relative;
   top: 0.5vh;
-  height: 30px;
-  width: 30px;
+  height: 4.6vh;
+  width: 4.6vh;
   background-image: url("WorldSymbol.png");
   background-size: contain;
   background-repeat: no-repeat;

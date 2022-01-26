@@ -156,7 +156,7 @@
   background-image: url("search-bar-dreams.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
+  height: 4vh;
+  width: 4vh;
   z-index: 102;
 }

@@ -32,9 +32,9 @@
   font-weight: normal;
   border: white;
   border-width: thick;
-  border-radius: 30px;
+  border-radius: 6vh;
   border-style: solid;
-  padding: 12px 16px;
+  padding: 2vh 1.5vw;
 }
 
 .public-DraftEditorPlaceholder-root {

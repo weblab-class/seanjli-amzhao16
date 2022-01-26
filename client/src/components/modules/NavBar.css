@@ -6,7 +6,7 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 17px;
+  font-size: 1.6vw;
   width: 21vw;
   background-color: #ffbade;
   color: #d271a4;
@@ -24,7 +24,6 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 1.5vh;
-  font-size: 17px;
   width: 21vw;
   background-color: #d271a4;
 }
@@ -37,7 +36,7 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 17px;
+  font-size: 1.6vw;
   width: 21vw;
   background-color: #ffc7d7;
   color: #e4829e;
@@ -51,7 +50,6 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 1.5vh;
-  font-size: 17px;
   width: 21vw;
   background-color: #e4829e;
 }
@@ -66,7 +64,7 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 17px;
+  font-size: 1.6vw;
   width: 21vw;
   background-color: #ffd5cf;
   color: #ea9a8f;
@@ -80,7 +78,6 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 1.5vh;
-  font-size: 17px;
   width: 21vw;
   background-color: #ea9a8f;
 }
@@ -97,7 +94,7 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 17px;
+  font-size: 1.6vw;
   width: 21vw;
   background-color: #ffe3c8;
   color: #e8b37f;
@@ -111,7 +108,6 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 1.5vh;
-  font-size: 17px;
   width: 21vw;
   background-color: #e8b37f;
 }
@@ -128,7 +124,7 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 17px;
+  font-size: 1.6vw;
   border: none;
   width: 11vw;
   background-color: #ffefc0;
@@ -148,7 +144,6 @@
   vertical-align: middle;
   line-height: 8vh;
   height: 8vh;
-  font-size: 15px;
   border: none;
   width: 5vw;
   background-image: url("home-icon.png");
